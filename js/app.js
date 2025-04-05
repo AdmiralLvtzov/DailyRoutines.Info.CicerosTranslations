@@ -583,20 +583,21 @@ class FAQApp {
     }
 
     setupTheme() {
+        // 获取存储的主题或使用默认亮色主题
         this.theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', this.theme);
         
-        const toggleBtn = document.createElement('div');
-        toggleBtn.className = 'theme-toggle';
-        toggleBtn.innerHTML = this.theme === 'dark' ? '🌞' : '🌙';
-        document.body.appendChild(toggleBtn);
+        // 找到主题切换按钮
+        const themeToggle = document.getElementById('theme-toggle');
         
-        toggleBtn.addEventListener('click', () => {
-            this.theme = this.theme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', this.theme);
-            toggleBtn.innerHTML = this.theme === 'dark' ? '🌞' : '🌙';
-            localStorage.setItem('theme', this.theme);
-        });
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                // 切换主题
+                this.theme = this.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', this.theme);
+                localStorage.setItem('theme', this.theme);
+            });
+        }
     }
 
     setupNavigation() {

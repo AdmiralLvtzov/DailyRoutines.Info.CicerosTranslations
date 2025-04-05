@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Routines 信息中心</title>
+    <meta name="description" content="Daily Routines 插件的官方信息中心，包含FAQ、教程和更新日志">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
     
@@ -15,17 +16,21 @@
     <!-- 使用更快的 CDN -->
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@highlightjs/cdn-assets@11.5.0/styles/default.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    
+    <!-- 添加图标库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
     <header class="home-header">
         <div class="header-content">
             <a href="." class="header-link">
+                <img src="https://gh.atmoomen.top/StaticAssets/main/DailyRoutines/image/icon.png" alt="Daily Routines Logo" class="header-logo">
                 <h1 class="site-title">Daily Routines 信息中心</h1>
             </a>
             <div class="header-search">
                 <div class="search-box">
-                    <span class="search-icon">🔍</span>
+                    <span class="search-icon"><i class='bx bx-search'></i></span>
                     <input type="text" placeholder="搜索文档..." id="header-search-input">
                 </div>
                 <div class="search-results" id="header-search-results"></div>
@@ -34,8 +39,12 @@
                 <select id="language-selector" class="header-button">
                     <!-- 语言选项将由 JavaScript 动态生成 -->
                 </select>
-                <a href="https://github.com/Dalamud-DailyRoutines" class="header-button" target="_blank">GitHub</a>
-                <a href="https://discord.gg/dailyroutines" class="header-button" target="_blank">Discord</a>
+                <a href="https://github.com/Dalamud-DailyRoutines" class="header-button" target="_blank">
+                    <i class='bx bxl-github'></i> GitHub
+                </a>
+                <a href="https://discord.gg/dailyroutines" class="header-button" target="_blank">
+                    <i class='bx bxl-discord-alt'></i> Discord
+                </a>
             </div>
         </div>
     </header>
@@ -55,14 +64,14 @@
                     <span class="sidebar-title">FAQ 中心</span>
                 </a>
                 <button class="sidebar-back">
-                    <span class="back-icon">←</span>
+                    <span class="back-icon"><i class='bx bx-arrow-back'></i></span>
                     <span class="back-text">返回主页</span>
                 </button>
             </div>
             
             <div class="search-container">
                 <div class="search-box">
-                    <span class="search-icon">🔍</span>
+                    <span class="search-icon"><i class='bx bx-search'></i></span>
                     <input type="text" placeholder="搜索文档..." id="search-input">
                 </div>
                 <div class="search-results" id="search-results"></div>
@@ -81,6 +90,33 @@
             <article id="article-content" class="hidden"></article>
         </main>
     </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://gh.atmoomen.top/StaticAssets/main/DailyRoutines/image/icon.png" alt="Daily Routines Logo" class="footer-logo-img">
+                <span>Daily Routines</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Dalamud-DailyRoutines" target="_blank">GitHub</a>
+                <a href="https://discord.gg/dailyroutines" target="_blank">Discord</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; <span id="current-year"></span> Daily Routines Team. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 主题切换按钮 -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换暗/亮模式主题">
+        <i class='bx bx-sun light-icon'></i>
+        <i class='bx bx-moon dark-icon'></i>
+    </button>
+
+    <!-- 返回顶部按钮 -->
+    <button class="scroll-top" id="scroll-top" aria-label="返回顶部">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
 
     <!-- 按正确的顺序加载脚本 -->
     <script src="./js/config.js"></script>
@@ -105,6 +141,26 @@
                     });
             });
         }
+        
+        // 设置当前年份
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // 返回顶部按钮功能
+        const scrollTopButton = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopButton.classList.add('show');
+            } else {
+                scrollTopButton.classList.remove('show');
+            }
+        });
+        
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 </html> 
