@@ -14,6 +14,27 @@ function initBasePath() {
     CONFIG.basePath = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
 }
 
+// 设置动画顺序
+function setAnimationOrder() {
+    // 为分类卡片设置动画顺序
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach((card, index) => {
+        card.style.setProperty('--animation-order', index);
+    });
+    
+    // 为文章列表项设置动画顺序
+    const navArticleItems = document.querySelectorAll('.nav-article-item');
+    navArticleItems.forEach((item, index) => {
+        item.style.setProperty('--animation-order', index);
+    });
+    
+    // 为最近文章项设置动画顺序
+    const recentArticleItems = document.querySelectorAll('.recent-article-item');
+    recentArticleItems.forEach((item, index) => {
+        item.style.setProperty('--animation-order', index);
+    });
+}
+
 class FAQApp {
     constructor() {
         // 确保语言配置存在
@@ -317,6 +338,9 @@ class FAQApp {
         // 重新绑定事件监听器
         this.setupEventListeners();
         this.setupCategoryState();
+        
+        // 渲染完成后设置动画顺序
+        setTimeout(setAnimationOrder, 100);
     }
 
     setupEventListeners() {
@@ -612,6 +636,100 @@ class FAQApp {
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
                 document.getElementById('search-input').focus();
+            }
+        });
+        
+        // 添加返回顶部按钮功能
+        this.setupScrollToTop();
+        
+        // 添加移动导航菜单功能
+        this.setupMobileNavigation();
+    }
+    
+    setupScrollToTop() {
+        // 检查是否已存在返回顶部按钮
+        let scrollTopButton = document.querySelector('.scroll-top');
+        
+        // 如果不存在，创建返回顶部按钮
+        if (!scrollTopButton) {
+            scrollTopButton = document.createElement('button');
+            scrollTopButton.className = 'scroll-top';
+            scrollTopButton.setAttribute('aria-label', '返回顶部');
+            scrollTopButton.innerHTML = '<i class="bx bx-chevron-up"></i>';
+            document.body.appendChild(scrollTopButton);
+        }
+        
+        // 处理滚动事件，控制按钮显示/隐藏
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopButton.classList.add('show');
+            } else {
+                scrollTopButton.classList.remove('show');
+            }
+        });
+        
+        // 添加点击事件处理
+        scrollTopButton.addEventListener('click', () => {
+            // 平滑滚动到顶部
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    setupMobileNavigation() {
+        // 检查是否已存在移动菜单按钮
+        let mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        
+        // 如果不存在，创建移动菜单按钮
+        if (!mobileMenuToggle) {
+            mobileMenuToggle = document.createElement('button');
+            mobileMenuToggle.className = 'mobile-menu-toggle';
+            mobileMenuToggle.setAttribute('aria-label', '菜单');
+            mobileMenuToggle.innerHTML = `
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            `;
+            document.body.appendChild(mobileMenuToggle);
+        }
+        
+        // 获取侧边栏元素
+        const sidebar = document.querySelector('.sidebar');
+        
+        // 添加点击事件处理
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            
+            // 禁用/启用内容滚动
+            if (sidebar.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // 点击侧边栏链接后关闭菜单
+        const sidebarLinks = sidebar.querySelectorAll('a, .nav-article-item');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                sidebar.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // 点击侧边栏外部关闭菜单
+        document.addEventListener('click', (event) => {
+            if (sidebar.classList.contains('active') && 
+                !sidebar.contains(event.target) && 
+                !mobileMenuToggle.contains(event.target)) {
+                    
+                mobileMenuToggle.classList.remove('active');
+                sidebar.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
     }
