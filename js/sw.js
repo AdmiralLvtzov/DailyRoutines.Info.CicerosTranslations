@@ -1,6 +1,8 @@
-const CACHE_NAME = 'dr-faq-cache-v1';
-const STATIC_CACHE = 'static-cache-v1';
-const DYNAMIC_CACHE = 'dynamic-cache-v1';
+// 使用时间戳作为缓存版本
+const CACHE_VERSION = 'v1';
+const CACHE_NAME = `dr-faq-cache-${CACHE_VERSION}`;
+const STATIC_CACHE = `static-cache-${CACHE_VERSION}`;
+const DYNAMIC_CACHE = `dynamic-cache-${CACHE_VERSION}`;
 
 // 需要预缓存的静态资源
 const STATIC_ASSETS = [
@@ -52,15 +54,18 @@ self.addEventListener('fetch', (event) => {
     // 处理静态资源
     if (STATIC_ASSETS.includes(url.pathname)) {
         event.respondWith(
-            caches.match(request)
-                .then(response => {
-                    return response || fetch(request).then(fetchResponse => {
-                        return caches.open(STATIC_CACHE)
-                            .then(cache => {
-                                cache.put(request, fetchResponse.clone());
-                                return fetchResponse;
-                            });
-                    });
+            fetch(request)
+                .then(fetchResponse => {
+                    // 网络优先策略
+                    return caches.open(STATIC_CACHE)
+                        .then(cache => {
+                            cache.put(request, fetchResponse.clone());
+                            return fetchResponse;
+                        });
+                })
+                .catch(() => {
+                    // 网络失败时使用缓存
+                    return caches.match(request);
                 })
         );
         return;
@@ -69,23 +74,24 @@ self.addEventListener('fetch', (event) => {
     // 处理文章请求
     if (url.pathname.startsWith('/articles/')) {
         event.respondWith(
-            caches.match(request)
-                .then(response => {
-                    return fetch(request)
-                        .then(fetchResponse => {
-                            return caches.open(DYNAMIC_CACHE)
-                                .then(cache => {
-                                    cache.put(request, fetchResponse.clone());
-                                    return fetchResponse;
-                                });
-                        })
-                        .catch(() => response);
+            fetch(request)
+                .then(fetchResponse => {
+                    // 网络优先策略
+                    return caches.open(DYNAMIC_CACHE)
+                        .then(cache => {
+                            cache.put(request, fetchResponse.clone());
+                            return fetchResponse;
+                        });
+                })
+                .catch(() => {
+                    // 网络失败时使用缓存
+                    return caches.match(request);
                 })
         );
         return;
     }
 
-    // 网络优先策略
+    // 其他请求使用网络优先策略
     event.respondWith(
         fetch(request)
             .then(response => {

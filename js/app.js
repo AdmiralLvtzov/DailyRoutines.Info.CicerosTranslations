@@ -94,12 +94,12 @@ class FAQApp {
     }
 
     setupAutoRefresh() {
-        // 每分钟检查一次更新
-        setInterval(() => this.checkForUpdates(), 60000);
-        // 当页面从隐藏状态变为可见时也检查更新
+        // 移除自动刷新逻辑，改为只在用户主动触发时检查更新
+        // 当页面从隐藏状态变为可见时，不自动刷新
         document.addEventListener('visibilitychange', () => {
             if (document.visibilityState === 'visible') {
-                this.checkForUpdates();
+                // 可以在这里添加更新提示，但不自动刷新
+                console.log('页面已恢复可见状态');
             }
         });
     }

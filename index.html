@@ -135,6 +135,25 @@
                 navigator.serviceWorker.register('./js/sw.js')
                     .then(registration => {
                         console.log('Service Worker 注册成功:', registration.scope);
+                        
+                        // 检查更新
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // 显示更新提示
+                                    const notification = document.createElement('div');
+                                    notification.className = 'update-notification';
+                                    notification.innerHTML = `
+                                        <div class="update-message">
+                                            网站已更新！
+                                            <button onclick="window.location.reload()">立即刷新</button>
+                                        </div>
+                                    `;
+                                    document.body.appendChild(notification);
+                                }
+                            });
+                        });
                     })
                     .catch(error => {
                         console.error('Service Worker 注册失败:', error);
