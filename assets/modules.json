@@ -997,6 +997,18 @@
         "NeedAuth": false,
         "Title": "自动通知额外奖励临危受命出现"
     },
+    "AutoNotifyChaoticRaidBonus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "当前所在大区或订阅大区诛灭战出现限时奖励提升时, 自动发送通知信息提醒",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动通知诛灭战限时奖励提升"
+    },
     "AutoNotifyCountdown": {
         "Author": [
             "HSS"
