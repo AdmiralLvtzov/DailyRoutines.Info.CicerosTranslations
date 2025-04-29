@@ -66,6 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = 'module-card';
         
+        // 设置卡片的动画延迟索引
+        card.style.setProperty('--index', modulesList.children.length);
+        
         const title = document.createElement('h2');
         title.className = 'module-title';
         title.textContent = module.Title;

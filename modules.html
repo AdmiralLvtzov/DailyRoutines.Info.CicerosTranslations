@@ -76,6 +76,13 @@
         </div>
     </footer>
 
+    <!-- 主题切换按钮 -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换暗/亮模式主题">
+        <i class='bx bx-sun light-icon'></i>
+        <i class='bx bx-moon dark-icon'></i>
+    </button>
+
+    <!-- 返回顶部按钮 -->
     <button class="scroll-top" id="scroll-top" aria-label="返回顶部">
         <i class='bx bx-up-arrow-alt'></i>
     </button>
@@ -83,24 +90,33 @@
     <script src="js/module-config.js"></script>
     <script src="js/modules.js"></script>
     <script>
-        // 设置当前年份
+        // 初始化年份
         document.getElementById('current-year').textContent = new Date().getFullYear();
         
-        // 返回顶部按钮功能
-        const scrollTopButton = document.getElementById('scroll-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopButton.classList.add('show');
-            } else {
-                scrollTopButton.classList.remove('show');
-            }
+        // 初始化主题
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        
+        // 主题切换按钮
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
         });
         
-        scrollTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        // 返回顶部按钮
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
