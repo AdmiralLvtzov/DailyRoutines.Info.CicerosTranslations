@@ -14,12 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const SEARCH_DELAY = 300; // 300毫秒延迟
     
     // 懒加载配置
-    const INITIAL_LOAD_COUNT = 20; // 初始加载20个模块
-    const BATCH_LOAD_COUNT = 30; // 后续每批加载30个模块
+    const INITIAL_LOAD_COUNT = 30; // 增加初始加载数量到30个
+    const BATCH_LOAD_COUNT = 40; // 增加批量加载数量到40个
     let allModulesEntries = []; // 存储所有模块数据
     let renderedCount = 0; // 已渲染的模块数量
     let isFiltering = false; // 是否正在筛选
     let loadingMoreModules = false; // 是否正在加载更多模块
+    let fastScrollDetected = false; // 检测快速滚动
+    let lastScrollY = 0; // 上一次滚动位置
+    let scrollSpeed = 0; // 滚动速度
 
     // 初始化分类选项
     function initCategoryOptions() {
@@ -111,12 +114,47 @@ document.addEventListener('DOMContentLoaded', () => {
         addScrollListener();
     }
     
+    // 预先加载下一批模块（但不立即显示）
+    let preloadedBatch = null;
+    function preloadNextBatch() {
+        if (preloadedBatch !== null || renderedCount >= allModulesEntries.length) return;
+        
+        const startIndex = renderedCount;
+        const endIndex = Math.min(startIndex + BATCH_LOAD_COUNT, allModulesEntries.length);
+        const nextEntries = allModulesEntries.slice(startIndex, endIndex);
+        
+        // 预先创建下一批模块卡片，但不添加到DOM
+        preloadedBatch = document.createDocumentFragment();
+        nextEntries.forEach(([key, module]) => {
+            const moduleCard = createModuleCard(key, module);
+            preloadedBatch.appendChild(moduleCard);
+        });
+    }
+    
     // 加载更多模块
     function loadMoreModules() {
         // 如果正在加载，则不重复加载
         if (loadingMoreModules) return;
         
         loadingMoreModules = true;
+        
+        // 如果已预加载下一批，直接使用
+        if (preloadedBatch !== null) {
+            const count = preloadedBatch.children.length;
+            modulesList.appendChild(preloadedBatch);
+            renderedCount += count;
+            preloadedBatch = null;
+            loadingMoreModules = false;
+            
+            // 立即预加载下一批
+            setTimeout(preloadNextBatch, 0);
+            
+            // 检查是否需要加载更多
+            if (fastScrollDetected || shouldLoadAhead()) {
+                setTimeout(loadMoreModules, 10);
+            }
+            return;
+        }
         
         // 确定要加载的数量
         const batchCount = renderedCount === 0 ? INITIAL_LOAD_COUNT : BATCH_LOAD_COUNT;
@@ -134,34 +172,53 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingMoreIndicator.style.gridColumn = '1 / -1';
         modulesList.appendChild(loadingMoreIndicator);
         
-        // 使用setTimeout增加小延迟，确保UI可以更新
-        setTimeout(() => {
-            // 创建文档片段，提高性能
-            const fragment = document.createDocumentFragment();
-            
-            // 渲染批次模块
-            remainingEntries.forEach(([key, module]) => {
-                const moduleCard = createModuleCard(key, module);
-                fragment.appendChild(moduleCard);
-            });
-            
-            // 移除加载更多指示器
-            if (loadingMoreIndicator.parentNode) {
-                loadingMoreIndicator.remove();
-            }
-            
-            // 一次性添加到DOM
-            modulesList.appendChild(fragment);
-            
-            // 更新已渲染计数
-            renderedCount += remainingEntries.length;
-            
-            // 重置加载状态
-            loadingMoreModules = false;
-            
+        // 立即渲染，不使用延迟
+        const fragment = document.createDocumentFragment();
+        
+        // 渲染批次模块
+        remainingEntries.forEach(([key, module]) => {
+            const moduleCard = createModuleCard(key, module);
+            fragment.appendChild(moduleCard);
+        });
+        
+        // 移除加载更多指示器
+        if (loadingMoreIndicator.parentNode) {
+            loadingMoreIndicator.remove();
+        }
+        
+        // 一次性添加到DOM
+        modulesList.appendChild(fragment);
+        
+        // 更新已渲染计数
+        renderedCount += remainingEntries.length;
+        
+        // 重置加载状态
+        loadingMoreModules = false;
+        
+        // 预加载下一批
+        setTimeout(preloadNextBatch, 0);
+        
+        // 如果检测到快速滚动或需要提前加载，继续加载
+        if (fastScrollDetected || shouldLoadAhead()) {
+            setTimeout(loadMoreModules, 10);
+        } else {
             // 如果视窗高度大于内容，继续加载
             checkIfMoreContentNeeded();
-        }, 50);
+        }
+    }
+    
+    // 判断是否需要提前加载
+    function shouldLoadAhead() {
+        // 如果已加载全部内容，不需要继续加载
+        if (renderedCount >= allModulesEntries.length) return false;
+        
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const scrollPosition = window.scrollY;
+        
+        // 如果内容高度小于3个屏幕高度，或者用户已滚动超过60%，就提前加载
+        return (documentHeight < windowHeight * 3) || 
+               (scrollPosition / (documentHeight - windowHeight) > 0.6);
     }
     
     // 检查是否需要继续加载更多内容（当屏幕未填满时）
@@ -174,9 +231,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollPosition = window.scrollY;
         
         // 更激进的加载触发条件
-        // 如果内容高度不足以填满视窗+1000px，或者滚动位置已经超过一半，就加载更多
-        if ((documentHeight < windowHeight + 1000) || 
-            (scrollPosition > documentHeight / 2)) {
+        // 如果内容高度不足以填满视窗+1500px，或者滚动位置已经超过一半，就加载更多
+        if ((documentHeight < windowHeight + 1500) || 
+            (scrollPosition > documentHeight / 3)) { // 改为1/3处就开始加载
             loadMoreModules();
         }
     }
@@ -193,22 +250,34 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 处理滚动事件（使用节流，避免过于频繁触发）
     const handleScroll = throttle(function() {
+        const currentScrollY = window.scrollY;
+        
+        // 计算滚动速度
+        scrollSpeed = Math.abs(currentScrollY - lastScrollY);
+        fastScrollDetected = scrollSpeed > 100; // 如果一次滚动超过100px，认为是快速滚动
+        
+        if (fastScrollDetected) {
+            // 快速滚动时，主动加载更多内容
+            loadMoreModules();
+        }
+        
+        lastScrollY = currentScrollY;
+        
         // 如果正在筛选或已加载全部模块，不触发懒加载
         if (isFiltering || renderedCount >= allModulesEntries.length) return;
         
         // 计算滚动位置
-        const currentScrollPosition = window.scrollY;
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
         
         // 提前触发加载，优化体验 - 降低加载触发条件
-        const remainingHeight = documentHeight - (currentScrollPosition + windowHeight);
+        const remainingHeight = documentHeight - (currentScrollY + windowHeight);
         
-        // 当剩余不足1000px或滚动超过70%时加载更多
-        if (remainingHeight < 1000 || (currentScrollPosition / (documentHeight - windowHeight) > 0.7)) {
+        // 当剩余不足1200px或滚动超过60%时加载更多
+        if (remainingHeight < 1200 || (currentScrollY / (documentHeight - windowHeight) > 0.6)) {
             loadMoreModules();
         }
-    }, 100); // 100毫秒的节流时间
+    }, 50); // 降低节流时间为50毫秒，提高灵敏度
     
     // 节流函数，控制函数执行频率
     function throttle(func, limit) {
@@ -358,6 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
         allModulesEntries = filteredData;
         renderedCount = 0;
         loadingMoreModules = false; // 重置加载状态
+        preloadedBatch = null; // 重置预加载批次
         
         // 更新模块计数
         moduleCount.textContent = filteredData.length;
@@ -365,8 +435,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // 检测是否有任何筛选
         const hasFilters = searchTerm || selectedCategory || selectedPermission || selectedAuthor;
         
-        // 直接加载筛选后的模块（如果少于100个则一次性加载，否则使用懒加载）
-        if (filteredData.length <= 100) {
+        // 直接加载筛选后的模块（如果少于150个则一次性加载，否则使用懒加载）
+        if (filteredData.length <= 150) {
             filteredData.forEach(([key, module]) => {
                 const moduleCard = createModuleCard(key, module);
                 modulesList.appendChild(moduleCard);
@@ -385,7 +455,12 @@ document.addEventListener('DOMContentLoaded', () => {
         isFiltering = false;
         
         // 检查是否需要加载更多内容
-        setTimeout(checkIfMoreContentNeeded, 300);
+        setTimeout(checkIfMoreContentNeeded, 100);
+        
+        // 如果有更多内容需要加载，预加载下一批
+        if (renderedCount < filteredData.length) {
+            setTimeout(preloadNextBatch, 200);
+        }
     }
     
     // 处理搜索输入
@@ -436,10 +511,13 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', throttle(checkIfMoreContentNeeded, 200), { passive: true });
         
         // 立即执行一次检查，确保初始内容填满页面
-        setTimeout(checkIfMoreContentNeeded, 500);
+        setTimeout(checkIfMoreContentNeeded, 300);
         
-        // 每3秒检查一次是否需要加载更多内容，防止极端情况下的加载失败
-        setInterval(checkIfMoreContentNeeded, 3000);
+        // 预加载下一批内容
+        setTimeout(preloadNextBatch, 500);
+        
+        // 每2秒检查一次是否需要加载更多内容，防止极端情况下的加载失败
+        setInterval(checkIfMoreContentNeeded, 2000);
     }
 
     // 添加事件监听器
