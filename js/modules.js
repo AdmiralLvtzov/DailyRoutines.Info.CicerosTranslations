@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const authorFilter = document.getElementById('authorFilter');
     const languageSelector = document.getElementById('language-selector');
     const moduleCount = document.getElementById('moduleCount');
-    const filtersContainer = document.getElementById('filtersContainer');
     
     // 搜索延迟处理
     let searchTimeout = null;
@@ -20,12 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let allModulesEntries = []; // 存储所有模块数据
     let renderedCount = 0; // 已渲染的模块数量
     let isFiltering = false; // 是否正在筛选
-    let lastScrollPosition = 0; // 记录上次滚动位置
-    let isScrollingDown = false; // 是否正在向下滚动
     let loadingMoreModules = false; // 是否正在加载更多模块
-    
-    // 优化滚动加载触发条件
-    const SCROLL_TRIGGER_OFFSET = 800; // 提前800px触发加载
 
     // 初始化分类选项
     function initCategoryOptions() {
@@ -199,30 +193,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 处理滚动事件（使用节流，避免过于频繁触发）
     const handleScroll = throttle(function() {
-        // 处理筛选容器的显示/隐藏
-        const currentScrollPosition = window.scrollY;
-        
-        // 获取最新的筛选容器元素（防止DOM变化导致的引用失效）
-        const currentFiltersContainer = document.getElementById('filtersContainer');
-        
-        // 确定滚动方向
-        isScrollingDown = currentScrollPosition > lastScrollPosition;
-        
-        // 当向下滚动超过阈值时，强制隐藏筛选容器
-        if (currentFiltersContainer) {
-            if (currentScrollPosition > 100) { // 降低触发阈值，更容易隐藏
-                currentFiltersContainer.classList.add('filters-hidden');
-            } else {
-                currentFiltersContainer.classList.remove('filters-hidden');
-            }
-        }
-        
-        lastScrollPosition = currentScrollPosition;
-        
         // 如果正在筛选或已加载全部模块，不触发懒加载
         if (isFiltering || renderedCount >= allModulesEntries.length) return;
         
         // 计算滚动位置
+        const currentScrollPosition = window.scrollY;
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
         

@@ -136,34 +136,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    position: sticky;
-    top: 80px; /* header的高度 */
-    z-index: 10;
+    position: static;
     border-left: 4px solid var(--primary-color);
-    transition: all 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-}
-
-/* 当滚动时隐藏筛选容器 */
-.filters-hidden {
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    box-shadow: none;
-    pointer-events: none; /* 防止隐藏时仍能点击 */
     transition: all 0.3s ease;
-}
-
-/* 当用户将鼠标移到页面顶部时显示筛选容器 */
-.container:hover .filters-hidden {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-    box-shadow: 0 2px 10px var(--shadow-color);
-    pointer-events: auto; /* 恢复点击事件 */
-}
-
-.filters-container:hover {
-    box-shadow: 0 4px 15px var(--shadow-color);
 }
 
 .search-box {
