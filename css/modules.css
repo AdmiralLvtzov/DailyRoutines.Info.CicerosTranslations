@@ -140,7 +140,26 @@ body {
     top: 80px; /* header的高度 */
     z-index: 10;
     border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* 当滚动时隐藏筛选容器 */
+.filters-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: none;
+    pointer-events: none; /* 防止隐藏时仍能点击 */
     transition: all 0.3s ease;
+}
+
+/* 当用户将鼠标移到页面顶部时显示筛选容器 */
+.container:hover .filters-hidden {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    pointer-events: auto; /* 恢复点击事件 */
 }
 
 .filters-container:hover {
@@ -247,6 +266,72 @@ body {
     gap: 30px;
     flex: 1;
     padding: 20px 0;
+}
+
+/* 加载指示器样式 */
+.loading-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.loading-indicator p {
+    margin-top: 15px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(74, 144, 226, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* 加载更多指示器样式 */
+.loading-more-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.loading-more-indicator p {
+    margin-top: 10px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.spinner-small {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(74, 144, 226, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+[data-theme="dark"] .spinner {
+    border-color: rgba(74, 144, 226, 0.15);
+    border-top-color: var(--primary-color);
+}
+
+[data-theme="dark"] .loading-indicator p {
+    color: var(--text-secondary);
 }
 
 @keyframes fadeInUp {
