@@ -1,6 +1,7 @@
 const TRANSLATIONS = {
     zh: {
         siteTitle: 'Daily Routines 信息中心',
+        modulesTitle: 'Daily Routines 模块列表',
         search: {
             placeholder: '搜索文档...',
             noResults: '没有找到相关结果',
@@ -8,6 +9,7 @@ const TRANSLATIONS = {
         },
         navigation: {
             backToHome: '返回主页',
+            modulesList: '模块列表',
             tableOfContents: '文档目录'
         },
         loading: {
@@ -22,6 +24,7 @@ const TRANSLATIONS = {
     },
     en: {
         siteTitle: 'Daily Routines Info Center',
+        modulesTitle: 'Daily Routines Modules List',
         search: {
             placeholder: 'Search documents...',
             noResults: 'No results found',
@@ -29,6 +32,7 @@ const TRANSLATIONS = {
         },
         navigation: {
             backToHome: 'Back to Home',
+            modulesList: 'Modules List',
             tableOfContents: 'Table of Contents'
         },
         loading: {
@@ -43,6 +47,7 @@ const TRANSLATIONS = {
     },
     ja: {
         siteTitle: 'Daily Routines インフォメーションセンター',
+        modulesTitle: 'Daily Routines モジュールリスト',
         search: {
             placeholder: 'ドキュメントを検索...',
             noResults: '結果が見つかりません',
@@ -50,6 +55,7 @@ const TRANSLATIONS = {
         },
         navigation: {
             backToHome: 'ホームに戻る',
+            modulesList: 'モジュールリスト',
             tableOfContents: '目次'
         },
         loading: {
@@ -67,6 +73,8 @@ const TRANSLATIONS = {
 // 在浏览器中设置为全局变量
 if (typeof window !== 'undefined') {
     window.TRANSLATIONS = TRANSLATIONS;
+    // 触发翻译加载完成事件
+    window.dispatchEvent(new Event('translationsLoaded'));
 }
 
 // 在 Node.js 环境中导出

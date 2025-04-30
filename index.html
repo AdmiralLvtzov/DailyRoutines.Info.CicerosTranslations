@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,8 +41,8 @@
                 <span class="bar"></span>
             </button>
             <div class="header-buttons">
-                <a href="modules" class="header-button">
-                    <i class='bx bx-grid-alt'></i> 模块列表
+                <a href="modules" class="header-button" id="modules-list-btn">
+                    <i class='bx bx-grid-alt'></i> <span class="i18n-modules-list">模块列表</span>
                 </a>
                 <select id="language-selector" class="header-button">
                     <!-- 语言选项将由 JavaScript 动态生成 -->
@@ -195,6 +195,32 @@
                 headerButtons.classList.toggle('active');
             });
         }
+        
+        // 主页顶栏国际化
+        function updateHeaderI18n() {
+            const currentLanguage = localStorage.getItem('selectedLanguage') || 'zh';
+            if (window.TRANSLATIONS && window.TRANSLATIONS[currentLanguage]) {
+                const translations = window.TRANSLATIONS[currentLanguage];
+                // 更新模块列表按钮文本
+                document.querySelectorAll('.i18n-modules-list').forEach(el => {
+                    el.textContent = translations.navigation.modulesList;
+                });
+            }
+        }
+        
+        // 当TRANSLATIONS加载完成后更新
+        if (window.TRANSLATIONS) {
+            updateHeaderI18n();
+        } else {
+            // 监听TRANSLATIONS加载
+            window.addEventListener('translationsLoaded', updateHeaderI18n);
+        }
+        
+        // 监听语言切换
+        document.getElementById('language-selector').addEventListener('change', function(e) {
+            localStorage.setItem('selectedLanguage', e.target.value);
+            updateHeaderI18n();
+        });
     </script>
 </body>
 </html> 

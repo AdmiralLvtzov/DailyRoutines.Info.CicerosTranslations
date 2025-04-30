@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let modulesData = {};
-    let currentLanguage = 'zh-CN';
+    let currentLanguage = 'zh';
     const modulesList = document.getElementById('modulesList');
     const searchInput = document.getElementById('searchInput');
     const categoryFilter = document.getElementById('categoryFilter');
@@ -24,10 +24,81 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastScrollY = 0; // 上一次滚动位置
     let scrollSpeed = 0; // 滚动速度
 
+    // 更新所有国际化文本
+    function updateI18nTexts() {
+        // 确保翻译已加载
+        if (!window.TRANSLATIONS || !window.TRANSLATIONS[currentLanguage]) {
+            console.error('未找到翻译数据！');
+            return;
+        }
+        
+        const translations = window.TRANSLATIONS[currentLanguage];
+        
+        // 更新页面标题
+        document.title = translations.modulesTitle + ' - DailyRoutines.FAQ';
+        
+        // 更新页面上的翻译文本
+        document.querySelectorAll('.i18n-modules-title').forEach(el => {
+            el.textContent = translations.modulesTitle;
+        });
+        
+        document.querySelectorAll('.i18n-back-to-home').forEach(el => {
+            el.textContent = translations.navigation.backToHome;
+        });
+        
+        document.querySelectorAll('.i18n-modules-list').forEach(el => {
+            el.textContent = translations.navigation.modulesList;
+        });
+    }
+
+    // 初始化语言选择器
+    function initLanguageSelector() {
+        // 确保语言配置存在
+        if (!window.LANGUAGE_CONFIG) {
+            console.error('语言配置未加载！');
+            window.LANGUAGE_CONFIG = {
+                default: 'zh',
+                supported: ['zh'],
+                labels: { 'zh': '中文' }
+            };
+        }
+        
+        // 获取本地存储的语言设置或使用默认语言
+        const savedLanguage = localStorage.getItem('selectedLanguage');
+        if (savedLanguage) {
+            currentLanguage = savedLanguage;
+        } else {
+            // 获取浏览器语言
+            const browserLang = navigator.language.toLowerCase().split('-')[0];
+            // 检查浏览器语言是否在支持的语言列表中
+            currentLanguage = window.LANGUAGE_CONFIG.supported.includes(browserLang)
+                ? browserLang
+                : window.LANGUAGE_CONFIG.default;
+            // 保存初始语言设置
+            localStorage.setItem('selectedLanguage', currentLanguage);
+        }
+        
+        // 设置语言选择器选项
+        languageSelector.innerHTML = window.LANGUAGE_CONFIG.supported.map(lang => 
+            `<option value="${lang}">${window.LANGUAGE_CONFIG.labels[lang]}</option>`
+        ).join('');
+        languageSelector.value = currentLanguage;
+        
+        // 更新页面文本
+        updateI18nTexts();
+    }
+
     // 初始化分类选项
     function initCategoryOptions() {
-        categoryFilter.innerHTML = '<option value="">所有分类</option>';
-        Object.entries(ModuleConfig.categories).forEach(([value, label]) => {
+        // 确保使用当前语言的分类
+        const categoryLabels = ModuleConfig.categories[currentLanguage] || ModuleConfig.categories.zh;
+        
+        // 更新"所有分类"选项为多语言
+        const allCategoriesText = currentLanguage === 'zh' ? '所有分类' : 
+                                currentLanguage === 'en' ? 'All Categories' : 'すべてのカテゴリ';
+        
+        categoryFilter.innerHTML = `<option value="">${allCategoriesText}</option>`;
+        Object.entries(categoryLabels).forEach(([value, label]) => {
             const option = document.createElement('option');
             option.value = value;
             option.textContent = label;
@@ -42,12 +113,35 @@ document.addEventListener('DOMContentLoaded', () => {
             module.Author.forEach(author => authors.add(author));
         });
         
-        authorFilter.innerHTML = '<option value="">所有作者</option>';
-        Array.from(authors).sort().forEach(author => {
+        // 更新"所有作者"选项为多语言
+        const allAuthorsText = currentLanguage === 'zh' ? '所有作者' : 
+                             currentLanguage === 'en' ? 'All Authors' : 'すべての作者';
+        
+        authorFilter.innerHTML = `<option value="">${allAuthorsText}</option>`;
+        authors.forEach(author => {
             const option = document.createElement('option');
             option.value = author;
             option.textContent = author;
             authorFilter.appendChild(option);
+        });
+    }
+
+    // 初始化权限选项
+    function initPermissionOptions() {
+        // 获取当前语言的权限标签
+        const permissionLabels = ModuleConfig.permissionTypes[currentLanguage] || ModuleConfig.permissionTypes.zh;
+        
+        // 更新"所有权限"选项为多语言
+        const allPermissionsText = currentLanguage === 'zh' ? '所有权限' : 
+                                 currentLanguage === 'en' ? 'All Permissions' : 'すべての権限';
+        
+        permissionFilter.innerHTML = `<option value="">${allPermissionsText}</option>`;
+        
+        Object.entries(permissionLabels).forEach(([value, label]) => {
+            const option = document.createElement('option');
+            option.value = value;
+            option.textContent = label;
+            permissionFilter.appendChild(option);
         });
     }
 
@@ -59,18 +153,28 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 检测当前路径是否在modules子目录中
             const basePath = window.location.pathname.includes('/modules/') ? '../' : '';
-            const response = await fetch(`${basePath}assets/${ModuleConfig.languageFiles[language]}`);
+            const url = `${basePath}assets/${ModuleConfig.languageFiles[language]}`;
+            
+            console.log(`加载${language}语言数据，URL: ${url}`);
+            
+            const response = await fetch(url);
             const data = await response.json();
+            
+            console.log(`${language}语言数据加载成功，包含${Object.keys(data).length}个模块`);
             
             // 加载完成后隐藏加载提示
             hideLoadingIndicator();
             
+            // 更新相关选项
             initAuthorOptions(data);
+            initPermissionOptions();
+            
             return data;
         } catch (error) {
             console.error(`Error loading ${language} modules:`, error);
-            if (language !== 'zh-CN') {
-                return loadModulesData('zh-CN');
+            if (language !== 'zh') {
+                console.log(`回退到中文数据`);
+                return loadModulesData('zh');
             }
             hideLoadingIndicator();
             return {};
@@ -81,10 +185,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function showLoadingIndicator() {
         // 检查是否已存在加载指示器
         if (!document.getElementById('loadingIndicator')) {
+            // 根据当前语言选择加载文本
+            const loadingText = currentLanguage === 'zh' ? '加载模块中...' : 
+                              currentLanguage === 'en' ? 'Loading modules...' : 
+                              'モジュールをロード中...';
+            
             const loadingIndicator = document.createElement('div');
             loadingIndicator.id = 'loadingIndicator';
             loadingIndicator.className = 'loading-indicator';
-            loadingIndicator.innerHTML = '<div class="spinner"></div><p>加载模块中...</p>';
+            loadingIndicator.innerHTML = `<div class="spinner"></div><p>${loadingText}</p>`;
             modulesList.appendChild(loadingIndicator);
         }
     }
@@ -97,15 +206,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 更新模块计数文本
+    function updateModuleCountText() {
+        const filterInfoElement = document.querySelector('.filter-info');
+        const countText = currentLanguage === 'zh' ? `已找到 <span id="moduleCount">${allModulesEntries.length}</span> 个模块` :
+                         currentLanguage === 'en' ? `Found <span id="moduleCount">${allModulesEntries.length}</span> modules` :
+                         `<span id="moduleCount">${allModulesEntries.length}</span> モジュールが見つかりました`;
+        
+        filterInfoElement.innerHTML = countText;
+    }
+
     // 渲染模块列表（懒加载方式）
     function renderModules(data) {
-        // 重置模块列表
+        // 重置所有状态
+        isFiltering = false;
+        loadingMoreModules = false;
+        preloadedBatch = null;
+        fastScrollDetected = false;
+        lastScrollY = window.scrollY;
+        
+        // 完全清空模块列表
         modulesList.innerHTML = '';
+        
+        // 重置数据
         allModulesEntries = Object.entries(data);
         renderedCount = 0;
         
         // 更新模块计数
-        moduleCount.textContent = allModulesEntries.length;
+        updateModuleCountText();
+        
+        console.log(`准备渲染${allModulesEntries.length}个模块，语言：${currentLanguage}`);
         
         // 初始批量加载
         loadMoreModules();
@@ -165,10 +295,15 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
+        // 根据当前语言选择加载更多文本
+        const loadingMoreText = currentLanguage === 'zh' ? '加载更多模块...' : 
+                              currentLanguage === 'en' ? 'Loading more modules...' : 
+                              'さらにモジュールをロード中...';
+        
         // 创建加载状态指示器
         const loadingMoreIndicator = document.createElement('div');
         loadingMoreIndicator.className = 'loading-more-indicator';
-        loadingMoreIndicator.innerHTML = '<div class="spinner-small"></div><p>加载更多模块...</p>';
+        loadingMoreIndicator.innerHTML = `<div class="spinner-small"></div><p>${loadingMoreText}</p>`;
         loadingMoreIndicator.style.gridColumn = '1 / -1';
         modulesList.appendChild(loadingMoreIndicator);
         
@@ -295,6 +430,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 创建模块卡片
     function createModuleCard(key, module) {
+        // 记录日志，用于调试
+        if (renderedCount < 2) { // 只记录前几个模块，避免日志过多
+            console.log(`创建模块卡片: ${module.Title}, 当前语言: ${currentLanguage}`);
+        }
+        
         const card = document.createElement('div');
         card.className = 'module-card';
         
@@ -312,10 +452,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const meta = document.createElement('div');
         meta.className = 'module-meta';
         
+        // 获取当前语言的分类和权限类型
+        const categoryLabels = ModuleConfig.categories[currentLanguage] || ModuleConfig.categories.zh;
+        const permissionLabels = ModuleConfig.permissionTypes[currentLanguage] || ModuleConfig.permissionTypes.zh;
+        
         // 添加分类标签
         const categoryTag = document.createElement('span');
         categoryTag.className = 'module-tag';
-        categoryTag.textContent = ModuleConfig.categories[module.Category] || '未知分类';
+        categoryTag.textContent = categoryLabels[module.Category] || '未知分类';
         categoryTag.addEventListener('click', () => {
             categoryFilter.value = module.Category;
             filterModules();
@@ -325,7 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (module.CNPremium) {
             const premiumTag = document.createElement('span');
             premiumTag.className = 'module-tag premium';
-            premiumTag.textContent = ModuleConfig.permissionTypes.CNPremium;
+            premiumTag.textContent = permissionLabels.CNPremium;
             premiumTag.addEventListener('click', () => {
                 permissionFilter.value = 'CNPremium';
                 filterModules();
@@ -334,7 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (module.GlobalPremium) {
             const premiumTag = document.createElement('span');
             premiumTag.className = 'module-tag premium';
-            premiumTag.textContent = ModuleConfig.permissionTypes.GlobalPremium;
+            premiumTag.textContent = permissionLabels.GlobalPremium;
             premiumTag.addEventListener('click', () => {
                 permissionFilter.value = 'GlobalPremium';
                 filterModules();
@@ -345,7 +489,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (module.NeedAuth) {
             const authTag = document.createElement('span');
             authTag.className = 'module-tag auth';
-            authTag.textContent = ModuleConfig.permissionTypes.NeedAuth;
+            authTag.textContent = permissionLabels.NeedAuth;
             authTag.addEventListener('click', () => {
                 permissionFilter.value = 'NeedAuth';
                 filterModules();
@@ -357,7 +501,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (module.CNOnly) {
             const cnTag = document.createElement('span');
             cnTag.className = 'module-tag cn-only';
-            cnTag.textContent = '国服特供';
+            const cnOnlyText = currentLanguage === 'zh' ? '国服特供' : 
+                              currentLanguage === 'en' ? 'CN Only' : 'CN限定';
+            cnTag.textContent = cnOnlyText;
             meta.appendChild(cnTag);
         }
         
@@ -397,6 +543,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function filterModules() {
         isFiltering = true;
         
+        // 记录开始筛选
+        console.log(`开始筛选模块，当前语言: ${currentLanguage}`);
+        
         const searchTerm = searchInput.value.toLowerCase();
         const selectedCategory = categoryFilter.value;
         const selectedPermission = permissionFilter.value;
@@ -422,15 +571,24 @@ document.addEventListener('DOMContentLoaded', () => {
             return matchesSearch && matchesCategory && matchesPermission && matchesAuthor;
         });
         
-        // 更新模块显示
-        modulesList.innerHTML = '';
-        allModulesEntries = filteredData;
+        // 重置所有状态
+        loadingMoreModules = false; 
+        preloadedBatch = null;
+        fastScrollDetected = false;
+        lastScrollY = window.scrollY;
         renderedCount = 0;
-        loadingMoreModules = false; // 重置加载状态
-        preloadedBatch = null; // 重置预加载批次
+        
+        // 完全清空模块列表
+        modulesList.innerHTML = '';
+        
+        // 更新数据
+        allModulesEntries = filteredData;
+        
+        // 记录筛选结果
+        console.log(`筛选结果: ${filteredData.length}个模块`);
         
         // 更新模块计数
-        moduleCount.textContent = filteredData.length;
+        updateModuleCountText();
         
         // 检测是否有任何筛选
         const hasFilters = searchTerm || selectedCategory || selectedPermission || selectedAuthor;
@@ -489,16 +647,80 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 更新搜索框占位符
+    function updateSearchPlaceholder() {
+        const placeholderText = currentLanguage === 'zh' ? '搜索模块名称或描述...' : 
+                             currentLanguage === 'en' ? 'Search modules...' : 
+                             'モジュールを検索...';
+        searchInput.placeholder = placeholderText;
+    }
+
     // 切换语言
     async function changeLanguage(language) {
+        // 如果已经是当前语言，不重复切换
+        if (language === currentLanguage) return;
+        
+        console.log(`语言切换: ${currentLanguage} -> ${language}`);
+        
+        // 更新当前语言
         currentLanguage = language;
-        modulesData = await loadModulesData(language);
-        renderModules(modulesData);
+        localStorage.setItem('selectedLanguage', currentLanguage);
+        
+        // 显示加载提示
+        showLoadingIndicator();
+        
+        try {
+            // 更新页面上的国际化文本
+            updateI18nTexts();
+            
+            // 加载新语言的模块数据
+            modulesData = await loadModulesData(language);
+            
+            // 更新所有与语言相关的选项
+            updateSearchPlaceholder();
+            initCategoryOptions();
+            initPermissionOptions();
+            
+            // 保存当前筛选条件
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedCategory = categoryFilter.value;
+            const selectedPermission = permissionFilter.value;
+            const selectedAuthor = authorFilter.value;
+            
+            // 强制重置所有状态
+            isFiltering = false;
+            loadingMoreModules = false;
+            preloadedBatch = null;
+            fastScrollDetected = false;
+            lastScrollY = window.scrollY;
+            
+            // 完全清空模块列表
+            modulesList.innerHTML = '';
+            
+            console.log(`语言切换完成，准备渲染模块`);
+            
+            // 应用筛选条件或直接渲染所有模块
+            if (searchTerm || selectedCategory || selectedPermission || selectedAuthor) {
+                // 重新应用筛选
+                filterModules();
+            } else {
+                // 没有筛选条件时，正常渲染所有模块
+                renderModules(modulesData);
+            }
+        } catch (error) {
+            console.error('语言切换失败:', error);
+            hideLoadingIndicator();
+            // 显示错误提示
+            alert(`加载${language}语言失败，请稍后再试`);
+        }
     }
 
     // 初始化
     async function init() {
+        initLanguageSelector();
         initCategoryOptions();
+        initPermissionOptions();
+        updateSearchPlaceholder();
         
         // 显示加载中状态
         showLoadingIndicator();
