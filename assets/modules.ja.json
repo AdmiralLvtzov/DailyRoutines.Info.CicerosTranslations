@@ -1,0 +1,3104 @@
+{
+    "AdventurerPlateThroughInspect": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "キャラクター情報画面にボタンを追加し、直接アドベンチャラープレートを開けるようにします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "キャラクター情報画面からアドベンチャラープレートを表示"
+    },
+    "Alphascape3Helper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "『時空の狭間オメガ：アルファ編3』に入った後、電力投射地点が出現した際に、自動的に『オメガジャマー』を繰り返し使用する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "『時空の狭間オメガ：アルファ編3』アシスト"
+    },
+    "AutoActionAlignCamera": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "一部のスキルの詠唱方向を常に現在のカメラの向きを基準にする",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "スキルを発動する際にカメラを自動的に向ける"
+    },
+    "AutoAddChatPrefixSuffix": {
+        "Author": [
+            "那年雪落"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "通常のチャットメッセージを送信する際に、自動的に特定の接頭辞(プレフィックス)や接尾辞(サフィックス)を追加します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "チャットメッセージに自動で接頭辞や接尾辞を追加する"
+    },
+    "AutoAdventure": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "「スタート」をクリックすると、現在の時間帯や天候で完了可能なすべての探索ノートを自動的に完了します\n※ワープするので注意",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "探検手帳を自動完了する"
+    },
+    "AutoAetherialReduction": {
+        "Author": [
+            "YLCHEN"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "セレクト画面を開き、『スタート』を押すと、自動で霊砂化選別します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動で選別して霊砂化"
+    },
+    "AutoAllowMultipleGames": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲーム本体による多重起動制限（最大2インスタンスまで）を自動的に解除する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ゲームの多重起動制限を解除"
+    },
+    "AutoAntiAfk": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "一定時間毎に離席カウントをリセットし、離席状態を防ぐ",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "離席落ち防止"
+    },
+    "AutoAntiCensorship": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": true,
+        "CNPremium": false,
+        "Description": "发送消息/编辑招募描述时, 自动在屏蔽词内部加点, 或是将其转成拼音以防止屏蔽\n接收消息时, 自动阻止屏蔽词系统工作, 显示消息原文",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动反屏蔽词"
+    },
+    "AutoAntiKnockback": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "自分がノックバックや引き寄せなどの強制移動に遭遇した際、選択したロジックで自動的に対応する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "ノックバック挙動改変"
+    },
+    "AutoAttireItems": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ミラージュドレッサーを開いて「スタート」をクリックすると、ドレッサー内の「装備一式」で登録できるアイテムを自動で取り出し、「まとめて幻影化」のUIが表示されると、登録可能な装備が自動で選択され、「装備一式」で幻影化されます。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "「装備一式」化の自動処理"
+    },
+    "AutoBasketBall": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "筐体をクリック後、自動的にモンスタートスを繰り返してプレイします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "モンスタートス自動プレイ"
+    },
+    "AutoBlockMisdirectionState": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自身が方向制御制限状態に陥る効果 (回転移動、混乱など) を自動で無効化し、関連する処理ロジックを無効にする。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "方向錯乱状態の効果を自動で無効化する"
+    },
+    "AutoBlockShutdownFromLobbyError": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲームがロビーサーバーエラーに遭遇した際、自動でゲームの強制終了を防ぎ、ログイン画面に戻るようにします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ロビーエラーによるゲームの強制終了を自動で防止"
+    },
+    "AutoBlockStatus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "指定された状態効果の受信および処理をローカルゲームクライアントで自動的に遮断する。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "状態効果を無効化"
+    },
+    "AutoBlockSystemNotice": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲーム内で送信されるシステム通知を自動的にブロックする (紫通知)",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "システム通知の自動ブロック"
+    },
+    "AutoBroadcastActionHitInfo": {
+        "Author": [
+            "Xww"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ダンジョン内で指定されたスキルのダイレクトヒット・クリティカルヒットのテキストを自動的に表示し、TTSでアナウンスする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "スキルのダイレクトヒット・クリティカルヒット状況を自動的にアナウンスする"
+    },
+    "AutoCancelCast": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "敵が死んだり、ターゲットできなくなった場合、自動的に詠唱を中断します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ターゲットロスト時、詠唱中断"
+    },
+    "AutoCancelGatherAnimation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "採集時に関連するスキルのアニメーション再生を自動的にキャンセルし、採集速度を向上させる",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "採集アニメーションをキャンセル"
+    },
+    "AutoCancelNPCEmote": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "インタラクションやカットシーン再生時に、NPCの感情アクション再生およびそれに伴う待機時間をキャンセル",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "NPCの感情アクション再生をキャンセル"
+    },
+    "AutoChakraFormShift": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在のジョブがモンクの時、コンテンツ突入時、再チャレンジ、戦闘終了後に「鉄山・陰陽闘気」と「演武」が使用されます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【MNK】自動闘気と演武"
+    },
+    "AutoCheckFoodUsage": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "食事バフの使用状態を自動で確認し、残り時間が閾値以下になると指定した食事を自動で使用する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "食事バフ状態を自動で確認する"
+    },
+    "AutoCheckItemLevel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツに入ると、PTメンバー全員の装備ILが自動でチェックされ、装備ILに異常があるメンバーが強調表示されます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "装備ILの自動チェック"
+    },
+    "AutoClaimItemIgnoringMismatchJobAndLevel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "アイテム入手する際、ジョブやレベルの不一致によって出る確認ウィンドウを自動的にYesします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "アイテム入手時ジョブ不一致確認自動Yes"
+    },
+    "AutoClaimPVPRewards": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "クリスタルコンフリクトのUIを開き、「スタート」をクリックすると、未受領のすべてのシリーズ戦報酬を全て受け取る。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "トロフィークリスタル受け取り自動化"
+    },
+    "AutoCollectableExchange": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "収集品の取引UIを開き、「スタート」をクリックすると、そのカテゴリにあるすべての利用可能な収集品を自動的に取引する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "収集品納品自動化"
+    },
+    "AutoCommenceDuty": {
+        "Author": [
+            "Cindy-Master"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "シャキったら自動的に「はい」をクリックします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動シャキ確認"
+    },
+    "AutoConfirmMateriaWork": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "マテリアの嵌め込み/回収/委託を自動で確認し、マテリアの嵌め込み時の前後のモーション制限を解除する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "マテリアの嵌め込みと回収を自動で確認する"
+    },
+    "AutoConfirmPortraitUpdate": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ポートレートプレビューが表示されたら、自動的に現在の装備状態で更新する。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ポートレート更新の自動確認"
+    },
+    "AutoConstantlyClick": {
+        "Author": [
+            "AtmoOmen",
+            "KirisameVanilla"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "任意のホットバーのボタンを長押しすると、自動的にそのボタンを高速で繰り返しクリックします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ターボクリック機能"
+    },
+    "AutoConstantlyInspect": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "埋もれた財宝鑑定結果UIが表示された時、自動的に「はい」ボタンを押し連続鑑定する。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "連続鑑定自動化"
+    },
+    "AutoConvertMapLink": {
+        "Author": [
+            "KirisameVanilla"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "地図座標を含むテキストメッセージを送信する際、クリック可能な地図座標リンクに変換します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "座標情報をマップリンクに変換"
+    },
+    "AutoCountBlacklisted": {
+        "Author": [
+            "ToxicStar"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "サーバー情報バーの形式で、設定範囲内のブラックリストに登録されたプレイヤーの数を表示する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動的に周辺のブラックリストに登録されたプレイヤーの数を表示する"
+    },
+    "AutoCountPlayers": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "サーバー情報バーの形式で現在周囲のプレイヤーの数を表示し、直接検索できる浮動ウィンドウを提供する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "周囲のプレイヤーの数を自動で表示する"
+    },
+    "AutoCutsceneSkip": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "スキップ可能な全てのムービーを自動的にスキップし、コンテンツルーレット：メインクエスト、オーシャンフィッシング、クリスタルコンフリクトなどを含むスキップ制限を解除する。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "カットシーンスキップ"
+    },
+    "AutoDance": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "踊り子でスタンダード/テクニカルステップを使用すると、自動的に対応するステップ踏みます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【DNC】自動ステップ"
+    },
+    "AutoDeleteLetters": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "モグレターの画面を開き、指定したカテゴリに移動し、「スタート」をクリックすると、一括削除します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "モグレターの一括削除"
+    },
+    "AutoDesynthesizeItems": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "分解画面を開き、「スタート」をクリックすると、自動的にすべてのアイテムを分解します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動アイテム分解"
+    },
+    "AutoDiscard": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "アイテムセットに登録されたアイテムを自動的に廃棄/売却する。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "アイテムの自動廃棄/売却"
+    },
+    "AutoDismount": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "マウント騎乗時にスキルを使うとすると、自動的にマウントから降り、スキルを使用します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動マウント解除"
+    },
+    "AutoDisplayDutyReadyLeftTime": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツ突入の準備確認が出たときに、応答残り時間を表示します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "コンテンツ突入準備の残り時間を表示"
+    },
+    "AutoDisplayMitigationInfo": {
+        "Author": [
+            "HaKu"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自身が被ダメ軽減効果を持つ場合、または対象が被ダメ減少効果を持つ場合、ダメージ軽減値を計算し、サーバー情報欄に効果一覧として表示する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "軽減率をリアルタイム表示"
+    },
+    "AutoDisplayRetainerPlayerName": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "マーケットボードの検索結果画面を開いた際、すでにデータが記録されているリテイナー名を自動でハイライトし、その所属プレイヤー名を表示する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "リテイナーの所属プレイヤー名を表示"
+    },
+    "AutoDrawMotifs": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在のジョブがピクトマンサーの時、コンテンツ突入時、リスタート時、戦闘終了後に現在使用可能なピクトスキルを自動的に使用する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【PCT】自動でピクト〇〇"
+    },
+    "AutoEliminateFishAwareness": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在の釣り場で警戒状態が発生した場合、自動的にエリアを切り替えて警戒を解除し、同じ場所で再びキャストする",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動的に釣り場の警戒を解除する"
+    },
+    "AutoEnableAttack": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "戦闘に入ると、全てのジョブにて自動でオートアタックを開始する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "オートアタックを自動で開始する"
+    },
+    "AutoExpertDelivery": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "稀少品調達を開き、「スタート」をクリックすると、自動的に装備を軍票に変えます",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動稀少品調達"
+    },
+    "AutoFaceCameraDirection": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲームキャラクターの向きが常に現在のカメラの向きと一致するようにする",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動的にカメラの方向を向く"
+    },
+    "AutoFateStart": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "近くに対話が必要なF.A.T.E.が存在する場合、自動的にその任務を開始する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動的にF.A.T.E.を開始する"
+    },
+    "AutoFateSync": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "F.A.T.E.範囲に入ると自動的にレベルシンクを行う",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "F.A.T.E.自動レベルシンク"
+    },
+    "AutoFCWSDeliver": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "素材納品画面を開き、「スタート」ボタンをクリックすると、現在所持しているすべての納品可能な素材が自動的に納品されます。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "カンパニークラフト納品自動化"
+    },
+    "AutoGardensWork": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "栽培関連の作業を自動か半自動的に処理します (種蒔き、収穫、肥料やり、手入れなど)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動栽培"
+    },
+    "AutoGathererRoleActions": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ギャザラージョブにチェンジした際、他のギャザラーの機能スキルが自動的に使用される。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ギャザラージョブの機能スキルの自動使用"
+    },
+    "AutoGysahlGreens": {
+        "Author": [
+            "Veever"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "フィールドエリアでチョコボ未召喚、または残り時間5分未満の場合、ギサールの野菜を自動使用",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ギサールの野菜を自動使用"
+    },
+    "AutoHideNeedlessPopups": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "「達成間近のアチーブメント」「LS通知」「インフォメーメーション」「おすすめクエスト」「ビギナーズガイド」などの不要なポップアップを自動的に非表示にします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "不要なポップアップウィンドウを自動的に隠す"
+    },
+    "AutoHighlightFlagMarker": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "マップマーカーを配置する際、自動的にウェイマーカーを使用して光の塔を形成し、ゲーム内でマーカーの目的地をハイライトします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "地図ポイントの自動ハイライト"
+    },
+    "AutoHolmgangSelf": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "戦士の『ホルムギャング』を使用する際、自身を強制的にスキルの対象とする。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【WAR】ホルムギャングのタゲ最適化"
+    },
+    "AutoHummer": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "筐体をクリック後、自動的にクリスタルタワーストライカーを繰り返してプレイします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "クリスタルタワーストライカー自動プレイ"
+    },
+    "AutoImmunizeForceMove": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "自分が歩行系の強制移動を受けた際、自動的にその効果を無効化する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "強制移動を無効化"
+    },
+    "AutoImmunizeInputDisable": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "入力無効状態や効果が付与された場合、自動的にそれを無効化する\n※【注意】あらゆる移動制限を無効化する可能性あり",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "入力無効状態の無効化"
+    },
+    "AutoImmunizeJumpRestriction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "自身がデバフやフィールド効果によってジャンプ禁止の制限を受けた際、自動的に無効化し制限を解除する。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "ジャンプ禁止の制限を無効化"
+    },
+    "AutoImmunizeThinIce": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "自身がデバフやフィールド効果によって氷上を滑るような移動状態になった際、自動的に無効化しその効果を解除する。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "氷上移動状態を無効化"
+    },
+    "AutoInDutySelectYes": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツ内でインタラクト時、自動的に「はい」を選択します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "コンテンツ交感自動確認"
+    },
+    "AutoJoinExitDuty": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "/pdr joinexitduty コマンドを追加し、使用後に1回だけ自動でコンテンツに入り、退出する。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "1回だけ自動でコンテンツに入り、退出する"
+    },
+    "AutoJumboCactpot": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ジャンボ・くじテンダーのUIを開くと、今週のすべてのジャンボ・くじテンダーを自動で購入します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動でジャンボ・くじテンダーを実行する"
+    },
+    "AutoLeaveDuty": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ブラックリストで選択したコンテンツでは自動退出しない。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "コンテンツから自動退出する"
+    },
+    "AutoLeveQuests": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "受注/報告NPCの設定を完了させ、「スタート」をクリックすると、指定したのクラフターリーヴをリーヴ権がなくなるまで納品します。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "クラフターリーヴ自動納品"
+    },
+    "AutoLogin": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "タイトル画面進入時、事前に設定された優先順位に従って最初のログイン可能なキャラクターに自動的にログインする。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動ログイン"
+    },
+    "AutoLucidDreaming": {
+        "Author": [
+            "qingsiweisan"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在のジョブがルーシッドドリームを使用可能であり、かつ黒魔道士でない場合、MPが指定した閾値を下回るとルーシッドドリームを自動で使用する。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動ルーシッドドリーム"
+    },
+    "AutoManageInterruptAction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在のターゲットが中断可能なスキルを詠唱中でない場合、詠唱中断系のスキル(インタージェクト、ヘッドグレイズなど)の使用を禁止する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "詠唱中断スキルの使用制限"
+    },
+    "AutoMarkAetherCurrents": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "マップ上にある、全ての風脈の泉の位置を自動的にマーキングして、風脈の画面をオリジナル化にし、風脈の表示をカスタマイズしたり、指定された風脈へのワープまたはナビゲーションができるようになります。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "風脈の泉自動マーキング"
+    },
+    "AutoMarksFinder": {
+        "Author": [
+            "AtmoOmen",
+            "KirisameVanilla"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "設定が完了した後、対応するエリア内のリスキーモブ情報を自動でスキャンし、リストデータとして整理する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動リスキーモブスキャナー"
+    },
+    "AutoMaterialize": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "マテリア精製の画面を開いて、「スタート」をクリックすると、自動的に選択したカテゴリー内の全ての装備のマテリアを精製します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動マテリア精製"
+    },
+    "AutoMateriaRetrive": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "装備からマテリアを回収する場合、その装備品に埋め込まれたマテリアはすべて自動的に回収されます",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "マテリア回収自動化"
+    },
+    "AutoMateriaTransmutation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "マテリア合成画面を開き、「スタート」をクリックすると、自動でマテリアを選択して合成する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動マテリア合成"
+    },
+    "AutoMiniCactpot": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ミニ・くじテンダーの画面に入ると、自動的にその日のすべてのミニ・くじテンダーを購入します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動ミニ・くじテンダー"
+    },
+    "AutoMJIGather": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "「スタート」をクリックすると、設定した無人島素材を自動的にループ採集します。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "無人島自動採集"
+    },
+    "AutoMJIWorkshopImport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": true,
+        "CNPremium": false,
+        "Description": "允许从剪贴板导入外部无人岛生产计划, 并一键自动安排 (仅支持国服作业集格式)",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动无人岛工房生产计划"
+    },
+    "AutoMount": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "指定された条件を満たした場合、自動的にマウントに乗ります",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "マウント自動騎乗"
+    },
+    "AutoMoveGearsNotInSet": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自動的にアーマリーチェストから有効なギアセットにも含まれていない装備をすべて取り出す",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ギアセットに含まれていない装備を自動的に取り出す"
+    },
+    "AutoMovePetCenter": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "カーバンクル/エオスを召喚したらフィールドの中央へ自動的に移動させます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "召喚したカーバンクル/エオスをフィールド中央へ配置"
+    },
+    "AutoMovePetPosition": {
+        "Author": [
+            "Wotou"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "8人用ダンジョンに入場した後、フィールド上に自分のカーバンクル/エオスが存在する場合、設定されたタイムラインに従って自動的に指定位置へ移動させる",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【SMN/SCH/ACN】カーバンクル/エオスの位置を自動的に移動する"
+    },
+    "AutoNotifyBonusFate": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "バージョン 4.0 以上のオープンフィールドに入ると、追加報酬付きF.A.T.E.が発生した際に自動で通知を送信します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "追加報酬付きF.A.T.E.の自動通知"
+    },
+    "AutoNotifyChaoticRaidBonus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在の所属データセンターまたは購読中のデータセンターで討滅戦の期間限定報酬アップが発生した際、自動で通知メッセージを送信してお知らせします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "討滅戦の期間限定報酬アップを自動通知"
+    },
+    "AutoNotifyCountdown": {
+        "Author": [
+            "HSS"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "カウントダウン開始時に、自動的に通知を送信します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "カウントダウン通知"
+    },
+    "AutoNotifyCutSceneEnd": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツ中、PTメンバーが５秒以上のカットシーン見た時、メンバー全員が見終わるとWindows通知を送信します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "カットシーン終了通知"
+    },
+    "AutoNotifyDutyConfirm": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "シャキった時、Windows通知で知らせます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "シャキ通知"
+    },
+    "AutoNotifyDutyName": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ID突入時、ダンジョン名や装備IL条件などの情報を、自動で通知メッセージとして送信します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": " ID情報の通知"
+    },
+    "AutoNotifyDutyStart": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツ内、コンテンツスタート時に自動的に通知を送信します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "コンテンツ開始通知"
+    },
+    "AutoNotifyLeveUpdate": {
+        "Author": [
+            "HSS"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "リーヴ受注権追加時、現在のリーヴ受注権をチェックし、100になるタイミングの通知を送信します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動リーヴ受注権リセット通知"
+    },
+    "AutoNotifyMessages": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "選択された種類のメッセージを受信または新着メッセージに指定されたキーワードが含まれてる場合、自動的に通知を送信します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "新着メッセージ通知"
+    },
+    "AutoNotifyReadyCheck": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "レディチェックを受信した際、自動的に通知情報を送信してリマインダーを表示する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "レディチェック通知"
+    },
+    "AutoNotifyRecruitmentEnd": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "パーティー募集が終了した時、自動的に通知を送信します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "PT募集終了通知"
+    },
+    "AutoNotifySPPlayers": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "指定したプレイヤーが現れた際、自動で通知メッセージを送信し、カスタムのテキストコマンドを実行します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "指定したプレイヤーが現れた際に通知する"
+    },
+    "AutoNoviceNetwork": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "「スタート」をクリックすると、ビギナーチャンネルに参加します",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "ビギナーチャンネル自動加入"
+    },
+    "AutoNumericInputMax": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "すべての数字入力フィールドを常に最大値に設定する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動で数字入力フィールドを最大値に設定する"
+    },
+    "AutoOpenMapLinks": {
+        "Author": [
+            "KirisameVanilla"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "指定されたプレイヤーが送信するか、指定されたチャットタイプで地図リンクが送信された際に、自動的にそれを開く",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "地図リンクを自動で開く"
+    },
+    "AutoOpenTreasures": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "IDに突入後、自動で周囲の開けられる宝箱を開ける",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "宝箱を自動で開ける"
+    },
+    "AutoPeloton": {
+        "Author": [
+            "yamiYori"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在がレンジ職の場合、移動中に自動的にプロトンを使用する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動プロトン"
+    },
+    "AutoPetFollow": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "戦闘終了時、フィールド上に自分のカーバンクル/エオスが存在する場合、自動で追従命令を送る",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【SMN/SCH/ACN】カーバンクル/エオスを自動追従"
+    },
+    "AutoPlayerCommend": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツ完了時、自動的にパーティーメンバーにMIP",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動MIP"
+    },
+    "AutoPreserveCollectable": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "収集アイテムをコレクションに追加するか確認する画面が表示された際、自動的に確認ボタンをクリックする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "収集品を自動で確認する"
+    },
+    "AutoPreventDuplicateStatus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "特定のスキルを使用する際に、バフ・デバフが存在してるかをチェック、軽減やシナジー被りを防ぎます",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "バフ被り防止"
+    },
+    "AutoPunchingMachine": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "筐体をクリック後、自動的にカフ・ア・カーを繰り返してプレイします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "カフ・ア・カー自動プレイ"
+    },
+    "AutoQTE": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツ中に、全てのQTE(Active Time Maneuver)を自動で完成します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動QTE"
+    },
+    "AutoQuestAccept": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "クエスト受注画面で、自動的に確認ボタンをクリックする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "クエスト自動受注"
+    },
+    "AutoQuestComplete": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "クエスト結果画面で、自動的に完了ボタンをクリックする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "クエスト自動報告"
+    },
+    "AutoRaise": {
+        "Author": [
+            "qingsiweisan"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "現在戦闘中、かつ自身が蘇生スキルを持っている場合、味方が戦闘不能状態になったことを検知すると、自動的に対応する蘇生スキルを使用する。",
+        "GlobalPremium": true,
+        "NeedAuth": false,
+        "Title": "オートレイズ"
+    },
+    "AutoRecommendFauxHollows": {
+        "Author": [
+            "Veever"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ソーチョー幻想盤の画面を開いた後、現在の最適解をハイライトする\n( 青 → 双剣 / ピンク → トレジャー＆ギフトボックス / 金 → ソーチョー)",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ソーチョーの幻想盤の最適解をハイライト"
+    },
+    "AutoRecordSubTimeLeft": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 1,
+        "CNOnly": true,
+        "CNPremium": false,
+        "Description": "登录时, 自动记录保存当前账号剩余的游戏时间, 并显示在服务器信息栏",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动记录剩余游戏时间"
+    },
+    "AutoRedirectDashActions": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "一部の移動スキルを使用する際、目的地を自動的に現在のマウスカーソルの位置にリダイレクトする",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "移動スキルの移動方向を変更する"
+    },
+    "AutoRefocus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツ中、見失ったフォーカスターゲットが再び出現すると、自動的にリフォーカスします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動リフォーカス"
+    },
+    "AutoRefreshMarketSearchResult": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "マケボの検索結果が \"少し時間をおいてから確認してください\" となったとき、自動的に再検索します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "マケボ検索結果自動更新"
+    },
+    "AutoRefreshPartyFinder": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "PT募集を開くと、一定間隔で募集リストを更新します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "PT募集リスト自動更新"
+    },
+    "AutoRefuseTrade": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "取引リクエストを受け取った際に自動的にキャンセルし、同時に通知メッセージを送信して、追加のカスタムテキストコマンドを実行する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "取引を自動的にキャンセル"
+    },
+    "AutoRemoveAnimationLockPunishment": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "すべてのスキル使用後に付与される約100msのアニメーションロックを自動で解除し、サーバーから送信される強制アニメーションロックのデータパケットを自動でブロックすることで、各種スキルの使用やウェービングのスムーズさを向上させる。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "スキルのアニメーションロックを自動で解除"
+    },
+    "AutoRemoveArmoireItemsFromDresser": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ミラージュドレッサーを開き、「スタート」をクリックすると、ドレッサーから愛蔵品キャビネットに収納できるアイテムを自動的に取り出します。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "愛蔵品キャビネット収納可能装備自動取り出し"
+    },
+    "AutoRemoveStatusSpeedPenalty": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "自身の移動速度が低下するデバフを受けた際、自動的にその移動速度低下の効果を無効化する。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "デバフによる移動速度低下を無効化"
+    },
+    "AutoRemoveWalkableCastingActionSpeedPenalty": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "詠唱中に歩行移動が可能なスキルを発動する際、自動で移動速度低下のペナルティを解除します。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "歩行詠唱スキルの移動速度低下ペナルティを解除"
+    },
+    "AutoRepair": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在装備中の装備耐久度を自動で検出し、設定した閾値を下回った時に自動修理を行う。修理時の前後モーション制限を解除します。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動修理"
+    },
+    "AutoRepeatChatMessage": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "チャットチャンネル内の各メッセージの後に   ボタンを追加し、そのメッセージを素早く繰り返すために使用する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "チャット情報を自動で繰り返す"
+    },
+    "AutoReplaceActionLowLevel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "レベルシンクによって一部の高レベルスキルが使用できなくなった場合、自動的にそれらを対応する低レベルスキルに置き換える",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動的に低レベルスキルへ置き換え"
+    },
+    "AutoReplaceLocationAction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツに入ると、GTアクションを使用する際、自動的にその設置位置がフィールドの中央にリダイレクトされる。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "GTアクションの発動位置をリダイレクトする"
+    },
+    "AutoReplaceLowBlowWithInterject": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在のターゲットが中断可能なスキルをキャストしていて、インタージェクトが使用可能な場合は、ホットバーのロウブロウをインタージェクトに置き換える",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【タンク】詠唱中断スキルへの置き換え"
+    },
+    "AutoRequestFriendsOnlineStatus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "友達リストを開いたときに、すべての友達のオンライン状態を自動的にリクエストする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動的に友達のオンライン状態をリクエストする"
+    },
+    "AutoRequestItemSubmit": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "アイテムを納品する際、アイテム自動選択し納品を終わらせます",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動納品"
+    },
+    "AutoRequestNecessity": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ログイン時に、ミラプリ、肖像、コレクションキャビネット、かばん、実績などを含む大量のデータを自動でリクエストし、各種インターフェースの表示時の読み込み時間を短縮する。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "必要なデータを自動でリクエストする"
+    },
+    "AutoRestoreFurniture": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "家具インターフェースを開き、「スタート」をクリックすると、自動的に倉庫内のすべての家具をかばんに取り出し、配置済みの家具を倉庫に収納する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "家具を自動的に回収する"
+    },
+    "AutoRetainerWork": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "リテイナーに関連する作業を自動または半自動で完了します。これには、価格変更による販売、ベンチャーの回収、ギルの均等分配・回収、登録都市の変更などが含まれます",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "リテイナーベンチャー自動化"
+    },
+    "AutoRetarget": {
+        "Author": [
+            "KirisameVanilla"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在、プレイヤーがターゲットを選択していない場合、自動で対象オブジェクトを選択するよう試みます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ターゲットを自動で選択する"
+    },
+    "AutoReuseEmote": {
+        "Author": [
+            "Xww"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "/pdr remote <エモート名/コマンド> (<間隔(ms)>) 指定した間隔 (デフォルトは2000ms) で対応するエモートを繰り返し使用する を追加",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "エモートの自動再使用"
+    },
+    "AutoSellCardsConfirm": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "カード回収UI表示後、自動的に「はい」を押します。\n「スタート」をクリックすると、自動的に所持品にあるすべての登録済みカードを回収します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "登録済カード自動回収"
+    },
+    "AutoSendMoney": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "指定された相手と指定されたギルを自動的に取引する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動ギル取引"
+    },
+    "AutoShopPurchase": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "「スタート」をクリックすると、指定されたショップリストのアイテムを自動で繰り返し購入する。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "ショップの自動繰り返し購入"
+    },
+    "AutoShowDutyGuide": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツに突入すると、自動的にオーバーレイで『新大陸見聞録』のダンジョン攻略が表示される",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動でコンテンツ攻略を表示する［CNのみ］"
+    },
+    "AutoSkipBuddyFeedScene": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "厩舎に預けた専用チョコボに餌を与える際、アニメーションを自動でスキップし、即座に給餌を完了させます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "チョコボの餌やりアニメーションをスキップ"
+    },
+    "AutoSkipLogo": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲーム開始時のロゴ画面を自動でスキップし、クライアントが直接ログイン画面に進むようにする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ロゴ画面を自動でスキップする"
+    },
+    "AutoSnipeQuest": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲームがタスクの監視を開始しようとしたとき、自動的にそれをブロックし、完了済みとしてマークする",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "観察クエストを自動的に完了する"
+    },
+    "AutoSortItems": {
+        "Author": [
+            "那年雪落"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "エリアを切り替える際に自動で予め設定したルールに従ってかばんとアーマリーチェストを整理する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "アイテムを自動整理"
+    },
+    "AutoSoulsow": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在のジョブがリーパーの時、コンテンツ突入時、リスタート時、戦闘終了後にソウルソウを自動的に使用する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【RPR】自動ソウルソウ"
+    },
+    "AutoSpeedMultiplier": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "/pdrspeed <移動速度倍率> コマンドを追加し、プレイヤーの移動速度倍率を設定します",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "移動速度倍率設定機能"
+    },
+    "AutoSplitStacks": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "アイテムを右クリック・プリセットの形式で指定数量に素早く分割できるように許可する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "アイテムを自動で分割する"
+    },
+    "AutoStoreToCabinet": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "愛蔵品キャビネットのインターフェースを開き、「スタート」をクリックすると、すべての保存可能な装備品が自動的に愛蔵品キャビネットに収納されます",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自動的に愛蔵品キャビネットに収納されます"
+    },
+    "AutoSubmarineCollect": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ボイジャーリストを開き、「スタート」をクリックすると、自動的に潜水艦を回収し再出港させます",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "潜水艦自動回収"
+    },
+    "AutoSummonPet": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在のジョブが、召喚師/学者/巴術士の場合、コンテンツに進入・リスタート時に自動的にカーバンクル/エオスを召喚します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【SMN/SCH/ACN】カーバンクル/エオスを自動召喚"
+    },
+    "AutoTalkSkip": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "NPCとの会話が表示された時、自動的にスキップします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "NPC会話自動スキップ"
+    },
+    "AutoTankStance": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在のロールがタンクの場合、コンテンツに進入時に自動的にスタンスを入れる。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【タンク】自動スタンス"
+    },
+    "AutoTenChiJin": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "忍術スキルをクリックすると、自動で対応する順序で結印スキルを使用し、結印を完了する。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【NIN】自動印結び"
+    },
+    "AutoThrottleTenChiJin": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "忍者の印を結ぶスキルを使用する際、各結印スキルは今回の結印期間中に一度だけ押せるようにする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【NIN】印スキル中に他スキルを制限"
+    },
+    "AutoUfoCatcher": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "筐体をクリック後、自動的にモーグリキャッチャーを繰り返してプレイします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "モーグリキャッチャー自動プレイ"
+    },
+    "AutoUnlockAllContents": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "見かけ上、すべてのコンテンツを解放済みとしてマークし、PT募集やコンテンツファインダーで直接コンテンツに関連する情報を確認できるようにする［未開放コンテンツへの参加申請はできません］",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "全コンテンツ解放状態にする"
+    },
+    "AutoUnlockAllOrchestrionsListen": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "オーケストリオン内のすべての楽譜の試聴を解放します (すべての楽譜が取得済みとしてマーカーされます)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "オーケストリオンの試聴を全開放"
+    },
+    "AutoUnlockExpertDelivery": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "いずれかのグランドカンパニーに参加後に、階級要件を無視し、希少品調達機能をアンロックする",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "希少品調達をアンロックする"
+    },
+    "AutoUseCrafterGathererManual": {
+        "Author": [
+            "Shiyuvi",
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "クラフター/ギャザラーで、レベルが最大でなく、有効なサバイバルマニュアルまたはエンジニアマニュアルを所持し、経験値ボーナスがない場合、自動で使用する。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "クラフター/ギャザラー用マニュアル自動使用"
+    },
+    "AutoUseEarthsReply": {
+        "Author": [
+            "ToxicStar"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "PVPエリア内でスキル「金剛の極意」を使用した後、その効果時間が終了しそうになった際に自動でスキル「金剛転輪」を使用し、効果の失効を防ぐ。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【MNK】金剛転輪を自動使用"
+    },
+    "AutoUseEventItem": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "イベントアイテムを使用する必要があるオブジェクトとインタラクションし、イベントアイテムバッグを開いた時、自動的に対応するイベントアイテムを使用する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動的にイベントアイテムを使用する"
+    },
+    "AutoUseItemStacks": {
+        "Author": [
+            "Cindy-Master"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ターゲットのスタックアイテムが使用可能な場合、その右クリックメニューに項目を追加し、アイテムを一括で使用できるようにする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "スタックアイテムを自動的に使用"
+    },
+    "AutoVerEasyQuestBattle": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "シングルプレイのクエストバトルに入ると、自動的に難易度を「VeryEasy」に変更する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "クエストバトル「VeryEasy」自動選択"
+    },
+    "AutoWoof": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在の騎乗マウントが大柴犬の場合、マウントスキル『吠える』を継続的に使用する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "大柴犬の『吠える』を自動化する"
+    },
+    "BaitSwitchCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "/pdr bait <アイテムID / アイテム名 / アイテム名のピンイン> コマンドを追加し、コマンドで釣り餌を切り替えられるようにする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "餌切り替えコマンド"
+    },
+    "BanEscToCancelCast": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "詠唱の時にEscキーを使用しても現在の詠唱が中断されなくなります",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ESCキーでの詠唱中断を無効にする"
+    },
+    "BetterBlueSetLoad": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "青魔道書UI内のアクティブセットの読み込みを最適化し、エーテルコピーなどの状態を解除せずにスキルセットを直接切り替えられる",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【BLU】青魔法アクティブセットの読み込み改善"
+    },
+    "BetterCommandInput": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コマンド入力時に、大小文字や全角半角の形式が正しくないコマンドを自動的に正しい形式に変換する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "コマンド入力の改善"
+    },
+    "BetterFateProgressUI": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "モジュールインターフェースをゲームの標準インターフェースの代わりに使用し、開く・切り替え時にロード不要、リアルタイムデータ更新をサポートし、右クリックでクイック転送もサポートする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "『F.A.T.E.達成度』のUI改善"
+    },
+    "BetterFollow": {
+        "Author": [
+            "HSS"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲームの自動追尾のターゲット制限を解除し、自動的にターゲットをロックして再追尾できるようにします",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自動追尾の改善"
+    },
+    "BetterPartyFinderSort": {
+        "Author": [
+            "decorwdyun"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "PT募集リストの昇順/降順並び替え機能を、各募集の残り時間に基づいて正確にソートするようにします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "PT募集リストの並び替えを最適化"
+    },
+    "BetterStatusTimeDisplay": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "選択したフォーマットで長時間ステータス効果の具体的な残り時間を表示します",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ステータス効果時間表示の改善"
+    },
+    "BetterTeleport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲームの標準テレポ画面をモジュール式インターフェースに置き換え、効率的な検索機能や目的地プレビューを提供します。また、都市内の任意のエーテライトへ直接テレポートすることも可能です。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "テレポUI最適化"
+    },
+    "BetterWaitCommand": {
+        "Author": [
+            "Cindy-Master"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "テキストコマンドで「wait」を有効にすると、ネイティブの最大時間制限と時間精度の制限が解除されます",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "「wait」コマンドの改善"
+    },
+    "BiggerHDWindowText": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "IMEウィンドウのズーム倍率をカスタマイズし、一部のウィンドウのテキストをより見やすくします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "IMEウィンドウ改善"
+    },
+    "BlockInputWhenFishing": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "釣り中の間、ほとんどの無関係なキー入力を禁止して、釣りの進行を意図せず中断しないようにする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "釣り中の間、キー入力を禁止する"
+    },
+    "BrayfloxsLongstopHelper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "IDに突入後、自動で「ゴブリン・パスファインダー」と会話し、「避難地の主門の鍵」を入手します。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "『奪還支援 ブレイフロクスの野営地』アシスト"
+    },
+    "ChineseNumericalNotation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲーム内の数字を中国の慣習に従い、「万」「億」を基本単位として表示し、残りの数字の桁区切りを千単位から万単位に変更します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "中国風の数字表示モード"
+    },
+    "ClipboardMultiLineToOneLine": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲーム内のテキストを貼り付ける際、複数行のテキストを1行に変換し、編集・送信しやすくする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "複数行を強制的に単一行に変換して貼り付ける"
+    },
+    "ContentFinderCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "/pdrduty コマンドを追加し、指定されたIDコンテンツまたはルーレットコンテンツに迅速に参加する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "コンテンツ検索ツールコマンド"
+    },
+    "CrossDCPartyFinder": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": true,
+        "CNPremium": false,
+        "Description": "允许在游戏原生的 队员招募 界面内选择并查看由众包网站提供的其他大区的招募信息",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "跨大区队员招募"
+    },
+    "CustomActionQueueTime": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "各スキル毎に先行入力できる時間を調整する。（先行入力できないスキルもできるようになる）",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "スキル毎の先行入力時間調整"
+    },
+    "CustomizeGameObject": {
+        "Author": [
+            "HSS"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "各オブジェクトに対して、拡大/縮小の設定をカスタマイズする。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "ゲーム内オブジェクトのスケーリング調整"
+    },
+    "CustomizeInterfaceText": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "設定に従ってゲーム内のすべてのテキストを置換・カスタマイズします。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "UIテキストのカスタム置換"
+    },
+    "CustomizeSightDistance": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "カメラの最大ズーム倍率をカスタマイズします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ズーム距離カスタマイズ"
+    },
+    "DisableGroundActionAutoFace": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "GTアクション(アサイラム、アーサリースターなど)を使用する際、現在のキャラ向きのまま使用する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "GTアクションによるキャラ向きの変更させない"
+    },
+    "DisplayTargetHP": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ターゲットとフォーカスターゲットは、選択されたフォーマットに従って、対応するターゲットのHPが表示されます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ターゲットのHPを表示"
+    },
+    "DisregardFollowQuest": {
+        "Author": [
+            "Errer"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "追跡タスクにおいて、追跡対象のキャラクターに対する隠れる判定を無視する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "追跡タスクの判定を無視する"
+    },
+    "ExpandActionRange": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "すべてのスキル射程距離を指定された距離分延長する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "スキル射程距離の延長"
+    },
+    "ExpandItemMenuSearch": {
+        "Author": [
+            "HSS"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "アイテムの右クリックメニューにいくつの機能を追加",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "アイテムの右クリックメニューを拡張"
+    },
+    "ExpandMacroTargetParameters": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲーム標準のテキストコマンドで使用できるターゲット指定パラメータを拡張し、より多く、かつ複雑なターゲットの条件指定に対応できるようにします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "マクロのターゲットパラメータ拡張"
+    },
+    "ExpandPlayerMenuSearch": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "プレイヤーの右クリックメニューにいくつの機能を追加",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "プレイヤーの右クリックメニューを拡張"
+    },
+    "ExpandTargetRadius": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ターゲットサークルの半径を元の範囲から指定された範囲だけ拡大する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "ターゲットサークルサイズ変更"
+    },
+    "FastBLUSpellbookSearchBar": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "青魔道書のUI左上に新しいクイック検索用のオーバレイを追加し、スキル名に基づいて即時検索を実行できるようにします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "【BLU】青魔道書クイック検索ボックス"
+    },
+    "FastContentsFinderRegister": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツファインダー内の各コンテンツページにボタンを追加し、デフォルト設定、制限解除、自由探索などの設定でワンクリック参加できるようにする。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "簡易コンテンツファインダー申請"
+    },
+    "FastCustomDeliveriesInfo": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "タスク情報内のお得意様インターフェースを最適化し、今週の報酬が増加したお得意様を表示できるようにし、転送などのクイック操作項目を追加する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "クイックお得意様情報画面"
+    },
+    "FasterTerritoryTransport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "エリア内のすべてのマップ遷移のロード速度を速め、ゲームキャラクターがロード中の無効状態からできるだけ早く抜け出せるようにする",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "エリア内のマップ遷移ロードを高速化する"
+    },
+    "FastFreeCompanyChest": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "カンパニーチェストを開いた後、すべてのページのデータを自動で取得し、操作ロック時間を大幅に短縮します\nまた、アイテムの保管や引き出し時に数量の確認が不要になります",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "クイックカンパニーチェスト"
+    },
+    "FastGrandCompanyExchange": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "軍票交換所の画面上部に、アイテム名を直接入力して対応するアイテムを即座に交換することができる、ショートカット交換用のオーバーレイを表示",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "軍票交換所でのアイテム交換を簡略化"
+    },
+    "FastJoinAnotherPartyRecruitment": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "募集詳細画面に新しいボタンを追加し、クリックすると現在のPTから即座に抜けて目標の募集に参加できるようにします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "迅速にPTを抜けて募集に参加"
+    },
+    "FastObjectInteract": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "「付近にある調べられるオブジェクト」のリストを表示するカスタマイズ可能なオーバーレイを追加し、素早く操作できるようにします。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "周囲のオブジェクトを素早く調べる"
+    },
+    "FastResetAllSDEnmity": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "１体の木人の敵視をリセットすれば、すべての木人の敵視をリセットできます。また、敵視をリセットするためのコマンドが追加されます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "すべての木人の敵視を素早くリセット"
+    },
+    "FastRidePillion": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "右クリックで現在複数人用の乗り物に乗っている仲間に対して、自動で相乗りを行う",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "迅速な相乗りする"
+    },
+    "FastTeleportPanel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "「クイック転送パネル」の浮遊ウィンドウを追加し、エリア内の任意の地点に迅速に転送するために使用する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "クイック転送パネル"
+    },
+    "FCMemberManagePanel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "FCメンバーインターフェースに新しいウィンドウを追加し、メンバーを迅速に検索、並べ替え、バッチ操作できるようにする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "FCメンバー管理パネル"
+    },
+    "FieldEntryCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "/pdrfe <パラメータ / コンテンツ名> (大文字と小文字を区別せず / 部分一致) 指令を追加し、指定された特別なシーン探索に素早く入るために使用する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "クイック特殊フィールド探索突入コマンド"
+    },
+    "FriendListRemarks": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "可在好友名单内右键为好友添加特定的昵称与备注, 并在游戏原生界面内直接显示, 同时支持记录获取好友曾用名",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "フレンドリストのニックネームとメモ"
+    },
+    "FriendlistTeleporter": {
+        "Author": [
+            "Xww",
+            "KirisameVanilla"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "フレンドリストでフレンドを右クリックした際、メニュー項目をクリックすることでフレンドがいるエリアやサーバーに迅速にテレポートできるようにする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "フレンドリスト右クリックでテレポート"
+    },
+    "FrontlinePlayerRadar": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "フロントラインに入ると、画面上に受信可能な周囲の全プレイヤーの位置情報を自動で表示・マークします。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "フロントライン プレイヤーレーダー"
+    },
+    "GlamourPlateApplyCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "/pdr gpapply <番号>  (1から開始) コマンドを追加し、ゲーム内で保存されたミラージュプレートをコマンドで簡単に切り替えられるようにします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ミラージュプレート切替コマンド"
+    },
+    "HealerHelper": {
+        "Author": [
+            "HaKu"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在のジョブがヒーラージョブの場合、特定のスキルを使用する際に設定に基づいてその使用を最適化します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ヒーラージョブのスキル最適化"
+    },
+    "HullbreakerIsleHelper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "IDに突入後、地面にあるすべての捕獲用トラップと開ける必要のある偽の宝箱を自動でマークします。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "『財宝伝説 ハルブレーカー・アイル』アシスト"
+    },
+    "IgnoreActionTargetBlocked": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "スキルを発動する際、スキルターゲットが遮られているためにスキル使用が禁止される検出機構を無視する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "スキルターゲットの遮蔽状態を無視する"
+    },
+    "IgnoreTransparencyWait": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "NPCとの会話時、相手のフェードイン・フェードアウト演出による待機時間をキャンセル",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "NPCのフェードイン・フェードアウト待機をキャンセル"
+    },
+    "IgnoreTurnAndLookAtWait": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "NPCと自動で対話する際、正面の一定角度範囲外にいる場合に発生する振り向きや視線調整による待機時間をキャンセル",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "NPCの振り向きや視線調整の待機を自動でキャンセル"
+    },
+    "InstanceZoneChangeCommand": {
+        "Author": [
+            "AtmoOmen",
+            "KirisameVanilla"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "/pdr insc コマンドを追加し、選択可能な任意のダンジョンエリアのエーテライトが存在する場合に、ダンジョンエリアを迅速に切り替える",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "ダンジョンエリアの切り替えショートカットコマンド"
+    },
+    "InstantDismount": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "騎乗を解除しようとした際、即座に下方の地面に降りて騎乗をキャンセルする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "即マウントから降りる"
+    },
+    "InstantLeaveDuty": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "すべてのコンテンツで退出制限を解除し、現在のコンテンツから強制的に退出する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "即コンテンツ退出"
+    },
+    "InstantLogout": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "すべてのログアウト/ゲーム終了制限を解除し、強制的にタイトル画面に戻る/ゲームを終了する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "即ログアウト"
+    },
+    "InstantPlaceLocationAction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "GTアクションを使用する際、マウスカーソルの位置で自動的に発動する為、再確認する必要はありません。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "即座にGTアクションを使用する"
+    },
+    "InstantReturn": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "デジョンのキャストとリキャストを無視する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "即デジョン"
+    },
+    "InstantSprint": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "スプリントがクールダウンしないようにする",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "即スプリント"
+    },
+    "InstantTeleport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "テレポのキャストとリキャストを無視する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "即テレポ"
+    },
+    "InvulnerableMode": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "/pdr invulnerable コマンドを追加し、このコマンドを使用して攻撃を受けない状態に切り替えることができるようにする\n※他人からは地面に潜ってるように見えるので注意",
+        "GlobalPremium": true,
+        "NeedAuth": true,
+        "Title": "無敵モード"
+    },
+    "LimitlessTargetDashAction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "指定ターゲットが必要な突進スキル (インターヴィーン/コル・ア・コルなど) の距離制限を無視して発動できるようにする\n※タゲれる限り届くので注意",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "突進スキルの距離制限を無視"
+    },
+    "LiveAnonymousMode": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲーム内に表示されるすべてのプレイヤー名とプレイヤーモデルをランダム化し、プレイ情報を保護します。\n(実際のデータは変更されず、モデルに関連しないプラグインには影響しませんが、他のプラグインのUI上で情報が露出する可能性があるためご注意ください。)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "ライブ配信匿名モード"
+    },
+    "MacroIntoActionQueue": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "全アクションと所持品使用をキューに入れる",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "マクロからのアクションをキューに入れる"
+    },
+    "MarkerInPartyList": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ターゲットのマークをPTリストのキャラクター名の前にも表示させる",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "PTリストにターゲットマークを表示する"
+    },
+    "MoveableDeathState": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "プレイヤーキャラクターが死亡状態でも移動できるようにする",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "死亡状態で移動可能"
+    },
+    "MultiTargetTracker": {
+        "Author": [
+            "KirisameVanilla"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ウェイマーカーを用いて、設定した複数のプレーヤーの位置情報を継続的に追跡します。\n※フロントラインでよく見る指揮者追跡みたいな機能",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "マルチターゲットトラッカー"
+    },
+    "NeverreapHelper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "IDに突入後、自動で「トヌバヌ」と会話し、「雲卵石」を入手します。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "『神域浮島 ネバーリープ』アシスト"
+    },
+    "NoClipMode": {
+        "Author": [
+            "Errer"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "ゲーム内のすべての衝突判定を解除し、キャラクターが移動する際に地形や障害物に妨げられないようにする",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "無衝突モード"
+    },
+    "NoFallDamage": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "落下時に、本来判定されるはずのダメージを無効にする (ONにすると、自キャラクターのジャンプと落下モーションが消失します)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "落下ダメージ無効"
+    },
+    "NoHideHotbars": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲーム内の関連UI (例: ホットバーなど) が、インタラクションや特定の操作の実行によって自動的に隠れないようにする",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ゲーム内のUIを常に表示する"
+    },
+    "NoRenderWhenBackground": {
+        "Author": [
+            "Siren"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲームがバックグラウンドにあるとき、画面のレンダリング出力を禁止して、待機時のリソース使用と消費電力を削減します (画面以外のゲーム機能には影響しません)",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "バックグラウンドでゲーム画面のレンダリングを禁止する"
+    },
+    "NoUIFade": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲーム中のブラックスクリーンとトランジションのフェード描画を無効にし、ロード中の不要な待ち時間を短縮",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "読み込み時にUIフェードしない"
+    },
+    "OptimizedInteraction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲームのインタラクションロジックを最適化し、視野外、ターゲットが見えない、ターゲットの位置が高すぎる/低すぎる、ジャンプ中や低空飛行中などの、インタラクション制限を解除します。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "インタラクションロジックの最適化"
+    },
+    "OptimizedLongCastTimeAction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "スキルのキャスト時間がリキャスト時間以上の場合、自動的に詠唱時間を0.4秒短縮する。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "長詠唱スキルの最適化"
+    },
+    "OptimiziedEnemyList": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "敵対リスト画面を最適化し、ゲームの標準要素を使用して、敵対ターゲットのHP、ヘイト、および詠唱進行状況を表示できるようにしました。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ゲームの敵対リスト画面の最適化"
+    },
+    "PartyFinderFilter": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "さまざまなルールに基づいて、条件を満たす募集情報をインテリジェントにフィルタリングして表示します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "PT募集フィルター"
+    },
+    "PartyFinderSettingRecord": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "PT募集内容編集画面内で入力した情報を永続的に保存し、次回画面を開いたときに自動で入力する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "PT募集内容編集の情報を自動保存"
+    },
+    "PermanentDisconnectStatus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "現在のオンライン状態を常に通信切断のままにする。いわゆる『赤玉状態』。 (他の操作には影響しません)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "永続的な通信切断状態"
+    },
+    "PetSizeContextMenu": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "召喚獣のコンテキストメニューに、サイズを素早く変更できるオプションを追加。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "召喚獣サイズの右クリックメニュー"
+    },
+    "PFPageSizeCustomize": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "PT募集で、1ページに表示できる件数をカスタマイズする。上限は1ページあたり100件です。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "PT募集表示件数カスタマイズ"
+    },
+    "PlayerTargetInfoExpand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ターゲットを選択した後に表示される目標情報に含まれる内容をカスタマイズできるようにします。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "プレイヤーターゲット情報拡張"
+    },
+    "PortraitAnimationTimeEditor": {
+        "Author": [
+            "Yarukon"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ポートレート編集画面を開くと、ポートレートのモーションをフレーム単位で調整・確認し、保存できます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ポートレートのモーションをフレーム単位で編集"
+    },
+    "ProhibitMountFlightRestrction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "エリアによる付与を禁止、騎乗禁止、デバフ、風脈中断による飛行制限 (例: 無人島の建物内)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "マウント騎乗禁止と風脈制限の撤廃"
+    },
+    "ProhibitSwimming": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "泳げる水域に入ると、自動的にキャラクターが泳ぎ状態になるのを禁止し、キャラクターが水面を走ったりスキルを発動したりできるようにします",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "泳ぐことを禁止する"
+    },
+    "QueueCombatTeleport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "戦闘中にテレポUIを開けない制限を解除し、戦闘中に発生したテレポリクエストを保存します\n戦闘が終了した瞬間に自動でテレポを実行します",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "戦闘中のテレポリクエストを保存する"
+    },
+    "QuickChatPanel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "チャット欄の隣にクイックメッセージ/指定されたテキスト/マクロ/ゲーム内の特殊文字お送信できるパネルを追加します\n(このモジュールはChat2と互換性がありません）",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "クイックチャットパネル"
+    },
+    "QuickSynthesisMore": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "簡易制作の上限を最大255回まで突破する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "より高い簡易制作の上限"
+    },
+    "RealQueuePosition": {
+        "Author": [
+            "逆光",
+            "Nukoooo"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コンテンツファインダーまたはワールド間テレポを使用する際、待機人数が50人を超えると、自動的に実際の待機順序を表示する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "実際の待機順序を表示する"
+    },
+    "RightClickToMoveMode": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "地面を右クリックすると、右クリックした場所に移動できる。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "右クリック移動モード"
+    },
+    "SameAethernetTeleport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "ゲームによる現在のエーテライト/都市内エーテライトへのテレポート使用制限を解除する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "現在選択中のエーテライトへの直接転送"
+    },
+    "SastashaHelper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "IDに突入後、自動で正しい珊瑚情報を送信し、対応する珊瑚のスイッチをハイライト表示します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "『天然要害 サスタシャ浸食洞』アシスト"
+    },
+    "ScrollableTabs": {
+        "Author": [
+            "Cyf5119"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ゲーム内の一部のタブ付きUIで、マウスホイールを使用して素早く切り替えができるようにします",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ゲーム内UIのタブをマウスホイールでスクロールして切り替え"
+    },
+    "SelectableRecruitmentText": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "募集詳細のメッセージは自由に選択・コピーが可能で、リンクのクリックによる迅速なジャンプなどの解析機能も提供します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "選択できる募集コメントのテキスト"
+    },
+    "ShopDisplayRealItemIcon": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "各種ショップのUIを開いた際、対象アイテムのカテゴリアイコンではなく、実際のアイテムアイコンに置き換える",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ショップでアイテムアイコンを表示"
+    },
+    "SoundEffectThrottler": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "システム音 (<se.>) の再生頻度と音量を制限する",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "システム音の再生頻度と音量を制限する"
+    },
+    "TargetDashActionNoMove": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "ターゲットに対して突進スキルを発動する際、その移動効果を無効化する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "突進スキルの移動無効"
+    },
+    "ThePraetoriumHelper": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ID『最終決戦 魔導城プラエトリウム』 で、魔導アーマー に搭乗した際、自動で周囲の最適なAOE対象に向けて 魔導カノン砲 を使用する。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "『最終決戦 魔導城プラエトリウム』アシスト"
+    },
+    "WeeklyBingoClickToOpen": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "クロの空想帳を開きコンプリートしたいマスをクリックすると、コンテンツファインダー内で最初に該当するコンテンツを開く（突入はしない）",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "クロの空想帳からコンテンツファインダーを開く"
+    },
+    "WorldTravelCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "/pdr worldtravel <サーバー> (大文字小文字の区別なし/部分一致) コマンドを追加し、三大都市内の任意の場所へのクイックワールド間テレポを実行する",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "クイックワールド間テレポコマンド"
+    }
+}

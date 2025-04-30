@@ -1,0 +1,3104 @@
+{
+    "AdventurerPlateThroughInspect": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add a button to check the adventure plate while inspecting a player.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Check Adventurer Plate While Inspecting"
+    },
+    "Alphascape3Helper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "The duty action Omega Jammer will be executed repeatedly and automatically on Conductive Focus during the duty Alphascape V3.0.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Alphascape V3.0 Helper"
+    },
+    "AutoActionAlignCamera": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Make some actions always cast in the current camera direction",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Force Actions To The Camera Direction"
+    },
+    "AutoAddChatPrefixSuffix": {
+        "Author": [
+            "那年雪落"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After configurations, given prefixes or suffixes would be automatically added to chat messages while they're sent.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto add chat prefixes and suffixes"
+    },
+    "AutoAdventure": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "After clicking start, automatically complete all Sightseeing Log allowed under the current time/weather",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Sightseeing Log"
+    },
+    "AutoAetherialReduction": {
+        "Author": [
+            "YLCHEN"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Aetherial reduction will be performed automatically for all the items with this option available after the user starts aetherial reduction in the interface.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Aetherial Reduction"
+    },
+    "AutoAllowMultipleGames": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allow the user to run multiple game instances simultaneously. The original cap is 2.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Allow Multiple Game Instances"
+    },
+    "AutoAntiAfk": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Reset the relevant timer within the game at fixed intervals to prevent being automatically set to AFK state",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Anti AFK"
+    },
+    "AutoAntiCensorship": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": true,
+        "CNPremium": false,
+        "Description": "发送消息/编辑招募描述时, 自动在屏蔽词内部加点, 或是将其转成拼音以防止屏蔽\n接收消息时, 自动阻止屏蔽词系统工作, 显示消息原文",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动反屏蔽词"
+    },
+    "AutoAntiKnockback": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Automatically apply the selected logic to handle forced movements like knockback/pull when encountered",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Anti Knockback"
+    },
+    "AutoAttireItems": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After opening the Glamour Dresser and clicking Start, all items in the Glamour Dresser that can be stored as a set will be automatically taken out, and when the Outfit Glamour interface appears, the available equipment will be automatically selected and saved as a set.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Process Items In Gear Sets"
+    },
+    "AutoBasketBall": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically loop playing Monster Toss after interacting with the game machine",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Monster Toss"
+    },
+    "AutoBlockMisdirectionState": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically block the status with limited direction controls (like Temporary Misdirection or Spinning) and invalidate related processing logic.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Block Misdirection Status"
+    },
+    "AutoBlockShutdownFromLobbyError": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "While encountering a lobby error, the module will automatically prevent game exiting. Instead, it will return to the login page.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto prevent game exiting from lobby errors"
+    },
+    "AutoBlockStatus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "After configuration, automatically block client-side reception and processing of specified status effects",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Block Status Effect"
+    },
+    "AutoBlockSystemNotice": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically block system notifications sent within the game (Purple Word Bulletin)",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Block System Notice"
+    },
+    "AutoBroadcastActionHitInfo": {
+        "Author": [
+            "Xww"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically use content hint and TTS to report specified action crit/direct hit info after configuration",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Report Actions Critical & Direct Hits"
+    },
+    "AutoCancelCast": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto cancel cast when the target is dead or cannot be selected.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Cancel Cast"
+    },
+    "AutoCancelGatherAnimation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Cancel related action animations during gathering to improve gathering speed.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Cancel Gathering Animations"
+    },
+    "AutoCancelNPCEmote": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto cancel NPC emotes and the waiting time they caused during cutscenes.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto cancel NPC emotes"
+    },
+    "AutoChakraFormShift": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If the current job is MNK, automatically use Steeled/Forbidden Meditation and Form Shift upon entering a Duty, triggering a Retry, or exiting Combat.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Meditation and Form Shift"
+    },
+    "AutoCheckFoodUsage": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically check the status of consumed food, and replenish specific food when the remaining time falls below the threshold",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Check Self Food Status"
+    },
+    "AutoCheckItemLevel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically check the item level of all party members after entering a duty and highlight those with abnormal item levels",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Check Item Level"
+    },
+    "AutoClaimItemIgnoringMismatchJobAndLevel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Ignore the warnings popped up caused by the level or the job of the character while purchasing, exchanging or just claiming items from shops.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Ignore Lvl And Job Warnings While Purchasing"
+    },
+    "AutoClaimPVPRewards": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto claim all pending series rewards after open Series Malmstones UI and click start",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Claim Trophy Crystals"
+    },
+    "AutoCollectableExchange": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Open the Collectables Submission window, and after clicking start, automatically trade all available Collectables in that category",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Trade Collectables"
+    },
+    "AutoCommenceDuty": {
+        "Author": [
+            "Cindy-Master"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto confirm the commencing duty window",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Duty Commence"
+    },
+    "AutoConfirmMateriaWork": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto confirm Materia melding/retrieval/meld request and remove delay restrictions before and after melding",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Confirm Materia Meld & Retrieval"
+    },
+    "AutoConfirmPortraitUpdate": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When the portrait update preview interface appears, click OK automatically to update the portrait to the latest equipment status.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Automatically confirm portrait updates"
+    },
+    "AutoConstantlyClick": {
+        "Author": [
+            "AtmoOmen",
+            "KirisameVanilla"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Holding down any hotbar key will automatically switch to rapid repeated presses of that key",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Repeat Click"
+    },
+    "AutoConstantlyInspect": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto click the \"Continue\" button when the Item Appraisal Result interface appears",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Item Appraisal"
+    },
+    "AutoConvertMapLink": {
+        "Author": [
+            "KirisameVanilla"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Convert any text contains coordinates to actual coordinates on the map automatically.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Convert Texts With Coordinates"
+    },
+    "AutoCountBlacklisted": {
+        "Author": [
+            "ToxicStar"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Display the number of players in Blacklist within the set range in the server information bar.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Count Players In Blacklist Nearby"
+    },
+    "AutoCountPlayers": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Display number of nearby players in server info bar, with a searchable overlay",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Count Players Nearby"
+    },
+    "AutoCutsceneSkip": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto skips all skippable cutscenes, and remove skip restrictions including but not limited to Main Scenario, Ocean Fishing, Crystalline Conflict.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Skip Cutscenes"
+    },
+    "AutoDance": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When using dancer action Standard/Technical Step, the corresponding dance step actions will be automatically used.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Dance"
+    },
+    "AutoDeleteLetters": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Open the Moogle Delivery interface, delete all letters in selected category when select a category and click start button.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Letters Delete"
+    },
+    "AutoDesynthesizeItems": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto confirm when the desynthesis interface opened;\nOpen the desynthesis interface and click start, it'll desynthesis all",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Item Desynthesis"
+    },
+    "AutoDiscard": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto discard or sell items in presets",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Discard Items"
+    },
+    "AutoDismount": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto dismount when you are trying to use available actions on mount.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Dismount"
+    },
+    "AutoDisplayDutyReadyLeftTime": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Display the remaining time on the floating window of Ready Checks.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Display Remaining Time Of Ready Check"
+    },
+    "AutoDisplayMitigationInfo": {
+        "Author": [
+            "HaKu"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "The actual percentage of all the mitigation currently applied, including the mitigation status on the character and the mitigation actions applied on the target, will be displayed in the server info bar.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Display Mitigation Details"
+    },
+    "AutoDisplayRetainerPlayerName": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Display the actual owners of the retainers selling items on the market board in highlights according the existed data, instead of the names of retainers themselves.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Display Owners Of Retainers"
+    },
+    "AutoDrawMotifs": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If the current job is Pictomancer, automatically use available Motiff actions upon entering or recommencing a duty, or exiting combat",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Draw Motifs"
+    },
+    "AutoEliminateFishAwareness": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After configuration, if an alert appears in the current fishing spot, switch zones to clear the alert and cast again at the same location",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Clear Fishing Spot Alert"
+    },
+    "AutoEnableAttack": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto enable Auto-Attack for all jobs when entering combat",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Enable Attack"
+    },
+    "AutoExpertDelivery": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto finish expert delivery after click start on the supply and provisioning missions interface.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Expert Delivery"
+    },
+    "AutoFaceCameraDirection": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Always align the game character's orientation with the current camera orientation",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Orient To The Camera Direction"
+    },
+    "AutoFateStart": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If there is a nearby FATE that requires dialogue to start, automatically initiate it.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Fate Start"
+    },
+    "AutoFateSync": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto level sync when entering a FATE range",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Fate Level Sync"
+    },
+    "AutoFCWSDeliver": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Open the Material Delivery interface and, upon clicking \"Start,\" automatically deliver all available materials",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto FC Workshop Deliver Items"
+    },
+    "AutoGardensWork": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto or semi-auto finish garden related operations, including planting, harvesting, fertilization, care, etc",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Gardening"
+    },
+    "AutoGathererRoleActions": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically use abilities from other gathering classes when switching to any gathering class",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Use Gatherer Role Actions"
+    },
+    "AutoGysahlGreens": {
+        "Author": [
+            "Veever"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If you are currently outside the city area and your chocobo partner has not been summoned or the remaining time is less than 5 minutes, you will automatically use Gysahl Greens.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Use Gysahl Greens"
+    },
+    "AutoHideNeedlessPopups": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically hide unnecessary popups such as Near-complete Achievements, Fellowship Notifications, Playguide, Recommended Duties, and Active Help",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Hide Unnecessary Popups"
+    },
+    "AutoHighlightFlagMarker": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When placing a flag, automatically use Waymarks to create a light pillar to highlight the destination.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Highlight Map Flag"
+    },
+    "AutoHolmgangSelf": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When using the Warrior action Holmgang, force target self.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Holmgang Self"
+    },
+    "AutoHummer": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After interacting with a Crystal Tower Striker game console, auto and repeatedly play the mini-game.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Crystal Tower Striker"
+    },
+    "AutoImmunizeForceMove": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Automatically nullify walking-based forced movement status effects on self",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Immunize Forced Movement"
+    },
+    "AutoImmunizeInputDisable": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Automatically nullify conditions or status effects that disable input",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Nullify Input Lock"
+    },
+    "AutoImmunizeJumpRestriction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "When the user is given a jump restriction by a status or the zone, the module will automatically make the user immune to it and remove related restrictions.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto immune to jump restrictions"
+    },
+    "AutoImmunizeThinIce": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "When the user is given a status similar to Thin Ice, the module will automatically make the user immune to it and remove related effects.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto immune to Thin Ice"
+    },
+    "AutoInDutySelectYes": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto select yes when interacting with the duty interactive items",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Select Yes In Duty Interactions"
+    },
+    "AutoJoinExitDuty": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add /pdr joinexitduty command for quick join-exit of duty",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Join-Exit Duty"
+    },
+    "AutoJumboCactpot": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto finish all of today's Jumbo Cactpot after opening its interface",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Jumbo Cactpot"
+    },
+    "AutoLeaveDuty": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto exit upon completion of non-blacklisted duties",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Leave Duty"
+    },
+    "AutoLeveQuests": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically repeat selected levequest up to max allowances after confirm current settings and click \"Start\"",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Finish Tradecraft Leves"
+    },
+    "AutoLogin": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically login to the first login-able character in the settings by priority upon entering main title screen",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Login"
+    },
+    "AutoLucidDreaming": {
+        "Author": [
+            "qingsiweisan"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If the current job can use Lucid Dreaming and is not a Black Mage, automatically use Lucid Dreaming when MP falls below the specified threshold.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Lucid Dreaming"
+    },
+    "AutoManageInterruptAction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If the current target is not casting an interruptible action, prevent the use of interrupt actions (e.g., Interject, Head Graze)",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Manage Interrupt Actions"
+    },
+    "AutoMarkAetherCurrents": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto mark aether currents on map, replace the vanilla UI with DR UI, allowing custom display of aether currents and teleport or auto navigation to the designated aether current.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Mark Aether Currents"
+    },
+    "AutoMarksFinder": {
+        "Author": [
+            "AtmoOmen",
+            "KirisameVanilla"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto scan and organize hunt mobs info into a list after configuring.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Hunt Mobs Finder"
+    },
+    "AutoMaterialize": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically extracts materia from all the equipment under selected category when you open Materia Creation and click \"Start\"",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Extract Materia"
+    },
+    "AutoMateriaRetrive": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When retrieving any gear's materia, retrieve all.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Retrieve Materia"
+    },
+    "AutoMateriaTransmutation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Open the Materia Transmutation interface, and after clicking Start, automatically select and transmute Materia.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Transmute Materia"
+    },
+    "AutoMiniCactpot": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto finish all of today's Mini Cactpot after opening its interface",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Mini Cactpot"
+    },
+    "AutoMJIGather": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically loop gathering Island Sanctuary items after finishing configuration and clicking start",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Gather In Island Sanctuary "
+    },
+    "AutoMJIWorkshopImport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": true,
+        "CNPremium": false,
+        "Description": "允许从剪贴板导入外部无人岛生产计划, 并一键自动安排 (仅支持国服作业集格式)",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动无人岛工房生产计划"
+    },
+    "AutoMount": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically mount under certain conditions",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Mount"
+    },
+    "AutoMoveGearsNotInSet": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically retrieve all gears not included in any valid set from the Armory Chest after use",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Retrieve Gears Not In Any Set"
+    },
+    "AutoMovePetCenter": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After summoning a creature in a duty or after entering a duty, automatically move the Pet to the center of the current zone.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto move the Pet to the center"
+    },
+    "AutoMovePetPosition": {
+        "Author": [
+            "Wotou"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After configuring and entering an eight-player duty, if there is a Pet summoned by the user, the Pet will automatically move according to the positions set in the timeline.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Move The Pet"
+    },
+    "AutoNotifyBonusFate": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After entering zones of 4.0 or later, while a FATE with bonus appears, a notification will be automatically sent to remind.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto notify FATEs with bonus"
+    },
+    "AutoNotifyChaoticRaidBonus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "当前所在大区或订阅大区诛灭战出现限时奖励提升时, 自动发送通知信息提醒",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动通知诛灭战限时奖励提升"
+    },
+    "AutoNotifyCountdown": {
+        "Author": [
+            "HSS"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto notifies when countdown starts",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify Countdown's Start"
+    },
+    "AutoNotifyCutSceneEnd": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically notifies that all party members' cutscene ended if a party member watches a cutscene for more than 5 seconds in duties",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify Cutscene End"
+    },
+    "AutoNotifyDutyConfirm": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically send a notification when the Duty Confirm window appears",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify Duty Commence"
+    },
+    "AutoNotifyDutyName": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto notify the duty name, the item level requirements and other related information while entering a duty.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify Duty Information"
+    },
+    "AutoNotifyDutyStart": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto notifies the start of duty when duty starts",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify Duty Starts"
+    },
+    "AutoNotifyLeveUpdate": {
+        "Author": [
+            "HSS"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto notifies the date that the limit reached when the leve allowances refresh",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify Leve Allowances Refreshment"
+    },
+    "AutoNotifyMessages": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto notifies when the selected message type comes in or a new message contains a specific keyword",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify New Messages"
+    },
+    "AutoNotifyReadyCheck": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically send notification reminders when a readiness confirmation is received",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify Ready Check"
+    },
+    "AutoNotifyRecruitmentEnd": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto notifies when the recruitment ends for any reason",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify Recruitment Ends"
+    },
+    "AutoNotifySPPlayers": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically send an alert and execute custom text commands when pre-specified special player appear",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify Special Players Appearance"
+    },
+    "AutoNoviceNetwork": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto try to join the Novice Network after clicking \"Start\"",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Join Novice Network"
+    },
+    "AutoNumericInputMax": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Set all number input components to always be at their maximum value",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Set Numeric Input Max"
+    },
+    "AutoOpenMapLinks": {
+        "Author": [
+            "KirisameVanilla"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After configuration, automatically open the map link when the specified player sends or the specified chat type receives it",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Open Map Link in Chat"
+    },
+    "AutoOpenTreasures": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After entering a duty, try to open all the available treasure coffers around automatically.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Open Treasure Coffers"
+    },
+    "AutoPeloton": {
+        "Author": [
+            "yamiYori"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If the current class/job is a physical ranged DPS, Peloton will automatically be executed while moving.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Peloton"
+    },
+    "AutoPetFollow": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When out of combat, if your summoned entity is present on the field, it will automatically receive a follow command",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Summons Follow"
+    },
+    "AutoPlayerCommend": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Give a commendation to the party member who has the same role or is a tank(healer) when you are a  healer(tank) in dungeons  automatically when the duty has ended.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Commend Party Members"
+    },
+    "AutoPreserveCollectable": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When the confirmation window for gathering items as Collectables appears, auto click confirm",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Confirm Collectable Preservation"
+    },
+    "AutoPreventDuplicateStatus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When corresponding actions are used auto-check status already exist for preventing the supply status overlap.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Prevents Actions Overlap"
+    },
+    "AutoPunchingMachine": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After interacting with Cuff-A-Cur, automatically and repeatedly play the mini-game.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Cuff-A-Cur"
+    },
+    "AutoQTE": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "In duties, automatically complete all types of Quick Time Event(QTE).",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto QTE"
+    },
+    "AutoQuestAccept": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto clicks the confirm button when the quest access interface appears",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Confirm Accept Quests"
+    },
+    "AutoQuestComplete": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto clicks the confirm button when the quest complete interface appears",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Confirm Complete Quests"
+    },
+    "AutoRaise": {
+        "Author": [
+            "qingsiweisan"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "If you are currently in combat and have the ability to resurrect, you will automatically use the relevant resurrection skills when you detect that your party member are unable to fight.",
+        "GlobalPremium": true,
+        "NeedAuth": false,
+        "Title": "Auto resurrect"
+    },
+    "AutoRecommendFauxHollows": {
+        "Author": [
+            "Veever"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When you open the Faux Hollows interface, the current optimal solution will be highlighted automatically according to your settings.\n(Highlight color: Blue → Twin Swords / Pink → Treasure Box, Gift Box / Gold → Faux)",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Faux Hollows Solver"
+    },
+    "AutoRecordSubTimeLeft": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 1,
+        "CNOnly": true,
+        "CNPremium": false,
+        "Description": "登录时, 自动记录保存当前账号剩余的游戏时间, 并显示在服务器信息栏",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动记录剩余游戏时间"
+    },
+    "AutoRedirectDashActions": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Automatically redirects the destination of some displacement skills to the current mouse pointer.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Redirect Dash Action"
+    },
+    "AutoRefocus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto refocuses the target if the lost focus target appears again in duties",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Refocus Target"
+    },
+    "AutoRefreshMarketSearchResult": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto re-requests when the market board item search result is \"Please wait\"",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Refresh Market Search Results"
+    },
+    "AutoRefreshPartyFinder": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto refreshes the recruitment board at a regular interval after opening it",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Refresh Recruitment Boards"
+    },
+    "AutoRefuseTrade": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically decline trade requests, send notification messages and execute additional custom text commands when receiving trade requests",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Refuse Trade Request"
+    },
+    "AutoRemoveAnimationLockPunishment": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically remove the 100ms animation lock that is added to all skills after use, and automatically block the mandatory animation lock data packets sent by the server to improve the smoothness of using and weaving various skills",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto remove animation lock on actions"
+    },
+    "AutoRemoveArmoireItemsFromDresser": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto remove all the gears that can be stored in the armoire from the glamour dresser after open the glamour dresser interface and click start",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Remove Armoire Items From Glamour Dresser"
+    },
+    "AutoRemoveStatusSpeedPenalty": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "When the user is given a status which could slow the user down, the module will automatically make the user immune to the speed penalties caused by the status.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto immune to speed penalties from status"
+    },
+    "AutoRemoveWalkableCastingActionSpeedPenalty": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Remove the speed reduction while executing the actions which allow players to walk during casting the actions.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto remove speed penalties of walking cast actions"
+    },
+    "AutoRepair": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto detects the equipped gears durability and repairs them when fall below the set threshold, removing the pre- and post-repair delay restrictions.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Repair"
+    },
+    "AutoRepeatChatMessage": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add a following button   to every message in chat, in order to quickly repeat the message.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Repeat Chat Message"
+    },
+    "AutoReplaceActionLowLevel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When higher-level actions become unusable due to level sync, automatically replace them with their lower-level counterparts",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Replace High Level Actions"
+    },
+    "AutoReplaceLocationAction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Upon entering a duty, automatically redirect the placement of ground-targeted actions to the center of the area",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Redirect Ground-Targeted Actions"
+    },
+    "AutoReplaceLowBlowWithInterject": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If the current target is chanting an interruptible skill and Interject is available, replace Low Blow with Interject in the Hotbar.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Replace LowBlow with Interject"
+    },
+    "AutoRequestFriendsOnlineStatus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically request the online status of all friends when opening the friend list.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Friends Online Status Request"
+    },
+    "AutoRequestItemSubmit": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto select items and complete the submission when submitting items",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Request Submit"
+    },
+    "AutoRequestNecessity": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto request data, including but not limited to Glamours, Portraits, Armoire, Inventory, and Achievements upon login to reduce loading times when opening various UI",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Request Essential Data"
+    },
+    "AutoRestoreFurniture": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Open the Furniture UI and click \"Start\" to automatically retrieve all storeroom furniture into the inventory/placed furniture into the storeroom",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Restore Furniture"
+    },
+    "AutoRetainerWork": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically or semi-automatically complete retainer-related tasks, including price adjustment for sales, collecting venture rewards, splitting/retrieving gil, and changing registered city",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Retainer Work"
+    },
+    "AutoRetarget": {
+        "Author": [
+            "KirisameVanilla"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After configuration, automatically retarget when the current player has no target",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Retarget"
+    },
+    "AutoReuseEmote": {
+        "Author": [
+            "Xww"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add /pdr remote <Emote Name/Command> (<Interval (ms)>) to repeat an emote with the given interval (2000ms by default).",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Reuse Emotes"
+    },
+    "AutoSellCardsConfirm": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto click confirm button after selling cards' interface appears;\nAuto selling all claimed cards after clicking start",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Sell Triple Triad Cards"
+    },
+    "AutoSendMoney": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After configuration, automatically trade the specified amount of gils in bulk with the designated targets",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Gil Trade"
+    },
+    "AutoShopPurchase": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto purchase items from the specified shop list after config setup and clicking start",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Repeat Shop Purchase"
+    },
+    "AutoShowDutyGuide": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Upon entering a duty, automatically display the instance guide from ff14.org in a overlay",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Duty Guide"
+    },
+    "AutoSkipBuddyFeedScene": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "While feeding your companion in the Chocobo stable, automatically skip the cutscenes and complete the feeding immediately.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto skip cutscenes of feeding Chocobo"
+    },
+    "AutoSkipLogo": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto skip the Logo screen at game startup, taking the client directly to the login screen",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Skip Logo"
+    },
+    "AutoSnipeQuest": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto avoid and change snipe quests into completed when starting snipe quests.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Finish Snipe Quest"
+    },
+    "AutoSortItems": {
+        "Author": [
+            "那年雪落"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After configurations, the items in the inventory and armoury will be automatically sorted according to the preset rules while switching zones.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Sort Items"
+    },
+    "AutoSoulsow": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If current job is Reaper, automatically use Soulsow after: entering or recommencing a duty, or leaving combat",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Soulsow"
+    },
+    "AutoSpeedMultiplier": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Add /pdrspeed <multiplier> to permanently adjust player speed multiplier",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Speed Multiplier"
+    },
+    "AutoSplitStacks": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allow quick item splitting into specified quantities via right-click or preset options",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Split Items"
+    },
+    "AutoStoreToCabinet": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Open the Armoire interface and, upon clicking \"Start,\" automatically store all storable gears into the Armoire",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Store To Armoire"
+    },
+    "AutoSubmarineCollect": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto confirm subaquatic voyages and resend submarines after opening the submarines interface and clicking start",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Collect Submarine"
+    },
+    "AutoSummonPet": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto summon pets when entering duty or retrying if you are SMN or SCH",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Summon Pet"
+    },
+    "AutoTalkSkip": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically skip a dialog when it emerges",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Skip Dialogue"
+    },
+    "AutoTankStance": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If it is currently a protective class, the shield posture is automatically enabled after entering the replica\nAuto tank stance when entering duties if you are tank",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Tank Stance"
+    },
+    "AutoTenChiJin": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allow users to set all the 7 kinds of Ninjutsu to the hotbars. The process of making mudras will be automatically completed in order after the user clicks a Ninjutsu.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Ninjutsu"
+    },
+    "AutoThrottleTenChiJin": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When weaving Shinobi, each Shinobi action can only be pressed once during the sequence.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Throttle Shinobi Actions"
+    },
+    "AutoUfoCatcher": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto repeat Moogle's Paw after interacting with the game machine.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Moogle's Paw"
+    },
+    "AutoUnlockAllContents": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Mark all duties as unlocked to directly view corresponding information in the Party Finder or Duty Finder.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Unlock All Duties"
+    },
+    "AutoUnlockAllOrchestrionsListen": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto unlock preview for all orchestrion rolls (marks all rolls as obtained)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Unlock All Orchestrions"
+    },
+    "AutoUnlockExpertDelivery": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Ignoring rank requirements, directly unlock the Expert Delivery feature after joining any Grand Company",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Unlock Expert Delivery"
+    },
+    "AutoUseCrafterGathererManual": {
+        "Author": [
+            "Shiyuvi",
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If the current job is crafter and gatherer, is not at max level, holds any valid survival science/engineering manual, and does not have the corresponding experience bonus effect, the corresponding manual item will be automatically used",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Use DoH/DoL Exp Manuals"
+    },
+    "AutoUseEarthsReply": {
+        "Author": [
+            "ToxicStar"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After using the skill Riddle of Earth in a PVP zone, automatically use the skill Earth's Reply when its duration is about to end to prevent it from expiration",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Earth's Reply"
+    },
+    "AutoUseEventItem": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When interacting with objects that require quest items and opening the Key Item inventory, automatically use the corresponding quest item",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Use Quest Event Item"
+    },
+    "AutoUseItemStacks": {
+        "Author": [
+            "Cindy-Master"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add right-click menu option for batch-using stackable items if they are usable",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Use Stackable Items"
+    },
+    "AutoVerEasyQuestBattle": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "While commencing a single-player quest combat, commence with the difficulty Very Easy.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto commence the easiest quest combat"
+    },
+    "AutoWoof": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto constantly Bark when mounted on Megashiba",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Megashiba Bark"
+    },
+    "BaitSwitchCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add the command /pdr bait <Item ID / Item Name / Item Name Pinyin> to allow switching bait via command.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Bait Switching Command"
+    },
+    "BanEscToCancelCast": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Pressing the Esc key during casting will no longer interrupt the current casting process",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Disable Esc Key To Interrupt Casting"
+    },
+    "BetterBlueSetLoad": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Optimized loading of active sets in the Blue Magic Spellbook interface, allowing active sets switching without removing Aetheric Mimicry.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Better BLU Spell Set Load"
+    },
+    "BetterCommandInput": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically converts incorrect case and full/half-case commands to correct commands when entering commands.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Better Command Input"
+    },
+    "BetterFateProgressUI": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Replace the native game interface with the module interface, enabling instant switching without loading, real-time data updates, and right-click quick teleportation support",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Better FATE Progress UI"
+    },
+    "BetterFollow": {
+        "Author": [
+            "HSS"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Unlocks the game's native follow target limitation, and is able to automatically lock on to the target and re-follow it.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Better Auto Follow"
+    },
+    "BetterPartyFinderSort": {
+        "Author": [
+            "decorwdyun"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Let the recruitments in Party Finder be sorted by the exact value of the remaining time.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Better Party Finder Sorting"
+    },
+    "BetterStatusTimeDisplay": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After configurations, the remaining time of status with long durations will be displayed in the selected format.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Display the status time better"
+    },
+    "BetterTeleport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Replace the vanilla teleportation interface with a Daily Routines one, which provides better searching, navigation and destination previews and allows players to directly teleport to any aethernet shard in the city.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Better Teleportation"
+    },
+    "BetterWaitCommand": {
+        "Author": [
+            "Cindy-Master"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Remove native time and precision limits for \"wait\" in text commands",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Better Wait Command"
+    },
+    "BiggerHDWindowText": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allows custom IME window scaling and make texts in some windows clearer",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Larger HD IME Interface"
+    },
+    "BlockInputWhenFishing": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "During casting, most unrelated key inputs are blocked to prevent accidental interruption of the fishing process",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Block Input During Fishing"
+    },
+    "BrayfloxsLongstopHelper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After entering the duty Brayflox's Longstop, automatically talk with the goblin pathfinder and get the Runstop Headgate key.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Brayflox's Longstop Helper"
+    },
+    "ChineseNumericalNotation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Display numbers in units of ten thousand \"wan\" and one hundred million \"yi\" and separate the numbers by ten thousands instead of thousand according to Chinese custom.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Display Numbers In Chinese Numerical Notations"
+    },
+    "ClipboardMultiLineToOneLine": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When pasting text in the game, multi-line text is forced to be converted into a single line to facilitate editing and sending.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Make Pasted Texts Single Line"
+    },
+    "ContentFinderCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Added /pdrduty command for quickly joining specific duties or roulettes",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Duty Finder Command"
+    },
+    "CrossDCPartyFinder": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": true,
+        "CNPremium": false,
+        "Description": "允许在游戏原生的 队员招募 界面内选择并查看由众包网站提供的其他大区的招募信息",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "跨大区队员招募"
+    },
+    "CustomActionQueueTime": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Customize the queue time for default and specific actions in the skill queue (time before next GCD)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Custom Action Queue Time"
+    },
+    "CustomizeGameObject": {
+        "Author": [
+            "HSS"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Customize the scaling of various in-game entities based on presets",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Customize Game Object Scale"
+    },
+    "CustomizeInterfaceText": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Replace and customize all in-game text according to presets saved",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Customize Interface Text Replacement"
+    },
+    "CustomizeSightDistance": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Customize the maximum sight distance allowed by the current game camera.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Custom sight distance"
+    },
+    "DisableGroundActionAutoFace": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Using ground-targeted actions (e.g., Asylum, Earthly Star) will no longer change the current facing direction",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Disable Facing Direction Change for Ground-Targeted Actions"
+    },
+    "DisplayTargetHP": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "In the Target bar and Focus Target bar, display the exact HP of the respective targets according to the selected format",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Display Target HP"
+    },
+    "DisregardFollowQuest": {
+        "Author": [
+            "Errer"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Ignore the hiding detection relative to the tracked character in Follow Quests",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Disregard Follow Quest Tracking"
+    },
+    "ExpandActionRange": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Once enabled, expand the range of all Actions by a specified distance",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Expand Action Range"
+    },
+    "ExpandItemMenuSearch": {
+        "Author": [
+            "HSS"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add additional search entry to the item subcommand menu",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Expand Item Menu Search"
+    },
+    "ExpandMacroTargetParameters": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add more parameters available in macros which could be used to refer to various targets in different situations or scenarios.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Extended Macro Parameters"
+    },
+    "ExpandPlayerMenuSearch": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add additional search entries to the player context menu",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Expand Player Menu Search"
+    },
+    "ExpandTargetRadius": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After configuration, expand the target radius by the specified range beyond its original size.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Expand Target Radius"
+    },
+    "FastBLUSpellbookSearchBar": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add a quick search bar to the upper left corner of Blue Magic Spellbook, to search in real time based on action names.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Quick search bar of Blue Magic Spellbook"
+    },
+    "FastContentsFinderRegister": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add shortcut buttons for each duty in Duty Finder, allowing users to join duties with prefabricated Duty Finder Settings.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Participate in Duty Finder instantly"
+    },
+    "FastCustomDeliveriesInfo": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Optimize the custom deliveries interface to display clients with increased rewards this week and add quick action options, such as teleportation, for these clients.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Quick Custom Deliveries Information Interface"
+    },
+    "FasterTerritoryTransport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Speed up all in-zone loading to reduce character disable time during loading",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Faster In-Zone Loading"
+    },
+    "FastFreeCompanyChest": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After opening the Free Company chest, automatically request all page data, significantly reduce operation lock time, and remove quantity confirmation when storing or retrieving items",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Fast Free Company Chest"
+    },
+    "FastGrandCompanyExchange": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Added a quick exchange floating window in the Company Seals Exchange interface, so you can instantly exchange it for the corresponding item by entering the item name directly.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Quickly Exchange Company Seals for Items"
+    },
+    "FastJoinAnotherPartyRecruitment": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "A button will be added to the party recruitment details interface that allows you to leave your current party and join the target recruitment with one click.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Quickly leave the party and join the recruitment"
+    },
+    "FastObjectInteract": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add an overlay listing nearby interactable objects, allowing quicker interactions through direct clicks",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Fast Object Interaction"
+    },
+    "FastResetAllSDEnmity": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Resetting enmity from a single Striking Dummy will clear enmity from all dummies, and a command is added for manual clearing",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Fast Reset All Striking Dummy Enmity"
+    },
+    "FastRidePillion": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto ride pillion when you right-click a party member that is riding a multi-seat mount",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Fast Ride Pillion"
+    },
+    "FastTeleportPanel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Add a Fast Teleport Panel widget for fast teleport to any location within the zone",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Fast Teleport Panel"
+    },
+    "FCMemberManagePanel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add a new window to the FC Member UI for quick search, sorting, and batch operations on members",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "FC Member Manage Panel"
+    },
+    "FieldEntryCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Added /pdrfe <Parameter/Instance Name> (Case insensitive / Partial match for the latter), to enter specified field operation",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Field Operations Entry Command"
+    },
+    "FriendListRemarks": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "可在好友名单内右键为好友添加特定的昵称与备注, 并在游戏原生界面内直接显示, 同时支持记录获取好友曾用名",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Nicknames In Friend List"
+    },
+    "FriendlistTeleporter": {
+        "Author": [
+            "Xww",
+            "KirisameVanilla"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Right-click a friend in Friend List to quickly teleport to the zone or the server the friend is currently in by a menu option.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Right-Click To Teleport In Friend List"
+    },
+    "FrontlinePlayerRadar": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After entering Frontline, the location of all players could be detected nearby would be marked and displayed on the screen.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Frontline Player Radar"
+    },
+    "GlamourPlateApplyCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add the /pdr gpapply <number> (starting from 1) command to quickly switch between the saved Glamour Plates",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Glamour Plate Switch Command"
+    },
+    "HealerHelper": {
+        "Author": [
+            "HaKu"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If the current job is a healer profession, the use of specific skills will be optimized according to the settings when using them.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Healer Helper"
+    },
+    "HullbreakerIsleHelper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After entering the duty Hullbreaker Isle, automatically mark all the iron leg traps on the ground and all the mimics that need to be contacted.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Hullbreaker Isle Helper"
+    },
+    "IgnoreActionTargetBlocked": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Ignore the game's internal detection mechanism that prevents action use due to the target being obstructed when casting",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Ignore Action Target Obstruction Status"
+    },
+    "IgnoreTransparencyWait": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Cancel the waiting time of NPC fading in and fading out while talking with NPCs.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto cancel waiting of NPC fade-in and fade-out"
+    },
+    "IgnoreTurnAndLookAtWait": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Cancel the waiting time of NPC turning and sight adjusting while interacting with NPCs if the user isn't within a certain angle in front of NPCs.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto cancel waiting of NPC turn and look"
+    },
+    "InstanceZoneChangeCommand": {
+        "Author": [
+            "AtmoOmen",
+            "KirisameVanilla"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add the /pdr insc command to quickly switch between instances if the Aetheryte in any of the instances can be selected.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Quick Instance Switching Command"
+    },
+    "InstantDismount": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Upon attempting to dismount, immediately step down to the ground.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Instantly Dismount"
+    },
+    "InstantLeaveDuty": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Remove all duty exit restrictions and forcefully leave the current instance.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Instant Leave Duty"
+    },
+    "InstantLogout": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Remove all logout/exit restrictions and force return to the title screen/exit the game",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Instant Logout"
+    },
+    "InstantPlaceLocationAction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically and instantly cast ground-targeted action at the mouse pointer without requiring further confirmation",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Instantly Place Ground-Targeted Action"
+    },
+    "InstantReturn": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Make the Return function instant with no cast time and remove its cooldown",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Instant Return"
+    },
+    "InstantSprint": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Remove Sprint Cooldown",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Instant Sprint"
+    },
+    "InstantTeleport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Make teleport instant, no cast time",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Instant Teleport"
+    },
+    "InvulnerableMode": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Add /pdr invulnerable command. This command allows User to become invulnerable to attacks.",
+        "GlobalPremium": true,
+        "NeedAuth": true,
+        "Title": "Invulnerable Mode"
+    },
+    "LimitlessTargetDashAction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Allow dash actions that require a target to ignore distance limits and be able to execute instantly upon selecting a target",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Disable Range Limits Of Gap Closer Actions"
+    },
+    "LiveAnonymousMode": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Obfuscate all player names and models in the game to encrypt gameplay information.\n(This is not an actual modification and does not affect non-model-related plugins, but be aware that other plugin interfaces may still reveal information.)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Live Anonymous Mode"
+    },
+    "MacroIntoActionQueue": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allow all actions and item usages to be queued",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Macro Into Action Queue"
+    },
+    "MarkerInPartyList": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Display target markers before member names in the party list",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Display Target Markers in Party List"
+    },
+    "MoveableDeathState": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Allow the current character to move normally even when in a dead state.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Moveable After Death"
+    },
+    "MultiTargetTracker": {
+        "Author": [
+            "KirisameVanilla"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After configuration, continuously track multiple active players' positions using field markers and record historical data",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Multi-Target Tracker"
+    },
+    "NeverreapHelper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After entering the duty Neverreap, automatically talk with Tonu Vanu and get the thunder eggs.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Neverreap Helper"
+    },
+    "NoClipMode": {
+        "Author": [
+            "Errer"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Disable all in-game collision detection, allowing character movement without being blocked by terrain or obstacles",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Noclip Mode"
+    },
+    "NoFallDamage": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Prevent fall damage\n(When enabled, character jump and fall animations will be disabled)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "No Fall Damage"
+    },
+    "NoHideHotbars": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "No longer hide some UI(e.g. hotbars) because of special operations automatically.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Always display UI"
+    },
+    "NoRenderWhenBackground": {
+        "Author": [
+            "Siren"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When game is in background, disable rendering to reduce idle resource usage and power consumption (does not affect any game functions except visuals)",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Disable Background Game Rendering"
+    },
+    "NoUIFade": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Disable in-game black screens and fade-ins/outs used for transitions to reduce unnecessary waiting time during loading",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "No Loading Black Screes"
+    },
+    "OptimizedInteraction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Optimized game interaction logic by removing interaction restrictions when objects are out of sight, obstructed, positioned too high or low, during character jumps, or while low-altitude flying.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Game Interaction Optimization"
+    },
+    "OptimizedLongCastTimeAction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If the cast time of an action is greater than or equal to its recast time, automatically shorten the cast time by 0.4 seconds.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Optimize Actions With Long Cast Time"
+    },
+    "OptimiziedEnemyList": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Optimize the enmity list, so that it could display more information of enemy targets like HP, enmity and cast in the form of original game elements.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Optimize Enmity List"
+    },
+    "PartyFinderFilter": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Intelligently filter and display recruitment information that meets the requirements based on multiple rules",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Party Finder Filter"
+    },
+    "PartyFinderSettingRecord": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Persistently save the recruitment details filled in the interface, and automatically populate them the next time the interface is opened",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Save Recruitment Edit Info"
+    },
+    "PermanentDisconnectStatus": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Keep the online status as 'Disconnected' permanently (without affecting other operations)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Permanent Disconnected Online Status"
+    },
+    "PetSizeContextMenu": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add size adjustment options to summoner's pet right-click menu",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Pet Size Context Menu"
+    },
+    "PFPageSizeCustomize": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allows customization of the number of listings per page in Party Finder, with a maximum of 100 listings per page",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Customize Party Finder Page Size"
+    },
+    "PlayerTargetInfoExpand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allow customization of the information displayed in the Target Info after selecting a target",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Player Target Info Expand"
+    },
+    "PortraitAnimationTimeEditor": {
+        "Author": [
+            "Yarukon"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allow the user to capture the emote by each frame while editing portraits.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Portrait Emote Capture By Frames"
+    },
+    "ProhibitMountFlightRestrction": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Prevent the application of 'Hoofing It' debuff and 'No Aether Currents Beyond This Point' restriction (e.g., inside Island Sanctuary buildings)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Remove Hoofing It & No Aether Current Beyond This Point Limitation"
+    },
+    "ProhibitSwimming": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically prevents the character from entering the swimming state in swimmable areas, allowing the character to run on water and use actions",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Prohibit Swimming"
+    },
+    "QueueCombatTeleport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Remove the restriction on opening the teleport menu during combat, store teleport requests made during combat, and automatically teleport the moment combat ends",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Restore Teleportation During Combat"
+    },
+    "QuickChatPanel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add a panel for quickly sending/copying preset text, macros, or in-game special icons.  \n(Note: Not compatible with Chat 2)",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Quick Chat Panel"
+    },
+    "QuickSynthesisMore": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Raise Quick Synthesis limit to 255.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Higher Quick Synthesis Limit"
+    },
+    "RealQueuePosition": {
+        "Author": [
+            "逆光",
+            "Nukoooo"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "When using the Duty Finder or World Travel, automatically show the real queue position when there are more than 50 players",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Display Real Queue Position"
+    },
+    "RightClickToMoveMode": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Enable moving to target location by right-clicking the ground",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Right-Click Movement Mode"
+    },
+    "SameAethernetTeleport": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Allow users to teleport to the aetheryte or aethernet shard they're currently at.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Allow To Teleport To The Current Aetheryte Or Shard"
+    },
+    "SastashaHelper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After entering the duty Sastasha, automatically acquire the colour given by the bloody memo and highlight the correct coral.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Sastasha Helper"
+    },
+    "ScrollableTabs": {
+        "Author": [
+            "Cyf5119"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Make some tabs in game could be switched by scrolling the middle button of the mouse.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Scrolling Switching Of In-game Tabs"
+    },
+    "SelectableRecruitmentText": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Make the recruitment text be selectable to facilitate copying precisely and provide link parsing, jumping and other life quality functions.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Selectable Recruitment Texts"
+    },
+    "ShopDisplayRealItemIcon": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "The category icons in front of entries will automatically be replaced by actual item icons in shop interfaces.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Display Actual Item Icon In Shops"
+    },
+    "SoundEffectThrottler": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically limit the playback frequency of system sound effects (<se.>) based on config",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Sound Effect Throttler"
+    },
+    "TargetDashActionNoMove": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "Disable movement of the character when executing a gap closer action.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Disable Movement Of Gap Closers"
+    },
+    "ThePraetoriumHelper": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After entering the duty \"The Praetorium\" and mounting the magitek reapers, the module will shot the Magitek Cannon towards the optimal AOE position nearby.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "The Praetorium Helper"
+    },
+    "WeeklyBingoClickToOpen": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allow to jump to the corresponding duties in the interface of Wondrous Tails.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Jump To Duties In Wondrous Tails"
+    },
+    "WorldTravelCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add /pdr worldtravel <world> (case insensitive/partial match) command for quick World Travel from any location within the three main cities",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Quick World Travel Command"
+    }
+}
