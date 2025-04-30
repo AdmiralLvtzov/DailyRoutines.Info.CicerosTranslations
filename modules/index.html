@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>模块列表 - DailyRoutines.FAQ</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modules.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modules.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
 </head>
@@ -13,13 +13,19 @@
     <header class="site-header">
         <div class="header-content">
             <h1 class="site-title">Daily Routines 模块列表</h1>
+            <!-- 移动端菜单切换按钮 -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="菜单">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <nav class="header-nav">
                 <select id="language-selector" class="header-button">
                     <option value="zh-CN">简体中文</option>
                     <option value="ja">日本語</option>
                     <option value="en">English</option>
                 </select>
-                <a href="." class="header-button">
+                <a href="../" class="header-button">
                     <i class='bx bx-home'></i> 返回主页
                 </a>
                 <a href="https://github.com/Dalamud-DailyRoutines" class="header-button" target="_blank">
@@ -86,8 +92,8 @@
         <i class='bx bx-up-arrow-alt'></i>
     </button>
 
-    <script src="js/module-config.js"></script>
-    <script src="js/modules.js"></script>
+    <script src="../js/module-config.js"></script>
+    <script src="../js/modules.js"></script>
     <script>
         // 初始化年份
         document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -117,6 +123,17 @@
         scrollTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+        
+        // 移动端菜单切换
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const headerNav = document.querySelector('.header-nav');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                headerNav.classList.toggle('active');
+            });
+        }
     </script>
 </body>
 </html> 

@@ -39,7 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 加载模块数据
     async function loadModulesData(language) {
         try {
-            const response = await fetch(`assets/${ModuleConfig.languageFiles[language]}`);
+            // 检测当前路径是否在modules子目录中
+            const basePath = window.location.pathname.includes('/modules/') ? '../' : '';
+            const response = await fetch(`${basePath}assets/${ModuleConfig.languageFiles[language]}`);
             const data = await response.json();
             initAuthorOptions(data);
             return data;
