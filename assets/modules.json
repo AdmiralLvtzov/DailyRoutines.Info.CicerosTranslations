@@ -2162,18 +2162,6 @@
         "NeedAuth": false,
         "Title": "自定义视距"
     },
-    "DevModule": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 1,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "本地测试用模块专用临时标题与描述文本",
-        "GlobalPremium": false,
-        "NeedAuth": false,
-        "Title": "本地测试用模块"
-    },
     "DisableGroundActionAutoFace": {
         "Author": [
             "AtmoOmen"
