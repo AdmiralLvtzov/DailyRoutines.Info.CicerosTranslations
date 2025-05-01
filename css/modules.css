@@ -860,6 +860,33 @@ body {
     .module-card {
         margin-bottom: 15px;
     }
+    
+    /* 优化移动端返回主页按钮 */
+    .back-to-home-btn {
+        display: none; /* 在移动端隐藏顶部按钮，显示悬浮按钮 */
+    }
+    
+    .home-floating-btn {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+    }
+    
+    /* 调整主题切换和返回顶部按钮位置，避免遮挡 */
+    .theme-toggle {
+        bottom: 90px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+    }
+    
+    .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+    }
 }
 
 /* 移动端菜单按钮 */
@@ -932,79 +959,65 @@ body {
     }
 }
 
-/* 修改容器样式以适应新的导航 */
-.modules-container {
-    display: block;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* 返回主页按钮样式 */
+.back-to-home-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
 }
 
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .modules-container {
-        padding: 10px;
-        margin-top: 10px;
-    }
-    
-    .filters-container {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 12px;
-        gap: 10px;
-    }
-    
-    .filters-container .search-box {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    
-    .filter-group {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    .filter-group select {
-        flex: 1 1 calc(50% - 4px);
-        min-width: 0;
-    }
-    
-    .modules-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        margin-top: 15px;
-    }
-    
-    .module-card {
-        flex-direction: column;
-        padding: 15px;
-    }
-    
-    .module-icon {
-        margin-right: 0;
-        margin-bottom: 10px;
-        align-self: center;
-    }
-    
-    .module-info {
-        width: 100%;
-    }
-    
-    /* 隐藏筛选区域的搜索框，使用顶部搜索框代替 */
-    .filters-container .search-box {
-        display: none;
-    }
-    
-    /* 模块信息按钮调整 */
-    .module-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    .module-button {
-        flex: 1 1 calc(50% - 4px);
-        min-width: 0;
-        padding: 8px;
-    }
+.back-to-home-btn i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.back-to-home-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* 悬浮返回主页按钮 */
+.home-floating-btn {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+    transition: var(--transition), transform 0.3s ease;
+    text-decoration: none;
+}
+
+.home-floating-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    background: var(--primary-hover);
+}
+
+[data-theme="dark"] .back-to-home-btn,
+[data-theme="dark"] .home-floating-btn {
+    background-color: var(--dark-primary);
+    color: white;
+}
+
+[data-theme="dark"] .back-to-home-btn:hover,
+[data-theme="dark"] .home-floating-btn:hover {
+    background-color: var(--dark-primary-hover);
 } 

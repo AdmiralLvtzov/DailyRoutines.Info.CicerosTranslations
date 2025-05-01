@@ -8,60 +8,37 @@
     <link rel="stylesheet" href="../css/modules.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
-    
-    <style>
-    /* 添加这段样式到页面 */
-    .title-module {
-        display: inline-block;
-    }
-    @media (max-width: 480px) {
-        .site-title {
-            font-size: 1.1rem;
-            white-space: nowrap;
-        }
-        #language-selector {
-            display: none !important;
-        }
-    }
-    </style>
 </head>
 <body>
-    <header class="home-header">
+    <header class="site-header">
         <div class="header-content">
-            <a href="../" class="header-link">
-                <h1 class="site-title"><span class="i18n-modules-title">Daily&nbsp;Routines <span class="title-module">模块列表</span></span></h1>
-            </a>
-            <div class="header-search">
-                <div class="search-box">
-                    <span class="search-icon"><i class='bx bx-search'></i></span>
-                    <input type="text" placeholder="搜索模块..." id="searchInput">
-                </div>
-            </div>
+            <h1 class="site-title"><span class="i18n-modules-title">Daily Routines 模块列表</span></h1>
+            
             <!-- 移动端菜单切换按钮 -->
             <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="菜单">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-            <div class="header-buttons">
-                <!-- 在非移动端页面添加返回主页按钮 -->
-                <a href="../" class="header-button desktop-only">
-                    <i class='bx bx-home'></i> <span class="i18n-back-to-home">返回主页</span>
-                </a>
+            
+            <nav class="header-nav">
                 <select id="language-selector" class="header-button">
                     <!-- 语言选项将由 JavaScript 动态生成 -->
                 </select>
+                <a href="../" class="header-button">
+                    <i class='bx bx-home'></i> <span class="i18n-back-to-home">返回主页</span>
+                </a>
                 <a href="https://github.com/Dalamud-DailyRoutines" class="header-button" target="_blank">
                     <i class='bx bxl-github'></i> GitHub
                 </a>
                 <a href="https://discord.gg/MDvv8Ejntw" class="header-button" target="_blank">
                     <i class='bx bxl-discord-alt'></i> Discord
                 </a>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <div class="container modules-container">
+    <div class="container">
         <div class="filters-container">
             <div class="search-box">
                 <i class='bx bx-search'></i>
@@ -115,36 +92,10 @@
         <i class='bx bx-up-arrow-alt'></i>
     </button>
 
-    <!-- 添加移动端底部导航栏 -->
-    <nav class="mobile-bottom-nav" id="mobile-bottom-nav">
-        <a href="../" class="mobile-nav-item">
-            <i class='bx bx-home mobile-nav-icon'></i>
-            <span>主页</span>
-        </a>
-        <a href="../modules" class="mobile-nav-item">
-            <i class='bx bx-grid-alt mobile-nav-icon'></i>
-            <span class="i18n-modules-list">模块列表</span>
-        </a>
-        <a href="javascript:void(0)" class="mobile-nav-item" id="mobile-search-btn">
-            <i class='bx bx-search mobile-nav-icon'></i>
-            <span>搜索</span>
-        </a>
-        <a href="javascript:void(0)" class="mobile-nav-item language-switcher" id="mobile-lang-btn">
-            <i class='bx bx-globe mobile-nav-icon'></i>
-            <span>语言</span>
-            <div class="mobile-lang-dropdown" id="mobile-lang-dropdown">
-                <!-- 动态添加语言选项 -->
-            </div>
-        </a>
-        <a href="javascript:void(0)" class="mobile-nav-item" id="mobile-theme-btn">
-            <i class='bx bx-moon mobile-nav-icon dark-icon'></i>
-            <i class='bx bx-sun mobile-nav-icon light-icon'></i>
-            <span>主题</span>
-        </a>
-    </nav>
-
-    <!-- 移动端提示元素 -->
-    <div class="mobile-menu-hint" id="mobile-menu-hint">点击右上角按钮查看更多选项</div>
+    <!-- 新增返回主页悬浮按钮 -->
+    <a href="../" class="home-floating-btn" aria-label="返回主页">
+        <i class='bx bx-home'></i>
+    </a>
 
     <!-- 先加载语言配置 -->
     <script src="../js/config.js"></script>
@@ -183,127 +134,14 @@
         
         // 移动端菜单切换
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const headerButtons = document.querySelector('.header-buttons');
+        const headerNav = document.querySelector('.header-nav');
         
         if (mobileMenuToggle) {
             mobileMenuToggle.addEventListener('click', () => {
                 mobileMenuToggle.classList.toggle('active');
-                headerButtons.classList.toggle('active');
+                headerNav.classList.toggle('active');
             });
         }
-        
-        // 顶部搜索框与筛选框互动
-        const headerSearchInput = document.getElementById('searchInput');
-        const filtersSearchInput = document.querySelector('.filters-container .search-box input');
-        
-        // 更新筛选器搜索逻辑，使用顶部搜索框的值
-        if (headerSearchInput && filtersSearchInput) {
-            // 保留原搜索框的ID，因为模块筛选逻辑依赖于这个ID
-            // 同步搜索
-            headerSearchInput.addEventListener('input', function() {
-                filtersSearchInput.value = this.value;
-                // 触发筛选逻辑
-                const event = new Event('input', { bubbles: true });
-                filtersSearchInput.dispatchEvent(event);
-            });
-        }
-        
-        // 移动端搜索按钮功能
-        const mobileSearchBtn = document.getElementById('mobile-search-btn');
-        if (mobileSearchBtn && headerSearchInput) {
-            mobileSearchBtn.addEventListener('click', function() {
-                headerSearchInput.focus();
-            });
-        }
-        
-        // 移动端主题切换按钮功能
-        const mobileThemeBtn = document.getElementById('mobile-theme-btn');
-        if (mobileThemeBtn) {
-            mobileThemeBtn.addEventListener('click', function() {
-                const currentTheme = document.documentElement.getAttribute('data-theme');
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-            });
-        }
-
-        // 移动端语言切换功能
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileLangBtn = document.getElementById('mobile-lang-btn');
-            const mobileLangDropdown = document.getElementById('mobile-lang-dropdown');
-            
-            if (mobileLangBtn && mobileLangDropdown) {
-                // 切换下拉菜单显示
-                mobileLangBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    mobileLangDropdown.classList.toggle('active');
-                });
-
-                // 关闭下拉菜单点击外部
-                document.addEventListener('click', function(e) {
-                    if (!mobileLangBtn.contains(e.target) && mobileLangDropdown.classList.contains('active')) {
-                        mobileLangDropdown.classList.remove('active');
-                    }
-                });
-
-                // 加载语言选项
-                function loadMobileLanguages() {
-                    if (window.LANGUAGES) {
-                        const currentLang = localStorage.getItem('selectedLanguage') || 'zh';
-                        
-                        // 清空现有选项
-                        mobileLangDropdown.innerHTML = '';
-                        
-                        // 添加新选项
-                        window.LANGUAGES.forEach(lang => {
-                            const option = document.createElement('div');
-                            option.className = 'mobile-lang-option';
-                            if (lang.code === currentLang) {
-                                option.classList.add('active');
-                            }
-                            option.setAttribute('data-lang', lang.code);
-                            option.textContent = lang.name;
-                            
-                            option.addEventListener('click', function() {
-                                const langCode = this.getAttribute('data-lang');
-                                localStorage.setItem('selectedLanguage', langCode);
-                                
-                                // 更新桌面端下拉菜单的选中项
-                                const desktopLangSelector = document.getElementById('language-selector');
-                                if (desktopLangSelector) {
-                                    desktopLangSelector.value = langCode;
-                                }
-                                
-                                // 触发语言切换事件，让页面其他部分更新
-                                const event = new Event('change');
-                                if (desktopLangSelector) {
-                                    desktopLangSelector.dispatchEvent(event);
-                                }
-                                
-                                // 关闭下拉菜单
-                                mobileLangDropdown.classList.remove('active');
-                                
-                                // 高亮当前选中项
-                                document.querySelectorAll('.mobile-lang-option').forEach(el => {
-                                    el.classList.remove('active');
-                                });
-                                this.classList.add('active');
-                            });
-                            
-                            mobileLangDropdown.appendChild(option);
-                        });
-                    }
-                }
-                
-                // 如果已加载语言配置则初始化
-                if (window.LANGUAGES) {
-                    loadMobileLanguages();
-                } else {
-                    // 监听语言配置加载完成事件
-                    window.addEventListener('languagesLoaded', loadMobileLanguages);
-                }
-            }
-        });
     </script>
 </body>
 </html> 

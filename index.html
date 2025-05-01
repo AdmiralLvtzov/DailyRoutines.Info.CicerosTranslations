@@ -20,25 +20,12 @@
     
     <!-- 添加图标库 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
-
-    <style>
-    /* 添加这段样式到页面 */
-    .info-text {
-        display: inline-block;
-    }
-    @media (max-width: 480px) {
-        .site-title {
-            font-size: 1.1rem;
-            white-space: nowrap;
-        }
-    }
-    </style>
 </head>
 <body>
     <header class="home-header">
         <div class="header-content">
             <a href="." class="header-link">
-                <h1 class="site-title">Daily&nbsp;Routines <span class="info-text">信息中心</span></h1>
+                <h1 class="site-title">Daily Routines 信息中心</h1>
             </a>
             <div class="header-search">
                 <div class="search-box">
@@ -54,8 +41,7 @@
                 <span class="bar"></span>
             </button>
             <div class="header-buttons">
-                <!-- 在非移动端页面添加模块列表按钮 -->
-                <a href="modules" class="header-button desktop-only" id="modules-list-btn">
+                <a href="modules/" class="header-button" id="modules-list-btn">
                     <i class='bx bx-grid-alt'></i> <span class="i18n-modules-list">模块列表</span>
                 </a>
                 <select id="language-selector" class="header-button">
@@ -135,40 +121,6 @@
     <button class="scroll-top" id="scroll-top" aria-label="返回顶部">
         <i class='bx bx-up-arrow-alt'></i>
     </button>
-
-    <!-- 添加移动端底部导航栏 -->
-    <nav class="mobile-bottom-nav" id="mobile-bottom-nav">
-        <a href="." class="mobile-nav-item">
-            <i class='bx bx-home mobile-nav-icon'></i>
-            <span>主页</span>
-        </a>
-        <a href="modules" class="mobile-nav-item">
-            <i class='bx bx-grid-alt mobile-nav-icon'></i>
-            <span class="i18n-modules-list">模块列表</span>
-        </a>
-        <a href="javascript:void(0)" class="mobile-nav-item" id="mobile-search-btn">
-            <i class='bx bx-search mobile-nav-icon'></i>
-            <span>搜索</span>
-        </a>
-        <a href="javascript:void(0)" class="mobile-nav-item language-switcher" id="mobile-lang-btn">
-            <i class='bx bx-globe mobile-nav-icon'></i>
-            <span>语言</span>
-            <div class="mobile-lang-dropdown" id="mobile-lang-dropdown">
-                <!-- 动态添加语言选项 -->
-            </div>
-        </a>
-        <a href="javascript:void(0)" class="mobile-nav-item" id="mobile-theme-btn">
-            <i class='bx bx-moon mobile-nav-icon dark-icon'></i>
-            <i class='bx bx-sun mobile-nav-icon light-icon'></i>
-            <span>主题</span>
-        </a>
-    </nav>
-
-    <!-- 移动端提示元素 -->
-    <div class="mobile-menu-hint" id="mobile-menu-hint">点击右上角按钮查看更多选项</div>
-    <div class="mobile-swipe-indicator" id="mobile-swipe-indicator">
-        <i class='bx bx-chevron-left'></i>
-    </div>
 
     <!-- 按正确的顺序加载脚本 -->
     <script src="./js/config.js"></script>
@@ -268,81 +220,6 @@
         document.getElementById('language-selector').addEventListener('change', function(e) {
             localStorage.setItem('selectedLanguage', e.target.value);
             updateHeaderI18n();
-        });
-
-        // 移动端语言切换功能
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileLangBtn = document.getElementById('mobile-lang-btn');
-            const mobileLangDropdown = document.getElementById('mobile-lang-dropdown');
-            
-            if (mobileLangBtn && mobileLangDropdown) {
-                // 切换下拉菜单显示
-                mobileLangBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    mobileLangDropdown.classList.toggle('active');
-                });
-
-                // 关闭下拉菜单点击外部
-                document.addEventListener('click', function(e) {
-                    if (!mobileLangBtn.contains(e.target) && mobileLangDropdown.classList.contains('active')) {
-                        mobileLangDropdown.classList.remove('active');
-                    }
-                });
-
-                // 加载语言选项
-                function loadMobileLanguages() {
-                    if (window.LANGUAGES) {
-                        const currentLang = localStorage.getItem('selectedLanguage') || 'zh';
-                        
-                        // 清空现有选项
-                        mobileLangDropdown.innerHTML = '';
-                        
-                        // 添加新选项
-                        window.LANGUAGES.forEach(lang => {
-                            const option = document.createElement('div');
-                            option.className = 'mobile-lang-option';
-                            if (lang.code === currentLang) {
-                                option.classList.add('active');
-                            }
-                            option.setAttribute('data-lang', lang.code);
-                            option.textContent = lang.name;
-                            
-                            option.addEventListener('click', function() {
-                                const langCode = this.getAttribute('data-lang');
-                                localStorage.setItem('selectedLanguage', langCode);
-                                
-                                // 更新桌面端下拉菜单的选中项
-                                const desktopLangSelector = document.getElementById('language-selector');
-                                if (desktopLangSelector) {
-                                    desktopLangSelector.value = langCode;
-                                }
-                                
-                                // 更新页面文本
-                                updateHeaderI18n();
-                                
-                                // 关闭下拉菜单
-                                mobileLangDropdown.classList.remove('active');
-                                
-                                // 高亮当前选中项
-                                document.querySelectorAll('.mobile-lang-option').forEach(el => {
-                                    el.classList.remove('active');
-                                });
-                                this.classList.add('active');
-                            });
-                            
-                            mobileLangDropdown.appendChild(option);
-                        });
-                    }
-                }
-                
-                // 如果已加载语言配置则初始化
-                if (window.LANGUAGES) {
-                    loadMobileLanguages();
-                } else {
-                    // 监听语言配置加载完成事件
-                    window.addEventListener('languagesLoaded', loadMobileLanguages);
-                }
-            }
         });
     </script>
 </body>
