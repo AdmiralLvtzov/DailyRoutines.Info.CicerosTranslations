@@ -930,4 +930,81 @@ body {
     .module-card {
         min-height: 180px;
     }
+}
+
+/* 修改容器样式以适应新的导航 */
+.modules-container {
+    display: block;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .modules-container {
+        padding: 10px;
+        margin-top: 10px;
+    }
+    
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .filters-container .search-box {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .filter-group {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .filter-group select {
+        flex: 1 1 calc(50% - 4px);
+        min-width: 0;
+    }
+    
+    .modules-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .module-card {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .module-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+        align-self: center;
+    }
+    
+    .module-info {
+        width: 100%;
+    }
+    
+    /* 隐藏筛选区域的搜索框，使用顶部搜索框代替 */
+    .filters-container .search-box {
+        display: none;
+    }
+    
+    /* 模块信息按钮调整 */
+    .module-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .module-button {
+        flex: 1 1 calc(50% - 4px);
+        min-width: 0;
+        padding: 8px;
+    }
 } 
