@@ -307,13 +307,16 @@ body {
 }
 
 .site-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--header-text);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
     margin: 0;
-    position: relative;
-    padding-bottom: 12px;
-    line-height: 1.2;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .site-title::after {
@@ -1222,11 +1225,11 @@ body {
     
     .site-title {
         font-size: 1.2rem;
-        padding-bottom: 4px;
-        white-space: normal;
-        line-height: 1.3;
-        max-width: 80%;
-        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(100% - 40px); /* 为菜单按钮预留空间 */
+        margin-right: 10px;
     }
     
     .home-container {
@@ -1255,6 +1258,13 @@ body {
     .category-grid {
         grid-template-columns: 1fr;
         gap: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.1rem;
+        max-width: calc(100% - 40px);
     }
 }
 
@@ -1834,11 +1844,11 @@ body {
     
     .site-title {
         font-size: 1.2rem;
-        padding-bottom: 4px;
-        white-space: normal;
-        line-height: 1.3;
-        max-width: 80%; /* 防止标题太长 */
-        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(100% - 40px); /* 为菜单按钮预留空间 */
+        margin-right: 10px;
     }
     
     .header-link {
@@ -1860,7 +1870,7 @@ body {
     
     /* 调整移动端底部导航样式 */
     .mobile-bottom-nav {
-        display: flex;
+        display: none; /* 默认不显示，只在移动端显示 */
         position: fixed;
         bottom: 0;
         left: 0;
@@ -1883,15 +1893,15 @@ body {
         text-decoration: none;
         font-size: 0.7rem;
         padding: 3px 0;
-        width: 25%;
+        width: 20%;
         position: relative;
         flex: 1;
         text-align: center;
     }
     
     .mobile-nav-icon {
-        font-size: 1.4rem;
-        margin-bottom: 2px;
+        font-size: 1.3rem;
+        margin-bottom: 3px;
         color: var(--primary-color);
         display: block; /* 确保图标总是显示 */
     }
@@ -2087,11 +2097,11 @@ body,
     
     .site-title {
         font-size: 1.2rem;
-        padding-bottom: 4px;
-        white-space: normal;
-        line-height: 1.3;
-        max-width: 80%; /* 防止标题太长 */
-        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(100% - 40px); /* 为菜单按钮预留空间 */
+        margin-right: 10px;
     }
     
     .header-link {
@@ -2113,7 +2123,7 @@ body,
     
     /* 调整移动端底部导航样式 */
     .mobile-bottom-nav {
-        display: flex;
+        display: none; /* 默认不显示，只在移动端显示 */
         position: fixed;
         bottom: 0;
         left: 0;
@@ -2136,15 +2146,15 @@ body,
         text-decoration: none;
         font-size: 0.7rem;
         padding: 3px 0;
-        width: 25%;
+        width: 20%;
         position: relative;
         flex: 1;
         text-align: center;
     }
     
     .mobile-nav-icon {
-        font-size: 1.4rem;
-        margin-bottom: 2px;
+        font-size: 1.3rem;
+        margin-bottom: 3px;
         color: var(--primary-color);
         display: block; /* 确保图标总是显示 */
     }
@@ -2173,6 +2183,13 @@ body,
     }
 }
 
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.1rem;
+        max-width: calc(100% - 40px);
+    }
+}
+
 /* 非移动端设备隐藏移动端元素 */
 @media (min-width: 769px) {
     .mobile-bottom-nav, 
@@ -2180,10 +2197,6 @@ body,
     .mobile-swipe-indicator, 
     .mobile-menu-toggle {
         display: none !important;
-    }
-    
-    body {
-        padding-bottom: 0 !important; /* 移除为移动导航栏添加的底部padding */
     }
 }
 
@@ -2332,6 +2345,14 @@ body,
     .desktop-only {
         display: flex;
     }
+    
+    /* 确保移动元素在非移动端不显示 */
+    .mobile-bottom-nav, 
+    .mobile-menu-hint, 
+    .mobile-swipe-indicator, 
+    .mobile-menu-toggle {
+        display: none !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2353,7 +2374,7 @@ body,
 
 /* 调整移动端底部导航样式 */
 .mobile-bottom-nav {
-    display: flex;
+    display: none; /* 默认不显示，只在移动端显示 */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -2376,10 +2397,47 @@ body,
     text-decoration: none;
     font-size: 0.7rem;
     padding: 3px 0;
-    width: 25%;
+    width: 20%;
     position: relative;
     flex: 1;
     text-align: center;
+}
+
+/* 移动端底部导航栏强制水平排列 */
+@media (max-width: 768px) {
+    /* 确保移动端底部导航水平排布 */
+    .mobile-bottom-nav {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap;
+        padding: 8px 0;
+    }
+
+    .mobile-nav-item {
+        flex: 1;
+        width: 20%;
+        max-width: 20%;
+        min-width: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+        padding: 3px 0;
+    }
+    
+    .mobile-nav-icon {
+        font-size: 1.3rem;
+        margin-bottom: 3px;
+    }
 }
 
 /* 移动端隐藏语言选择器 */
@@ -2445,45 +2503,6 @@ body,
     }
 }
 
-/* 确保非激活时语言选择器和其他菜单都不可见不可交互 */
-.header-buttons:not(.active) * {
-    pointer-events: none;
-}
-
-/* 确保移动端菜单收起时所有元素不可交互 */
-@media (max-width: 768px) {
-    /* 收起菜单时确保子元素完全不可交互 */
-    .header-buttons:not(.active) {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-        pointer-events: none;
-        visibility: hidden;
-        display: none !important;
-        z-index: -1;
-    }
-    
-    /* 菜单激活时才显示和允许交互 */
-    .header-buttons.active {
-        position: relative;
-        top: auto;
-        left: auto;
-        display: flex !important;
-        flex-direction: column;
-        visibility: visible;
-        pointer-events: auto;
-        max-height: 300px;
-        opacity: 1;
-        z-index: 1000;
-        background-color: var(--surface-color);
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        width: 100%;
-        max-width: 250px;
-    }
-}
-
 /* 为移动导航添加语言切换按钮样式 */
 .mobile-nav-item.language-switcher {
     position: relative;
@@ -2534,3 +2553,63 @@ body,
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--dark-primary);
 }
+
+/* 确保非激活时语言选择器和其他菜单都不可见不可交互 - 仅限移动端 */
+@media (max-width: 768px) {
+    /* 收起菜单时确保子元素完全不可交互 */
+    .header-buttons:not(.active) {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        pointer-events: none;
+        visibility: hidden;
+        display: none !important;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+    
+    /* 确保非激活时子元素无法交互 */
+    .header-buttons:not(.active) * {
+        pointer-events: none;
+    }
+    
+    /* 菜单激活时才显示和允许交互 */
+    .header-buttons.active {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: flex !important;
+        flex-direction: column;
+        visibility: visible;
+        pointer-events: auto;
+        max-height: 300px;
+        opacity: 1;
+        z-index: 1000;
+        background-color: var(--surface-color);
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    /* 确保语言切换器在移动端菜单关闭时完全不可交互 */
+    #language-selector:not(.active) {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        pointer-events: none;
+        visibility: hidden;
+        display: none !important;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+}
+
+/* 为移动导航添加语言切换按钮样式 */
