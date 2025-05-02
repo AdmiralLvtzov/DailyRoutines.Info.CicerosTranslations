@@ -465,7 +465,7 @@
         "CNPremium": false,
         "Description": "允许快速丢弃/出售预设好中的一组物品",
         "GlobalPremium": false,
-        "NeedAuth": false,
+        "NeedAuth": true,
         "Title": "自动丢弃物品"
     },
     "AutoDismount": {
@@ -623,6 +623,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "自动园圃作业"
+    },
+    "AutoGatherDiadem": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完成并在 天上福地云冠群岛 内点击开始后, 自动循环采集当前职业对应的特供材料以积累技巧点",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动云冠群岛采集"
     },
     "AutoGathererRoleActions": {
         "Author": [
@@ -2421,7 +2433,7 @@
         "Category": 5,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "可在好友名单内右键为好友添加特定的昵称与备注, 并在游戏原生界面内直接显示",
+        "Description": "可在好友名单内右键为好友添加特定的昵称与备注, 并在游戏原生界面内直接显示, 同时支持记录获取好友曾用名",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "好友名单昵称与备注"
