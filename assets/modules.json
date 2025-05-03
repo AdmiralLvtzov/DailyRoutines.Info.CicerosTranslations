@@ -1441,6 +1441,18 @@
         "NeedAuth": true,
         "Title": "自动移除步行咏唱技能移速惩罚"
     },
+    "AutoRenewRecruitment": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完成后, 当招募剩余时间不足时, 自动编辑招募一次以续期",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动招募续期"
+    },
     "AutoRepair": {
         "Author": [
             "AtmoOmen"
@@ -1716,6 +1728,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动拆分物品"
+    },
+    "AutoStellarSprint": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "当位于宇宙探索相关区域, 且当前职业为生产采集时, 自动使用宇宙冲刺",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动宇宙探索冲刺"
     },
     "AutoStoreToCabinet": {
         "Author": [
