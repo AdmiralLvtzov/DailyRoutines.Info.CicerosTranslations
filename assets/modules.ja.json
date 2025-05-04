@@ -66,10 +66,10 @@
         "Category": 6,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "セレクト画面を開き、『スタート』を押すと、自動で霊砂化選別します",
+        "Description": "精選UIを開き、「スタート」をくりっくすると、自動で霊砂化します。",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "自動で選別して霊砂化"
+        "Title": "自動で精選して霊砂化"
     },
     "AutoAllowMultipleGames": {
         "Author": [
@@ -465,7 +465,7 @@
         "CNPremium": false,
         "Description": "アイテムセットに登録されたアイテムを自動的に廃棄/売却する。",
         "GlobalPremium": false,
-        "NeedAuth": false,
+        "NeedAuth": true,
         "Title": "アイテムの自動廃棄/売却"
     },
     "AutoDismount": {
@@ -623,6 +623,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "自動栽培"
+    },
+    "AutoGatherDiadem": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "ディアデム諸島内で「スタート」をクリックすると、現在のクラスに対応する特別採集素材を自動で繰り返し採集し、テクニカルポイントを蓄積します。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "ディアデム諸島自動採集"
     },
     "AutoGathererRoleActions": {
         "Author": [
@@ -1429,6 +1441,18 @@
         "NeedAuth": true,
         "Title": "歩行詠唱スキルの移動速度低下ペナルティを解除"
     },
+    "AutoRenewRecruitment": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "PT募集の残り時間が少なくなると、自動的に募集を再編集して期限を延長します。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "PT募集自動更新"
+    },
     "AutoRepair": {
         "Author": [
             "AtmoOmen"
@@ -1704,6 +1728,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "アイテムを自動で分割する"
+    },
+    "AutoStellarSprint": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "コスモエクスプローラーエリアに居て、現在のジョブがギャザクラ職である時、自動的にコスモスプリントを使用します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "オートコスモスプリント"
     },
     "AutoStoreToCabinet": {
         "Author": [
@@ -2421,7 +2457,7 @@
         "Category": 5,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "可在好友名单内右键为好友添加特定的昵称与备注, 并在游戏原生界面内直接显示, 同时支持记录获取好友曾用名",
+        "Description": "フレンドリスト内で右クリックして、フレンドに特定のニックネームやメモを追加することができ、ゲームの標準UI上にも直接表示されます。また、フレンドの過去の名前を記録する機能にも対応しています。",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "フレンドリストのニックネームとメモ"
