@@ -33,3 +33,21 @@ tags: [开发, IPC]
 - 返回值 `bool`
   - `true`: 是
   - `false`: 否 / 模块未启用
+
+# 自动修理 / AutoRepair
+
+## IsBusy
+
+检查当前模块是否正忙
+
+- 名称: `DailyRoutines.Modules.AutoRepair.IsBusy`
+- 返回值 `bool`
+  - `true`: 是
+  - `false`: 否 / 模块未启用
+
+## EnqueueRepair
+
+发送自动修理请求
+
+- 名称: `DailyRoutines.Modules.AutoRepair.EnqueueRepair`
+- 返回值 `object` (`void`)
