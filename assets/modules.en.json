@@ -465,7 +465,7 @@
         "CNPremium": false,
         "Description": "Auto discard or sell items in presets",
         "GlobalPremium": false,
-        "NeedAuth": false,
+        "NeedAuth": true,
         "Title": "Auto Discard Items"
     },
     "AutoDismount": {
@@ -623,6 +623,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "Auto Gardening"
+    },
+    "AutoGatherDiadem": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完成并在 天上福地云冠群岛 内点击开始后, 自动循环采集指定材料以积累技巧点/练级",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Gather In The Diadem"
     },
     "AutoGathererRoleActions": {
         "Author": [
@@ -803,6 +815,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "Auto Finish Tradecraft Leves"
+    },
+    "AutoLockGameWindow": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "进入战斗后, 自动锁定游戏窗口, 防止其被意外拖动到主屏外",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动锁定游戏窗口"
     },
     "AutoLogin": {
         "Author": [
@@ -1004,10 +1028,10 @@
         "Category": 8,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "当前所在大区或订阅大区诛灭战出现限时奖励提升时, 自动发送通知信息提醒",
+        "Description": "Notify the user when chaotic raid bonus is available in the current data center or the data center the user subscribed.",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "自动通知诛灭战限时奖励提升"
+        "Title": "Auto Notify Chaotic Raid Bonus"
     },
     "AutoNotifyCountdown": {
         "Author": [
@@ -1429,6 +1453,18 @@
         "NeedAuth": true,
         "Title": "Auto remove speed penalties of walking cast actions"
     },
+    "AutoRenewRecruitment": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically renew user's party recruitment while the remaining time is running low after configurations.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Renew Recruitment"
+    },
     "AutoRepair": {
         "Author": [
             "AtmoOmen"
@@ -1452,6 +1488,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "Auto Repeat Chat Message"
+    },
+    "AutoReplaceActionAnimation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically replace the animations of specified actions with animations from different actions.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Replace Action Animation"
     },
     "AutoReplaceActionLowLevel": {
         "Author": [
@@ -1704,6 +1752,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Auto Split Items"
+    },
+    "AutoStellarSprint": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically execute Stellar Sprint in the zones related to Cosmic Exploration while the current job is a Disciple of the Land or Hand.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Stellar Sprint"
     },
     "AutoStoreToCabinet": {
         "Author": [
@@ -2421,7 +2481,7 @@
         "Category": 5,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "可在好友名单内右键为好友添加特定的昵称与备注, 并在游戏原生界面内直接显示, 同时支持记录获取好友曾用名",
+        "Description": "Allow users to add nicknames or notes for players in Friend List, which will be displayed in vanilla game interface. Also provide the feature to check previous names of friends.",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Nicknames In Friend List"
@@ -2716,6 +2776,19 @@
         "NeedAuth": true,
         "Title": "Neverreap Helper"
     },
+    "NoAutoClosePartyFinder": {
+        "Author": [
+            "Nyy",
+            "YLCHEN"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "While the members in the current recruitment change, prevent the party finder interface from being closed and re-open the recruitment which the user was just reading if applicable.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Hold Party Finder Interface"
+    },
     "NoClipMode": {
         "Author": [
             "Errer"
@@ -2987,7 +3060,7 @@
         ],
         "Category": 2,
         "CNOnly": false,
-        "CNPremium": true,
+        "CNPremium": false,
         "Description": "Allow users to teleport to the aetheryte or aethernet shard they're currently at.",
         "GlobalPremium": false,
         "NeedAuth": true,

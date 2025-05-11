@@ -631,7 +631,7 @@
         "Category": 1,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "ディアデム諸島内で「スタート」をクリックすると、現在のクラスに対応する特別採集素材を自動で繰り返し採集し、テクニカルポイントを蓄積します。",
+        "Description": "ディアデム諸島で「スタート」をクリックすると、自動で指定された素材を繰り返し採集し、技巧点を貯めたりレベル上げを行います。",
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "ディアデム諸島自動採集"
@@ -815,6 +815,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "クラフターリーヴ自動納品"
+    },
+    "AutoLockGameWindow": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "戦闘開始後、ゲームウィンドウをロックし、誤って画面外に移動してしまうのを防ぎます。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "ゲームウィンドウを固定する"
     },
     "AutoLogin": {
         "Author": [
@@ -1476,6 +1488,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "チャット情報を自動で繰り返す"
+    },
+    "AutoReplaceActionAnimation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "指定したスキルを発動した際のアニメーション効果が、別のスキルのアニメーションに自動的に置き換えられます。",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "スキルアニメーションの自動置き換え"
     },
     "AutoReplaceActionLowLevel": {
         "Author": [
@@ -2752,6 +2776,19 @@
         "NeedAuth": true,
         "Title": "『神域浮島 ネバーリープ』アシスト"
     },
+    "NoAutoClosePartyFinder": {
+        "Author": [
+            "Nyy",
+            "YLCHEN"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "現在のPT構成に変動があった際、ゲームが自動的にPT募集ウィンドウを閉じるのを防ぎ、現在閲覧中の募集詳細画面を自動で再表示します。",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "PT構成変動時のPT募集ウィンドウ閉じを無効にする"
+    },
     "NoClipMode": {
         "Author": [
             "Errer"
@@ -3023,7 +3060,7 @@
         ],
         "Category": 2,
         "CNOnly": false,
-        "CNPremium": true,
+        "CNPremium": false,
         "Description": "ゲームによる現在のエーテライト/都市内エーテライトへのテレポート使用制限を解除する",
         "GlobalPremium": false,
         "NeedAuth": true,

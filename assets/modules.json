@@ -631,7 +631,7 @@
         "Category": 1,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "配置完成并在 天上福地云冠群岛 内点击开始后, 自动循环采集当前职业对应的特供材料以积累技巧点",
+        "Description": "配置完成并在 天上福地云冠群岛 内点击开始后, 自动循环采集指定材料以积累技巧点/练级",
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "自动云冠群岛采集"
@@ -815,6 +815,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "自动批量完成生产理符"
+    },
+    "AutoLockGameWindow": {
+        "Author": [
+            "status102"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "进入战斗后, 自动锁定游戏窗口, 防止其被意外拖动到主屏外",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动锁定游戏窗口"
     },
     "AutoLogin": {
         "Author": [
@@ -1476,6 +1488,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "自动复读聊天信息"
+    },
+    "AutoReplaceActionAnimation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完成后, 自动将指定技能发动时的动画效果替换为另一技能的动画效果",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动替换技能动画"
     },
     "AutoReplaceActionLowLevel": {
         "Author": [
@@ -2752,6 +2776,19 @@
         "NeedAuth": true,
         "Title": "空中神域不获岛助手"
     },
+    "NoAutoClosePartyFinder": {
+        "Author": [
+            "Nyy",
+            "YLCHEN"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "当招募成员发生变更时, 自动阻止游戏关闭队员招募界面, 并重新打开正在阅读的招募详情界面",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "禁止队员招募自动关闭"
+    },
     "NoClipMode": {
         "Author": [
             "Errer"
@@ -3023,7 +3060,7 @@
         ],
         "Category": 2,
         "CNOnly": false,
-        "CNPremium": true,
+        "CNPremium": false,
         "Description": "自动解除游戏禁止传送至当前以太之光/城内以太之晶的限制",
         "GlobalPremium": false,
         "NeedAuth": true,
