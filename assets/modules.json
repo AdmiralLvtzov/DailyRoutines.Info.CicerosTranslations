@@ -51,9 +51,9 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 1,
+        "Category": 10,
         "CNOnly": false,
-        "CNPremium": true,
+        "CNPremium": false,
         "Description": "点击开始后, 自动完成当前时间段/天气下允许完成的所有探索笔记",
         "GlobalPremium": false,
         "NeedAuth": true,
@@ -628,7 +628,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 1,
+        "Category": 10,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "配置完成并在 天上福地云冠群岛 内点击开始后, 自动循环采集指定材料以积累技巧点/练级",
@@ -707,6 +707,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动游玩强袭水晶塔"
+    },
+    "AutoHuntingLog": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 10,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动完成指定职业/大国防联军下的所有/指定等级的非副本怪物讨伐任务",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动讨伐笔记"
     },
     "AutoImmunizeForceMove": {
         "Author": [
@@ -881,7 +893,7 @@
             "AtmoOmen",
             "KirisameVanilla"
         ],
-        "Category": 1,
+        "Category": 10,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "配置完成后, 自动扫描对应区域内的恶名精英信息, 整理成列表数据",
@@ -941,7 +953,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 1,
+        "Category": 10,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "配置完成并点击开始后, 自动循环采集无人岛素材",
@@ -1848,6 +1860,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动限制结印技能"
+    },
+    "AutoTrackStatusOff": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动记录自身给予其他玩家的状态效果存续情况, 并在其被他人主动解除时发送通知信息提醒",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动记录状态效果消失情况"
     },
     "AutoUfoCatcher": {
         "Author": [
