@@ -3,7 +3,7 @@ const CACHE_VERSION = 'v1';
 const CACHE_NAME = `dr-faq-cache-${CACHE_VERSION}`;
 const STATIC_CACHE = `static-cache-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `dynamic-cache-${CACHE_VERSION}`;
-
+ 
 // 需要预缓存的静态资源
 const STATIC_ASSETS = [
     '/',

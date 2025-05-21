@@ -5,4 +5,4 @@ RewriteRule ^(.*)$ $1.html [L]
 
 # 如果请求的是 modules.html，重定向到 modules
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+modules\.html [NC]
-RewriteRule ^ /modules [R=301,L] 
+RewriteRule ^ /modules [R=301,L]

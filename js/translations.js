@@ -79,5 +79,5 @@ if (typeof window !== 'undefined') {
 
 // 在 Node.js 环境中导出
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { TRANSLATIONS };
+    module.exports = {TRANSLATIONS};
 } 

@@ -23,7 +23,7 @@ if (typeof window !== 'undefined') {
 
 // 在 Node.js 环境中导出
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { LANGUAGE_CONFIG, CATEGORY_WEIGHTS };
+    module.exports = {LANGUAGE_CONFIG, CATEGORY_WEIGHTS};
 }
 
 // 确保在浏览器环境中全局可用
