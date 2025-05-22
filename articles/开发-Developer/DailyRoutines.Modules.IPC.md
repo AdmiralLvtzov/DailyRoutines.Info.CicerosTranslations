@@ -51,3 +51,116 @@ tags: [开发, IPC]
 
 - 名称: `DailyRoutines.Modules.AutoRepair.EnqueueRepair`
 - 返回值 `object` (`void`)
+
+# 自动移速倍增器 / AutoSpeedMultiplier
+
+## ChangeMultiplier
+
+调整移速倍率
+
+- 名称: `DailyRoutines.Modules.AutoSpeedMultiplier.ChangeMultiplier`
+- 参数
+  - `float`: 移速倍率, 有效值为 0 至 10 之间
+- 返回值 `object` (`void`)
+
+# 自动面向摄像机方向 / AutoFaceCameraDirection
+
+## SetWorkMode
+
+设置工作模式
+
+- 名称: `DailyRoutines.Modules.AutoFaceCameraDirection.SetWorkMode`
+- 参数
+  - `bool`: 设置工作模式
+    - `true`: 仅在按住打断热键时, 令游戏人物面向与摄像机保持一致
+    - `false`: 按住打断热键时, 不再令游戏人物面向与摄像机保持一致
+- 返回值 `object` (`void`)
+
+## CancelLockOn
+
+取消面向锁定
+
+- 名称: `DailyRoutines.Modules.AutoFaceCameraDirection.CancelLockOn`
+- 返回值 `object` (`void`)
+
+## LockOnGround
+
+按照固定场地朝向锁定面向
+
+- 名称: `DailyRoutines.Modules.AutoFaceCameraDirection.LockOnGround`
+- 参数
+  - `string`: 场地朝向
+    - `south`: 正南
+    - `north`: 正北
+    - `west`: 正西
+    - `east`: 正东
+    - `northeast`: 东北
+    - `southeast`: 东南
+    - `northwest`: 西北
+    - `southwest`: 西南
+- 返回值 `bool`
+  - `true`: 设定成功
+  - `false`: 未找到对应的场地朝向
+
+## LockOnChara
+
+按照玩家面向锁定朝向
+
+- 名称: `DailyRoutines.Modules.AutoFaceCameraDirection.LockOnChara`
+- 参数
+  - `float`: 玩家面向 (`Rotation` 属性)
+- 返回值 `object` (`void`)
+
+## LockOnCamera
+
+按照摄像机面向锁定朝向
+
+- 名称: `DailyRoutines.Modules.AutoFaceCameraDirection.LockOnCamera`
+- 参数
+  - `float`: 摄像机面向 (`Rotation` 属性)
+- 返回值 `object` (`void`)
+
+# 自动移速倍增器 / AutoSpeedMultiplier
+
+## ChangeMultiplier
+
+发送自动修理请求
+
+- 名称: `DailyRoutines.Modules.AutoSpeedMultiplier.ChangeMultiplier`
+- 参数
+  - `float`: 移速倍率, 有效值为 0 至 10 之间
+- 返回值 `object` (`void`)
+
+# 自动防击退 / AutoAntiKnockback
+
+## ReplayKnockback
+
+重放上一次遇到的击退
+
+- 名称: `DailyRoutines.Modules.AutoAntiKnockback.ReplayKnockback`
+- 返回值 `object` (`void`)
+
+## ChangeMethod
+
+调整强制位移应对处理逻辑
+
+- 名称: `DailyRoutines.Modules.AutoAntiKnockback.ChangeMethod`
+- 参数
+  - `int`: 处理逻辑
+    - `0`: 无, 不处理
+    - `1`: 快速就位
+    - `2`: 即刻就位
+    - `3`: 不位移
+    - `4`: 调整距离
+- 返回值 `bool`
+  - `true`: 设定成功
+  - `false`: 未找到对应的场地朝向
+
+## AdjustDistanceMultiplier
+
+调整应对逻辑 `调整距离` 中的距离调整系数
+
+- 名称: `DailyRoutines.Modules.AutoAntiKnockback.AdjustDistanceMultiplier`
+- 参数
+  - `float`: 距离调整系数
+- 返回值 `object` (`void`)
