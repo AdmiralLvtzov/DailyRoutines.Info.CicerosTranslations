@@ -51,15 +51,15 @@ class SearchEngine {
         try {
             const response = await fetch(`${CONFIG.basePath}/${CONFIG.indexFile}?v=${CONFIG.cacheVersion}`);
             if (!response.ok) throw new Error('无法加载文章索引');
-            
+
             const data = await response.json();
             const categories = data.categories;
             this.documents.clear();
-            
+
             // 按分类批量加载文章
             const loadPromises = categories.map(category => this.loadCategoryArticles(category));
             await Promise.all(loadPromises);
-            
+
             console.log('搜索索引构建完成，总文档数:', this.documents.size);
         } catch (error) {
             console.error('构建搜索索引失败:', error);
@@ -70,7 +70,7 @@ class SearchEngine {
     async loadCategoryArticles(category) {
         const batchSize = 10; // 每批加载的文章数
         const articles = category.articles;
-        
+
         for (let i = 0; i < articles.length; i += batchSize) {
             const batch = articles.slice(i, i + batchSize);
             const batchPromises = batch.map(article => this.loadArticle(category.name, article));
@@ -80,7 +80,7 @@ class SearchEngine {
 
     async loadArticle(categoryName, article) {
         const articleId = `${categoryName}/${article.slug}`;
-        
+
         // 如果文章正在加载中，返回现有的 Promise
         if (this.loadingPromises.has(articleId)) {
             return this.loadingPromises.get(articleId);
@@ -92,7 +92,7 @@ class SearchEngine {
                     `${CONFIG.basePath}/${CONFIG.articlesPath}/${categoryName}/${article.slug}.md?v=${CONFIG.cacheVersion}`
                 );
                 const content = await contentResponse.text();
-                
+
                 // 提取文章内容（移除frontmatter）
                 const processedContent = content
                     .replace(/^---[\s\S]*?---/, '')  // 移除frontmatter
@@ -143,14 +143,14 @@ class SearchEngine {
 
         // 合并搜索结果并去重
         const uniqueResults = new Map();
-        
+
         searchResults.forEach(result => {
             if (!result.result || !Array.isArray(result.result)) return;
-            
+
             result.result.forEach(item => {
                 const docId = item.doc.id;
                 const doc = this.documents.get(docId);
-                
+
                 if (!doc) return;
 
                 if (!uniqueResults.has(docId)) {

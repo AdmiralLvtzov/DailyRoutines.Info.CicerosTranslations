@@ -7,220 +7,220 @@
     <meta name="description" content="Daily Routines 插件的官方信息中心，包含FAQ、教程和更新日志">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-    
+
     <!-- 预加载关键资源 -->
     <link rel="preload" href="./js/app.js" as="script">
     <link rel="preload" href="./js/search.js" as="script">
     <link rel="preload" href="./css/style.css" as="style">
-    
+
     <!-- 使用更快的 CDN -->
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@highlightjs/cdn-assets@11.5.0/styles/default.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
-    
+
     <!-- 添加图标库 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
-    <header class="home-header">
-        <div class="header-content">
-            <a href="." class="header-link">
-                <h1 class="site-title">Daily Routines 信息中心</h1>
+<header class="home-header">
+    <div class="header-content">
+        <a href="." class="header-link">
+            <h1 class="site-title">Daily Routines 信息中心</h1>
+        </a>
+        <div class="header-search">
+            <div class="search-box">
+                <span class="search-icon"><i class='bx bx-search'></i></span>
+                <input type="text" placeholder="搜索文档..." id="header-search-input">
+            </div>
+            <div class="search-results" id="header-search-results"></div>
+        </div>
+        <!-- 移动端菜单切换按钮 -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="菜单">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="header-buttons">
+            <a href="modules/" class="header-button" id="modules-list-btn">
+                <i class='bx bx-grid-alt'></i> <span class="i18n-modules-list">模块列表</span>
             </a>
-            <div class="header-search">
-                <div class="search-box">
-                    <span class="search-icon"><i class='bx bx-search'></i></span>
-                    <input type="text" placeholder="搜索文档..." id="header-search-input">
-                </div>
-                <div class="search-results" id="header-search-results"></div>
-            </div>
-            <!-- 移动端菜单切换按钮 -->
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="菜单">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <div class="header-buttons">
-                <a href="modules/" class="header-button" id="modules-list-btn">
-                    <i class='bx bx-grid-alt'></i> <span class="i18n-modules-list">模块列表</span>
-                </a>
-                <select id="language-selector" class="header-button">
-                    <!-- 语言选项将由 JavaScript 动态生成 -->
-                </select>
-                <a href="https://github.com/Dalamud-DailyRoutines" class="header-button" target="_blank">
-                    <i class='bx bxl-github'></i> GitHub
-                </a>
-                <a href="https://discord.gg/MDvv8Ejntw" class="header-button" target="_blank">
-                    <i class='bx bxl-discord-alt'></i> Discord
-                </a>
-            </div>
+            <select id="language-selector" class="header-button">
+                <!-- 语言选项将由 JavaScript 动态生成 -->
+            </select>
+            <a href="https://github.com/Dalamud-DailyRoutines" class="header-button" target="_blank">
+                <i class='bx bxl-github'></i> GitHub
+            </a>
+            <a href="https://discord.gg/MDvv8Ejntw" class="header-button" target="_blank">
+                <i class='bx bxl-discord-alt'></i> Discord
+            </a>
         </div>
-    </header>
-    
-    <main class="home-container">
-        <div class="category-grid" id="category-list"></div>
-    </main>
-
-    <!-- 文章内容容器 -->
-    <div class="container hidden">
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <a href="." class="sidebar-brand">
-                    <span class="sidebar-title">FAQ 中心</span>
-                </a>
-                <button class="sidebar-back">
-                    <span class="back-icon"><i class='bx bx-arrow-back'></i></span>
-                    <span class="back-text">返回主页</span>
-                </button>
-            </div>
-            
-            <div class="search-container">
-                <div class="search-box">
-                    <span class="search-icon"><i class='bx bx-search'></i></span>
-                    <input type="text" placeholder="搜索文档..." id="search-input">
-                </div>
-                <div class="search-results" id="search-results"></div>
-            </div>
-
-            <nav class="sidebar-nav">
-                <div class="nav-section">
-                    <h3 class="nav-title">文档目录</h3>
-                    <div id="category-nav"></div>
-                </div>
-            </nav>
-        </aside>
-        
-        <main class="content">
-            <div id="article-list"></div>
-            <article id="article-content" class="hidden"></article>
-        </main>
     </div>
+</header>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <span>Daily Routines</span>
-            </div>
-            <div class="footer-links">
-                <a href="https://github.com/Dalamud-DailyRoutines" target="_blank">GitHub</a>
-                <a href="https://discord.gg/MDvv8Ejntw" target="_blank">Discord</a>
-            </div>
-            <div class="footer-copyright">
-                &copy; <span id="current-year"></span> Daily Routines Team. All rights reserved.
-            </div>
+<main class="home-container">
+    <div class="category-grid" id="category-list"></div>
+</main>
+
+<!-- 文章内容容器 -->
+<div class="container hidden">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="." class="sidebar-brand">
+                <span class="sidebar-title">FAQ 中心</span>
+            </a>
+            <button class="sidebar-back">
+                <span class="back-icon"><i class='bx bx-arrow-back'></i></span>
+                <span class="back-text">返回主页</span>
+            </button>
         </div>
-    </footer>
 
-    <!-- 主题切换按钮 -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="切换暗/亮模式主题">
-        <i class='bx bx-sun light-icon'></i>
-        <i class='bx bx-moon dark-icon'></i>
-    </button>
+        <div class="search-container">
+            <div class="search-box">
+                <span class="search-icon"><i class='bx bx-search'></i></span>
+                <input type="text" placeholder="搜索文档..." id="search-input">
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
 
-    <!-- 返回顶部按钮 -->
-    <button class="scroll-top" id="scroll-top" aria-label="返回顶部">
-        <i class='bx bx-up-arrow-alt'></i>
-    </button>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <h3 class="nav-title">文档目录</h3>
+                <div id="category-nav"></div>
+            </div>
+        </nav>
+    </aside>
 
-    <!-- 按正确的顺序加载脚本 -->
-    <script src="./js/config.js"></script>
-    <script src="./js/translations.js"></script>
-    <script src="https://fastly.jsdelivr.net/npm/marked@5.1.2/lib/marked.umd.min.js"></script>
-    <script src="https://fastly.jsdelivr.net/npm/marked-gfm-heading-id@3.1.0/lib/index.umd.js"></script>
-    <script src="https://fastly.jsdelivr.net/npm/@highlightjs/cdn-assets@11.5.0/highlight.min.js"></script>
-    <script src="https://fastly.jsdelivr.net/npm/flexsearch@0.7.31/dist/flexsearch.bundle.js"></script>
-    <script src="./js/search.js"></script>
-    <script src="./js/app.js"></script>
-    
-    <!-- 注册 Service Worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./js/sw.js')
-                    .then(registration => {
-                        console.log('Service Worker 注册成功:', registration.scope);
-                        
-                        // 检查更新
-                        registration.addEventListener('updatefound', () => {
-                            const newWorker = registration.installing;
-                            newWorker.addEventListener('statechange', () => {
-                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                    // 显示更新提示
-                                    const notification = document.createElement('div');
-                                    notification.className = 'update-notification';
-                                    notification.innerHTML = `
+    <main class="content">
+        <div id="article-list"></div>
+        <article id="article-content" class="hidden"></article>
+    </main>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <span>Daily Routines</span>
+        </div>
+        <div class="footer-links">
+            <a href="https://github.com/Dalamud-DailyRoutines" target="_blank">GitHub</a>
+            <a href="https://discord.gg/MDvv8Ejntw" target="_blank">Discord</a>
+        </div>
+        <div class="footer-copyright">
+            &copy; <span id="current-year"></span> Daily Routines Team. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- 主题切换按钮 -->
+<button class="theme-toggle" id="theme-toggle" aria-label="切换暗/亮模式主题">
+    <i class='bx bx-sun light-icon'></i>
+    <i class='bx bx-moon dark-icon'></i>
+</button>
+
+<!-- 返回顶部按钮 -->
+<button class="scroll-top" id="scroll-top" aria-label="返回顶部">
+    <i class='bx bx-up-arrow-alt'></i>
+</button>
+
+<!-- 按正确的顺序加载脚本 -->
+<script src="./js/config.js"></script>
+<script src="./js/translations.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/marked@5.1.2/lib/marked.umd.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/marked-gfm-heading-id@3.1.0/lib/index.umd.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/@highlightjs/cdn-assets@11.5.0/highlight.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/flexsearch@0.7.31/dist/flexsearch.bundle.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/app.js"></script>
+
+<!-- 注册 Service Worker -->
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("./js/sw.js")
+                .then(registration => {
+                    console.log("Service Worker 注册成功:", registration.scope);
+
+                    // 检查更新
+                    registration.addEventListener("updatefound", () => {
+                        const newWorker = registration.installing;
+                        newWorker.addEventListener("statechange", () => {
+                            if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+                                // 显示更新提示
+                                const notification = document.createElement("div");
+                                notification.className = "update-notification";
+                                notification.innerHTML = `
                                         <div class="update-message">
                                             网站已更新！
                                             <button onclick="window.location.reload()">立即刷新</button>
                                         </div>
                                     `;
-                                    document.body.appendChild(notification);
-                                }
-                            });
+                                document.body.appendChild(notification);
+                            }
                         });
-                    })
-                    .catch(error => {
-                        console.error('Service Worker 注册失败:', error);
                     });
-            });
-        }
-        
-        // 设置当前年份
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // 返回顶部按钮功能
-        const scrollTopButton = document.getElementById('scroll-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopButton.classList.add('show');
-            } else {
-                scrollTopButton.classList.remove('show');
-            }
-        });
-        
-        scrollTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // 移动端菜单切换
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const headerButtons = document.querySelector('.header-buttons');
-        
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenuToggle.classList.toggle('active');
-                headerButtons.classList.toggle('active');
-            });
-        }
-        
-        // 主页顶栏国际化
-        function updateHeaderI18n() {
-            const currentLanguage = localStorage.getItem('selectedLanguage') || 'zh';
-            if (window.TRANSLATIONS && window.TRANSLATIONS[currentLanguage]) {
-                const translations = window.TRANSLATIONS[currentLanguage];
-                // 更新模块列表按钮文本
-                document.querySelectorAll('.i18n-modules-list').forEach(el => {
-                    el.textContent = translations.navigation.modulesList;
+                })
+                .catch(error => {
+                    console.error("Service Worker 注册失败:", error);
                 });
-            }
-        }
-        
-        // 当TRANSLATIONS加载完成后更新
-        if (window.TRANSLATIONS) {
-            updateHeaderI18n();
-        } else {
-            // 监听TRANSLATIONS加载
-            window.addEventListener('translationsLoaded', updateHeaderI18n);
-        }
-        
-        // 监听语言切换
-        document.getElementById('language-selector').addEventListener('change', function(e) {
-            localStorage.setItem('selectedLanguage', e.target.value);
-            updateHeaderI18n();
         });
-    </script>
+    }
+
+    // 设置当前年份
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+
+    // 返回顶部按钮功能
+    const scrollTopButton = document.getElementById("scroll-top");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollTopButton.classList.add("show");
+        } else {
+            scrollTopButton.classList.remove("show");
+        }
+    });
+
+    scrollTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    // 移动端菜单切换
+    const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+    const headerButtons = document.querySelector(".header-buttons");
+
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener("click", () => {
+            mobileMenuToggle.classList.toggle("active");
+            headerButtons.classList.toggle("active");
+        });
+    }
+
+    // 主页顶栏国际化
+    function updateHeaderI18n() {
+        const currentLanguage = localStorage.getItem("selectedLanguage") || "zh";
+        if (window.TRANSLATIONS && window.TRANSLATIONS[currentLanguage]) {
+            const translations = window.TRANSLATIONS[currentLanguage];
+            // 更新模块列表按钮文本
+            document.querySelectorAll(".i18n-modules-list").forEach(el => {
+                el.textContent = translations.navigation.modulesList;
+            });
+        }
+    }
+
+    // 当TRANSLATIONS加载完成后更新
+    if (window.TRANSLATIONS) {
+        updateHeaderI18n();
+    } else {
+        // 监听TRANSLATIONS加载
+        window.addEventListener("translationsLoaded", updateHeaderI18n);
+    }
+
+    // 监听语言切换
+    document.getElementById("language-selector").addEventListener("change", function (e) {
+        localStorage.setItem("selectedLanguage", e.target.value);
+        updateHeaderI18n();
+    });
+</script>
 </body>
 </html> 

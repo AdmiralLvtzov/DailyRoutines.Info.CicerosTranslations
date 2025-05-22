@@ -21,13 +21,13 @@ function setAnimationOrder() {
     categoryCards.forEach((card, index) => {
         card.style.setProperty('--animation-order', index);
     });
-    
+ 
     // 为文章列表项设置动画顺序
     const navArticleItems = document.querySelectorAll('.nav-article-item');
     navArticleItems.forEach((item, index) => {
         item.style.setProperty('--animation-order', index);
     });
-    
+
     // 为最近文章项设置动画顺序
     const recentArticleItems = document.querySelectorAll('.recent-article-item');
     recentArticleItems.forEach((item, index) => {
@@ -43,13 +43,13 @@ class FAQApp {
             window.LANGUAGE_CONFIG = {
                 default: 'zh',
                 supported: ['zh'],
-                labels: { 'zh': '中文' }
+                labels: {'zh': '中文'}
             };
         }
-        
+
         this.categories = [];
         this.categoryWeights = {}; // 添加分类权重存储
-        
+
         // 获取本地存储的语言设置或浏览器语言
         const savedLanguage = localStorage.getItem('selectedLanguage');
         if (savedLanguage) {
@@ -132,18 +132,18 @@ class FAQApp {
                 method: 'GET',
                 cache: 'no-cache' // 使用 fetch 缓存控制
             });
-            
+
             if (!response.ok) return;
-            
+
             const newIndex = await response.json();
             const currentHash = JSON.stringify(this.categories);
             const newHash = JSON.stringify(newIndex.categories);
-            
+
             if (currentHash !== newHash) {
                 console.log('检测到文章更新，正在刷新...');
                 this.categories = newIndex.categories;
                 this.categoryWeights = newIndex.categoryWeights || {};
-                
+
                 // 根据权重重新排序分类
                 this.categories.sort((a, b) => {
                     const weightA = this.categoryWeights[a.name] || 0;
@@ -153,9 +153,9 @@ class FAQApp {
                     }
                     return weightB - weightA;
                 });
-                
+
                 this.renderCategories();
-                
+
                 // 如果有当前文章，重新加载
                 if (this.currentArticle) {
                     await this.loadArticle(this.currentArticle.slug, this.currentArticle.category);
@@ -205,7 +205,7 @@ class FAQApp {
         const data = await response.json();
         this.categories = data.categories;
         this.categoryWeights = data.categoryWeights || {}; // 加载分类权重
-        
+
         // 根据权重重新排序分类
         this.categories.sort((a, b) => {
             const weightA = this.categoryWeights[a.name] || 0;
@@ -218,7 +218,7 @@ class FAQApp {
 
         // 设置语言选择器
         const languageSelector = document.getElementById('language-selector');
-        languageSelector.innerHTML = window.LANGUAGE_CONFIG.supported.map(lang => 
+        languageSelector.innerHTML = window.LANGUAGE_CONFIG.supported.map(lang =>
             `<option value="${lang}">${window.LANGUAGE_CONFIG.labels[lang]}</option>`
         ).join('');
         languageSelector.value = this.currentLanguage;
@@ -272,7 +272,7 @@ class FAQApp {
     async renderCategories() {
         const container = document.getElementById('category-list');
         const categoryNav = document.getElementById('category-nav');
-        
+
         // 渲染主页分类卡片
         container.innerHTML = '<div class="loading"><div class="loader"></div><p>' + this.t('loading.index') + '</p></div>';
         categoryNav.innerHTML = ''; // 清空导航
@@ -338,7 +338,7 @@ class FAQApp {
         // 重新绑定事件监听器
         this.setupEventListeners();
         this.setupCategoryState();
-        
+
         // 渲染完成后设置动画顺序
         setTimeout(setAnimationOrder, 100);
     }
@@ -402,7 +402,7 @@ class FAQApp {
         if (this.isArticleLoading && this.currentArticle && this.currentArticle.slug === slug && this.currentArticle.category === category) {
             return;
         }
-        
+
         this.isArticleLoading = true;
         document.querySelector('.container').classList.remove('hidden');
         document.querySelector('.home-container').classList.add('hidden');
@@ -413,7 +413,7 @@ class FAQApp {
                 <p>${this.t('loading.article')}</p>
             </div>
         `;
-        
+
         try {
             // 首先尝试加载当前语言版本
             let path = `${CONFIG.basePath}/${CONFIG.articlesPath}/${category}/${slug}${this.currentLanguage === window.LANGUAGE_CONFIG.default ? '' : '.' + this.currentLanguage}.md`;
@@ -433,9 +433,9 @@ class FAQApp {
             }
 
             if (!response.ok) throw new Error(`文章加载失败 (${response.status})`);
-            
+
             const markdown = await response.text();
-            
+
             // 配置 marked.js 选项
             const markedOptions = {
                 gfm: true, // 启用 GitHub 风格的 Markdown
@@ -451,7 +451,7 @@ class FAQApp {
                     code(code, language) {
                         const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
                         return `<pre><code class="hljs language-${validLanguage}">${
-                            hljs.highlight(code, { language: validLanguage }).value
+                            hljs.highlight(code, {language: validLanguage}).value
                         }</code></pre>`;
                     }
                 }
@@ -461,7 +461,7 @@ class FAQApp {
             if (window.markedGfmHeadingId) {
                 marked.use(window.markedGfmHeadingId.gfmHeadingId());
             }
-            
+
             // 解析 frontmatter
             const frontmatterMatch = markdown.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
             if (frontmatterMatch) {
@@ -507,10 +507,10 @@ class FAQApp {
                 // 如果没有 frontmatter，直接渲染全部内容
                 this.renderArticle(marked.parse(markdown));
             }
-            
+
             // 更新当前文章信息
-            this.currentArticle = { slug, category };
-            
+            this.currentArticle = {slug, category};
+
             // 使用 replaceState 而不是直接修改 hash，避免触发 hashchange 事件
             const newHash = `#${category}/${slug}`;
             if (window.location.hash !== newHash) {
@@ -520,7 +520,7 @@ class FAQApp {
             const savedProgress = localStorage.getItem(`progress:${newHash}`);
             if (savedProgress) {
                 requestAnimationFrame(() => {
-                    articleContent.scrollTop = savedProgress * 
+                    articleContent.scrollTop = savedProgress *
                         (articleContent.scrollHeight - articleContent.clientHeight);
                 });
             }
@@ -541,11 +541,11 @@ class FAQApp {
     renderArticle(content) {
         const articleContent = document.getElementById('article-content');
         const articleList = document.getElementById('article-list');
-        
+
         articleContent.innerHTML = content;
         articleList.classList.add('hidden');
         articleContent.classList.remove('hidden');
-        
+
         // 高亮代码块
         document.querySelectorAll('pre code').forEach(block => {
             hljs.highlightElement(block);
@@ -554,8 +554,8 @@ class FAQApp {
         // 保存阅读进度
         articleContent.addEventListener('scroll', () => {
             if (!this.currentArticle) return;
-            
-            const scrollPercent = articleContent.scrollTop / 
+
+            const scrollPercent = articleContent.scrollTop /
                 (articleContent.scrollHeight - articleContent.clientHeight);
             const progressKey = `progress:#${this.currentArticle.category}/${this.currentArticle.slug}`;
             localStorage.setItem(progressKey, scrollPercent);
@@ -566,16 +566,16 @@ class FAQApp {
         if (window.location.hash) {
             const hashContent = decodeURIComponent(window.location.hash.substring(1));
             const parts = hashContent.split('/');
-            
+
             if (parts.length === 2) {
                 // 如果hash包含category和slug，加载具体文章
                 const [category, slug] = parts;
-                
+
                 // 避免重复加载当前文章
                 if (this.currentArticle && this.currentArticle.slug === slug && this.currentArticle.category === category) {
                     return;
                 }
-                
+
                 this.loadArticle(slug, category);
             } else if (parts.length === 1) {
                 // 如果hash只包含category，显示分类页面
@@ -588,12 +588,12 @@ class FAQApp {
 
     setupCategoryState() {
         this.categoryState = JSON.parse(localStorage.getItem('categoryState') || '{}');
-        
+
         document.querySelectorAll('.nav-category-title').forEach(title => {
             const category = title.textContent;
             const articlesList = title.nextElementSibling;
             articlesList.hidden = !this.categoryState[category];
-            
+
             title.addEventListener('click', () => {
                 articlesList.hidden = !articlesList.hidden;
                 this.saveCategoryState(category, !articlesList.hidden);
@@ -610,10 +610,10 @@ class FAQApp {
         // 获取存储的主题或使用默认亮色主题
         this.theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', this.theme);
-        
+
         // 找到主题切换按钮
         const themeToggle = document.getElementById('theme-toggle');
-        
+
         if (themeToggle) {
             themeToggle.addEventListener('click', () => {
                 // 切换主题
@@ -631,25 +631,25 @@ class FAQApp {
             if (e.key === 'Escape') {
                 this.showHome();
             }
-            
+
             // Ctrl/Cmd + K 聚焦搜索框
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
                 document.getElementById('search-input').focus();
             }
         });
-        
+
         // 添加返回顶部按钮功能
         this.setupScrollToTop();
-        
+
         // 添加移动导航菜单功能
         this.setupMobileNavigation();
     }
-    
+
     setupScrollToTop() {
         // 检查是否已存在返回顶部按钮
         let scrollTopButton = document.querySelector('.scroll-top');
-        
+
         // 如果不存在，创建返回顶部按钮
         if (!scrollTopButton) {
             scrollTopButton = document.createElement('button');
@@ -658,7 +658,7 @@ class FAQApp {
             scrollTopButton.innerHTML = '<i class="bx bx-chevron-up"></i>';
             document.body.appendChild(scrollTopButton);
         }
-        
+
         // 处理滚动事件，控制按钮显示/隐藏
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
@@ -667,7 +667,7 @@ class FAQApp {
                 scrollTopButton.classList.remove('show');
             }
         });
-        
+
         // 添加点击事件处理
         scrollTopButton.addEventListener('click', () => {
             // 平滑滚动到顶部
@@ -677,11 +677,11 @@ class FAQApp {
             });
         });
     }
-    
+
     setupMobileNavigation() {
         // 检查是否已存在移动菜单按钮
         let mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        
+
         // 如果不存在，创建移动菜单按钮
         if (!mobileMenuToggle) {
             mobileMenuToggle = document.createElement('button');
@@ -694,15 +694,15 @@ class FAQApp {
             `;
             document.body.appendChild(mobileMenuToggle);
         }
-        
+
         // 获取侧边栏元素
         const sidebar = document.querySelector('.sidebar');
-        
+
         // 添加点击事件处理
         mobileMenuToggle.addEventListener('click', () => {
             mobileMenuToggle.classList.toggle('active');
             sidebar.classList.toggle('active');
-            
+
             // 禁用/启用内容滚动
             if (sidebar.classList.contains('active')) {
                 document.body.style.overflow = 'hidden';
@@ -710,7 +710,7 @@ class FAQApp {
                 document.body.style.overflow = '';
             }
         });
-        
+
         // 点击侧边栏链接后关闭菜单
         const sidebarLinks = sidebar.querySelectorAll('a, .nav-article-item');
         sidebarLinks.forEach(link => {
@@ -720,13 +720,13 @@ class FAQApp {
                 document.body.style.overflow = '';
             });
         });
-        
+
         // 点击侧边栏外部关闭菜单
         document.addEventListener('click', (event) => {
-            if (sidebar.classList.contains('active') && 
-                !sidebar.contains(event.target) && 
+            if (sidebar.classList.contains('active') &&
+                !sidebar.contains(event.target) &&
                 !mobileMenuToggle.contains(event.target)) {
-                    
+
                 mobileMenuToggle.classList.remove('active');
                 sidebar.classList.remove('active');
                 document.body.style.overflow = '';
@@ -744,7 +744,7 @@ class FAQApp {
         // 确保初始状态下搜索结果区域是隐藏的
         if (searchResults) searchResults.innerHTML = '';
         if (headerSearchResults) headerSearchResults.innerHTML = '';
-        
+
         // 添加样式确保搜索结果区域默认隐藏
         if (headerSearchResults) headerSearchResults.style.display = 'none';
         if (searchResults) searchResults.style.display = 'none';
@@ -753,7 +753,7 @@ class FAQApp {
         const handleSearch = (input, resultsContainer) => {
             clearTimeout(debounceTimer);
             const query = input.value.trim();
-            
+
             // 清空搜索结果
             if (!query) {
                 resultsContainer.innerHTML = '';
@@ -822,7 +822,7 @@ class FAQApp {
             const isHeaderSearchInputClick = headerSearchInput && (headerSearchInput.contains(e.target) || e.target === headerSearchInput);
             const isSearchResultsClick = searchResults && searchResults.contains(e.target);
             const isHeaderSearchResultsClick = headerSearchResults && headerSearchResults.contains(e.target);
-            
+
             // 如果点击了搜索框或搜索结果区域以外的地方，关闭搜索结果
             if (!isSearchInputClick && !isHeaderSearchInputClick && !isSearchResultsClick && !isHeaderSearchResultsClick) {
                 if (searchResults) {
@@ -845,13 +845,13 @@ class FAQApp {
                 console.log('点击标签:', tag); // 添加调试日志
                 const results = this.searchEngine.searchByTag(tag);
                 console.log('标签搜索结果:', results); // 添加调试日志
-                
+
                 // 如果在主页，切换到文章页面并显示搜索结果
                 if (document.querySelector('.home-container').classList.contains('hidden') === false) {
                     document.querySelector('.home-container').classList.add('hidden');
                     document.querySelector('.container').classList.remove('hidden');
                 }
-                
+
                 if (searchInput) {
                     searchInput.value = `#${tag}`;
                     searchInput.focus();
@@ -864,7 +864,7 @@ class FAQApp {
 
     renderSearchResults(results, container) {
         if (!container) container = document.getElementById('search-results');
-        
+
         if (results.length === 0) {
             container.innerHTML = `<div class="search-results-inner"><div class="no-results">${this.t('search.noResults')}</div></div>`;
             container.style.display = 'block'; // 显示"无结果"提示
@@ -894,21 +894,21 @@ class FAQApp {
             item.addEventListener('click', () => {
                 const slug = item.dataset.slug;
                 const category = item.dataset.category;
-                
+
                 // 如果在主页，切换到文章页面
                 if (document.querySelector('.home-container').classList.contains('hidden') === false) {
                     document.querySelector('.home-container').classList.add('hidden');
                     document.querySelector('.container').classList.remove('hidden');
                 }
-                
+
                 this.loadArticle(slug, category);
                 container.innerHTML = '';
                 container.style.display = 'none';
-                
+
                 // 清空搜索框
                 const searchInput = document.getElementById('search-input');
                 if (searchInput) searchInput.value = '';
-                
+
                 const headerSearchInput = document.getElementById('header-search-input');
                 if (headerSearchInput) headerSearchInput.value = '';
             });
@@ -954,24 +954,24 @@ class FAQApp {
 
     async showCategoryPage(categoryName) {
         console.log('显示分类页面:', categoryName); // 添加调试日志
-        
+
         // 确保容器可见性正确设置
         const container = document.querySelector('.container');
         const homeContainer = document.querySelector('.home-container');
         const articleContent = document.getElementById('article-content');
         const articleList = document.getElementById('article-list');
-        
+
         if (!container || !homeContainer || !articleContent || !articleList) {
             console.error('找不到必要的DOM元素');
             return;
         }
-        
+
         // 设置显示状态
         container.classList.remove('hidden');
         homeContainer.classList.add('hidden');
         articleContent.classList.add('hidden');
         articleList.classList.remove('hidden');
-        
+
         // 查找对应的分类
         const category = this.categories.find(cat => cat.name === categoryName);
         if (!category) {
@@ -984,9 +984,9 @@ class FAQApp {
             `;
             return;
         }
-        
+
         console.log('找到分类:', category); // 添加调试日志
-        
+
         // 显示加载中状态
         articleList.innerHTML = `
             <div class="loading">
@@ -994,7 +994,7 @@ class FAQApp {
                 <p>${this.t('loading.category')}</p>
             </div>
         `;
-        
+
         try {
             // 渲染分类页面
             const articlesHTML = await Promise.all(category.articles.map(async article => {
@@ -1011,7 +1011,7 @@ class FAQApp {
                     </div>
                 `;
             }));
-            
+
             // 更新页面内容
             articleList.innerHTML = `
                 <h1 class="category-page-title">${categoryName}</h1>
@@ -1019,20 +1019,20 @@ class FAQApp {
                     ${articlesHTML.join('')}
                 </div>
             `;
-            
+
             // 添加文章点击事件
             articleList.querySelectorAll('.article-item').forEach(item => {
                 item.addEventListener('click', () => {
                     this.loadArticle(item.dataset.slug, item.dataset.category);
                 });
             });
-            
+
             // 更新URL（使用replaceState避免触发新的hashchange事件）
             const newHash = `#${categoryName}`;
             if (window.location.hash !== newHash) {
                 history.replaceState(null, null, newHash);
             }
-            
+
         } catch (error) {
             console.error('渲染分类页面失败:', error);
             articleList.innerHTML = `
