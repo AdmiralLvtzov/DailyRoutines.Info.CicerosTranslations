@@ -164,3 +164,14 @@ tags: [开发, IPC]
 - 参数
   - `float`: 距离调整系数
 - 返回值 `object` (`void`)
+
+# 自动刷新市场搜索结果 / AutoRefreshMarketSearchResult
+
+## IsMarketStuck
+
+当前市场是否无法正常返回搜索结果 (正在重新请求)
+
+- 名称: `DailyRoutines.Modules.AutoRefreshMarketSearchResult.IsMarketStuck`
+- 返回值 `bool`
+  - `true`: 是
+  - `false`: 否
