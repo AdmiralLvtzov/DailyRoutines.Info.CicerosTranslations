@@ -23,6 +23,18 @@
         "NeedAuth": false,
         "Title": "欧米茄时空狭缝阿尔法幻境3助手"
     },
+    "AutoAcceptInvitation": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完成后, 自动接受满足条件的玩家的组队邀请",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动接受组队邀请"
+    },
     "AutoActionAlignCamera": {
         "Author": [
             "AtmoOmen"
@@ -648,6 +660,18 @@
         "NeedAuth": false,
         "Title": "自动采集职业职能技能"
     },
+    "AutoGuaranteeCarryingObject": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "在野外区域搬运物品时, 自动遁地以防止被怪物攻击致使搬运失败\n(当选中任务目标后或在休息区内, 发生移动时, 遁地会自动失效)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动保障搬运物品安全"
+    },
     "AutoGysahlGreens": {
         "Author": [
             "Veever"
@@ -683,6 +707,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动高亮地图标点"
+    },
+    "AutoHighlightStatusAction": {
+        "Author": [
+            "HaKu"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完毕后, 当技能对应的状态效果即将失效时, 自动高亮对应的技能图标",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动高亮状态效果对应技能"
     },
     "AutoHolmgangSelf": {
         "Author": [
@@ -1321,18 +1357,6 @@
         "NeedAuth": false,
         "Title": "自动确认任务结果"
     },
-    "AutoRaise": {
-        "Author": [
-            "qingsiweisan"
-        ],
-        "Category": 3,
-        "CNOnly": false,
-        "CNPremium": true,
-        "Description": "若当前位于战斗状态, 且自身拥有复活能力, 则在检测到队友陷入无法战斗状态时, 自动使用相关复活技能",
-        "GlobalPremium": true,
-        "NeedAuth": false,
-        "Title": "自动复活"
-    },
     "AutoRecommendFauxHollows": {
         "Author": [
             "Veever"
@@ -1741,6 +1765,18 @@
         "NeedAuth": false,
         "Title": "自动播魂种"
     },
+    "AutoSpearfish": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完成后, 在刺鱼界面出现后, 自动显示当前渔场信息并自动按照配置刺鱼",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动刺鱼"
+    },
     "AutoSpeedMultiplier": {
         "Author": [
             "AtmoOmen"
@@ -2065,6 +2101,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "更好的自动跟随"
+    },
+    "BetterMarketBoard": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "添加 /pdr market 指令用以打开模块提供的远程市场布告板界面, 可在其中快速查价、购买并设定价格监控",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "更好的市场布告板"
     },
     "BetterPartyFinderSort": {
         "Author": [
@@ -2763,6 +2811,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "小队列表显示目标标记"
+    },
+    "MoreFlexibleMJIWorkdays": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "打开工房生产计划界面后, 显示可快捷配置工房休息日的悬浮窗, 并解除每周期必须要双休的限制",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "更加灵活的无人岛工房休息日设置"
     },
     "MoveableDeathState": {
         "Author": [
