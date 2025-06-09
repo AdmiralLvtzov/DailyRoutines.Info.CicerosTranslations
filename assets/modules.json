@@ -588,6 +588,19 @@
         "NeedAuth": true,
         "Title": "自动面向摄像机方向"
     },
+    "AutoFate": {
+        "Author": [
+            "Fragile",
+            "AtmoOmen"
+        ],
+        "Category": 10,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完成并点击开始后, 自动按照预设目标循环完成指定区域的临危受命 (FATE) 任务",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动临危受命"
+    },
     "AutoFateStart": {
         "Author": [
             "AtmoOmen"
@@ -1783,7 +1796,7 @@
         ],
         "Category": 2,
         "CNOnly": false,
-        "CNPremium": true,
+        "CNPremium": false,
         "Description": "添加 /pdrspeed <移速倍率> 指令, 用于持久调整玩家移速乘算系数",
         "GlobalPremium": false,
         "NeedAuth": true,
@@ -1896,6 +1909,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动限制结印技能"
+    },
+    "AutoTimedLogout": {
+        "Author": [
+            "Wotou"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "设定时间后, 自动在对应时间时登出角色/关闭游戏/关闭电脑",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动定时登出"
     },
     "AutoTrackStatusOff": {
         "Author": [
@@ -2449,6 +2474,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "快捷部队储物柜"
+    },
+    "FastFreeCompanyChestStore": {
+        "Author": [
+            "YLCHEN"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "打开部队储物柜后, 为物品添加右键菜单 放入部队储物柜 以快捷存储, 或按住打断热键后右键物品直接存储到当前页",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "快捷部队储物柜存储"
     },
     "FastGrandCompanyExchange": {
         "Author": [
