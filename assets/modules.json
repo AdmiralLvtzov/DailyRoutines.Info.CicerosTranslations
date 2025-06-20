@@ -950,6 +950,18 @@
         "NeedAuth": true,
         "Title": "自动恶名精英扫描器"
     },
+    "AutoMateriaAttach": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "导入外部网站的配装计划并确认后, 自动按照计划批量完成所有装备的魔晶石镶嵌",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动镶嵌魔晶石"
+    },
     "AutoMaterialize": {
         "Author": [
             "AtmoOmen"
@@ -1117,6 +1129,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动通知过场剧情结束"
+    },
+    "AutoNotifyDiademWeather": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "当位于云冠群岛内, 所订阅的天气出现时, 自动发送通知信息提醒",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动通知云冠群岛特殊天气"
     },
     "AutoNotifyDutyConfirm": {
         "Author": [
@@ -2259,6 +2283,18 @@
         "NeedAuth": true,
         "Title": "任务搜索器指令"
     },
+    "CopyItemNameContextMenu": {
+        "Author": [
+            "Nukoooo"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "为游戏内其他界面内的物品右键菜单补全 复制道具名 选项",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "复制道具名右键菜单"
+    },
     "CrossDCPartyFinder": {
         "Author": [
             "AtmoOmen"
@@ -2415,6 +2451,18 @@
         "NeedAuth": true,
         "Title": "更大的目标半径"
     },
+    "ExtraBlueSet": {
+        "Author": [
+            "Marsh"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "在青魔法书界面旁新增悬浮窗, 允许保存更多的青魔法技能组, 并提供 /pdr exblueset 指令用以快捷切换技能组",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "额外的青魔法技能组"
+    },
     "FastBLUSpellbookSearchBar": {
         "Author": [
             "AtmoOmen"
@@ -2534,6 +2582,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "快速重置所有木人仇恨"
+    },
+    "FastRetainerStore": {
+        "Author": [
+            "YLChen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "在雇员物品页面添加右键菜单, 用以一键存取同类物品",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "快捷雇员物品存取"
     },
     "FastRidePillion": {
         "Author": [
@@ -2884,6 +2944,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "多目标追踪器"
+    },
+    "NameplateIconAdjustment": {
+        "Author": [
+            "Marsh"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完毕后, 调整变更所有对象的头标尺寸缩放与位置偏移",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "目标标记调整"
     },
     "NeverreapHelper": {
         "Author": [
