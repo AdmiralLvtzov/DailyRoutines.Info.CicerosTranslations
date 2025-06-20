@@ -45,6 +45,24 @@ tags: [开发, IPC]
   - `true`: 是
   - `false`: 否 / 模块未启用
 
+## IsNeedToRepair
+
+是否有装备需要修理
+
+- 名称: `DailyRoutines.Modules.AutoRepair.IsNeedToRepair`
+- 返回值 `bool`
+  - `true`: 是
+  - `false`: 否 / 模块未启用
+
+  ## IsAbleToRepair
+
+当前人物状态是否可修理
+
+- 名称: `DailyRoutines.Modules.AutoRepair.IsAbleToRepair`
+- 返回值 `bool`
+  - `true`: 是
+  - `false`: 否 / 模块未启用
+
 ## EnqueueRepair
 
 发送自动修理请求
