@@ -23,6 +23,18 @@
         "NeedAuth": false,
         "Title": "Alphascape V3.0 Helper"
     },
+    "AutoAcceptInvitation": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically accept party invitations from players who satisfy certain conditions after proper configurations.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Accept Party Invitation"
+    },
     "AutoActionAlignCamera": {
         "Author": [
             "AtmoOmen"
@@ -51,9 +63,9 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 1,
+        "Category": 10,
         "CNOnly": false,
-        "CNPremium": true,
+        "CNPremium": false,
         "Description": "After clicking start, automatically complete all Sightseeing Log allowed under the current time/weather",
         "GlobalPremium": false,
         "NeedAuth": true,
@@ -215,17 +227,17 @@
         "NeedAuth": false,
         "Title": "Auto Cancel Cast"
     },
-    "AutoCancelGatherAnimation": {
+    "AutoCancelFSHAnimation": {
         "Author": [
             "AtmoOmen"
         ],
         "Category": 2,
         "CNOnly": false,
         "CNPremium": true,
-        "Description": "Cancel related action animations during gathering to improve gathering speed.",
+        "Description": "All the action locks after performing fishing actions will be removed in order to improve the efficiency.",
         "GlobalPremium": false,
         "NeedAuth": true,
-        "Title": "Auto Cancel Gathering Animations"
+        "Title": "Auto Cancel Fishing Animations"
     },
     "AutoCancelNPCEmote": {
         "Author": [
@@ -237,7 +249,19 @@
         "Description": "Auto cancel NPC emotes and the waiting time they caused during cutscenes.",
         "GlobalPremium": false,
         "NeedAuth": true,
-        "Title": "Auto cancel NPC emotes"
+        "Title": "Auto Cancel NPC Emotes"
+    },
+    "AutoCancelStarContributor": {
+        "Author": [
+            "Shiyuvi"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "After entering the areas related to Cosmic Exploration, regularly check whether the Star Contributor status is applied and cancel it if is.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Cancel Star Contributor"
     },
     "AutoChakraFormShift": {
         "Author": [
@@ -333,7 +357,7 @@
         "Description": "Auto confirm Materia melding/retrieval/meld request and remove delay restrictions before and after melding",
         "GlobalPremium": false,
         "NeedAuth": true,
-        "Title": "Auto Confirm Materia Meld & Retrieval"
+        "Title": "Auto Confirm Materia Melding And Retrieval"
     },
     "AutoConfirmPortraitUpdate": {
         "Author": [
@@ -383,6 +407,30 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Auto Convert Texts With Coordinates"
+    },
+    "AutoCosmicExplorationLeveling": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 10,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically accept quests and level up in Cosmic Exploration for Disciples of the Land or Hand after proper configurations and clicking start.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Level Up In Cosmic Exploration"
+    },
+    "AutoCosmicFortune": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "A floating window will be displayed below Cosmic Exploration Exotablet for rolling Cosmic Fortune if the current amount of Lunar Credits is enough for at least one roll. A command /pdr cosfortune for the same purpose will also be provided.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Cosmic Fortune"
     },
     "AutoCountBlacklisted": {
         "Author": [
@@ -492,6 +540,18 @@
         "NeedAuth": false,
         "Title": "Auto Display Remaining Time Of Ready Check"
     },
+    "AutoDisplayFateItemCount": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Display the number of FATE items the character is currently possessing and has submitted nearby FATE information if the character is engaging a FATE involves item collections.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "FATE Item Counter"
+    },
     "AutoDisplayMitigationInfo": {
         "Author": [
             "HaKu"
@@ -504,17 +564,17 @@
         "NeedAuth": false,
         "Title": "Auto Display Mitigation Details"
     },
-    "AutoDisplayRetainerPlayerName": {
+    "AutoDisplayMSQProgress": {
         "Author": [
             "AtmoOmen"
         ],
         "Category": 5,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "Display the actual owners of the retainers selling items on the market board in highlights according the existed data, instead of the names of retainers themselves.",
+        "Description": "If there're main scenario quests to be completed, display the number of remaining main scenario quests and the progress percentage in the Main Scenario Guide interface.",
         "GlobalPremium": false,
-        "NeedAuth": true,
-        "Title": "Auto Display Owners Of Retainers"
+        "NeedAuth": false,
+        "Title": "Auto Display Main Scenario Quest Progress"
     },
     "AutoDrawMotifs": {
         "Author": [
@@ -576,6 +636,19 @@
         "NeedAuth": true,
         "Title": "Auto Orient To The Camera Direction"
     },
+    "AutoFate": {
+        "Author": [
+            "Fragile",
+            "AtmoOmen"
+        ],
+        "Category": 10,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Auto completely FATEs in specified areas according to presets made by the user after proper configurations and clicking start.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto FATE"
+    },
     "AutoFateStart": {
         "Author": [
             "AtmoOmen"
@@ -586,7 +659,7 @@
         "Description": "If there is a nearby FATE that requires dialogue to start, automatically initiate it.",
         "GlobalPremium": false,
         "NeedAuth": true,
-        "Title": "Auto Fate Start"
+        "Title": "Auto Start Fate"
     },
     "AutoFateSync": {
         "Author": [
@@ -598,7 +671,7 @@
         "Description": "Auto level sync when entering a FATE range",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "Auto Fate Level Sync"
+        "Title": "Auto FATE Level Sync"
     },
     "AutoFCWSDeliver": {
         "Author": [
@@ -628,10 +701,10 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 1,
+        "Category": 10,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "配置完成并在 天上福地云冠群岛 内点击开始后, 自动循环采集指定材料以积累技巧点/练级",
+        "Description": "Automatically gather specified materials for skyward score or leveling up after configurations and clicking start in The Diadem.",
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "Auto Gather In The Diadem"
@@ -648,6 +721,18 @@
         "NeedAuth": false,
         "Title": "Auto Use Gatherer Role Actions"
     },
+    "AutoGuaranteeCarryingObject": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Move underground while carrying objects in non-instanced areas, to prevent dropping due to monster attacks. (The module won't affect once the quest target is selected or while the character is moving in a sanctuary)",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Safe Object Carrying"
+    },
     "AutoGysahlGreens": {
         "Author": [
             "Veever"
@@ -659,6 +744,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Auto Use Gysahl Greens"
+    },
+    "AutoHideGameObjects": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically hide the models of specified objects after proper configurations, in order to improve the game performance and prioritize the rendering of important objects.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Hide Game Objects"
     },
     "AutoHideNeedlessPopups": {
         "Author": [
@@ -684,6 +781,18 @@
         "NeedAuth": false,
         "Title": "Auto Highlight Map Flag"
     },
+    "AutoHighlightStatusAction": {
+        "Author": [
+            "HaKu"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically highlight the action when its corresponding status is going to expire after proper configurations.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Highlight Actions Corresponding To Status"
+    },
     "AutoHolmgangSelf": {
         "Author": [
             "AtmoOmen"
@@ -707,6 +816,30 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Auto Crystal Tower Striker"
+    },
+    "AutoHuntingLog": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 10,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically complete all the monster hunting entries of the specified job or the specified Grand Company, except for those have to be completed in duties.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Complete Hunting Log"
+    },
+    "AutoIgnorePortraitLimitation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically ignore the restrictions during creating a portrait, such as the weapon shouldn't cover the character face or the camera position shouldn't be too high.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Ignore Portrait Restrictions"
     },
     "AutoImmunizeForceMove": {
         "Author": [
@@ -768,6 +901,18 @@
         "NeedAuth": false,
         "Title": "Auto Select Yes In Duty Interactions"
     },
+    "AutoInventoryTransfer": {
+        "Author": [
+            "Yangdoubao"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If there're interfaces which allow item storage (like inventory or saddlebag) available, allow the user to transfer items between them by clicking while pressing Interrupt Hotkey.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Transfer Items Between Interfaces"
+    },
     "AutoJoinExitDuty": {
         "Author": [
             "AtmoOmen"
@@ -823,10 +968,10 @@
         "Category": 2,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "进入战斗后, 自动锁定游戏窗口, 防止其被意外拖动到主屏外",
+        "Description": "Automatically lock the game window after starting a combat to prevent accidentally being dragged.",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "自动锁定游戏窗口"
+        "Title": "Auto Lock Game Window"
     },
     "AutoLogin": {
         "Author": [
@@ -881,13 +1026,25 @@
             "AtmoOmen",
             "KirisameVanilla"
         ],
-        "Category": 1,
+        "Category": 10,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "Auto scan and organize hunt mobs info into a list after configuring.",
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "Auto Hunt Mobs Finder"
+    },
+    "AutoMateriaAttach": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically meld materia with gears in batches after importing melding plans from external websites.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Meld Materia"
     },
     "AutoMaterialize": {
         "Author": [
@@ -925,6 +1082,18 @@
         "NeedAuth": true,
         "Title": "Auto Transmute Materia"
     },
+    "AutoMessageScheduler": {
+        "Author": [
+            "Wotou"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically send given texts after proper configurations including beginning time, intervals and repetition times.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Send Messages According To Schedules"
+    },
     "AutoMiniCactpot": {
         "Author": [
             "AtmoOmen"
@@ -941,7 +1110,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 1,
+        "Category": 10,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "Automatically loop gathering Island Sanctuary items after finishing configuration and clicking start",
@@ -1056,6 +1225,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Auto Notify Cutscene End"
+    },
+    "AutoNotifyDiademWeather": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 8,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically notify the user after the subscribed special weathers appear while the character is in The Diadem.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Notify Of Special Weathers In The Diadem"
     },
     "AutoNotifyDutyConfirm": {
         "Author": [
@@ -1223,7 +1404,7 @@
         "Description": "When out of combat, if your summoned entity is present on the field, it will automatically receive a follow command",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "Auto Summons Follow"
+        "Title": "Auto Summon Follow"
     },
     "AutoPlayerCommend": {
         "Author": [
@@ -1308,18 +1489,6 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Auto Confirm Complete Quests"
-    },
-    "AutoRaise": {
-        "Author": [
-            "qingsiweisan"
-        ],
-        "Category": 3,
-        "CNOnly": false,
-        "CNPremium": true,
-        "Description": "If you are currently in combat and have the ability to resurrect, you will automatically use the relevant resurrection skills when you detect that your party member are unable to fight.",
-        "GlobalPremium": true,
-        "NeedAuth": false,
-        "Title": "Auto resurrect"
     },
     "AutoRecommendFauxHollows": {
         "Author": [
@@ -1559,7 +1728,7 @@
         "Description": "Auto select items and complete the submission when submitting items",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "Auto Request Submit"
+        "Title": "Auto Submit Items"
     },
     "AutoRequestNecessity": {
         "Author": [
@@ -1645,6 +1814,18 @@
         "NeedAuth": true,
         "Title": "Auto Gil Trade"
     },
+    "AutoSharpenInterfaceText": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动处理部分界面内模糊不清的文本, 高清化其渲染效果, 使文本更加清晰且易于阅读",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动高清化界面文本"
+    },
     "AutoShopPurchase": {
         "Author": [
             "AtmoOmen"
@@ -1729,17 +1910,41 @@
         "NeedAuth": false,
         "Title": "Auto Soulsow"
     },
+    "AutoSpearfish": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically spearfish and provide detailed information of the current teeming water on the spearfishing interface after proper configurations.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Spearfish"
+    },
     "AutoSpeedMultiplier": {
         "Author": [
             "AtmoOmen"
         ],
         "Category": 2,
         "CNOnly": false,
-        "CNPremium": true,
+        "CNPremium": false,
         "Description": "Add /pdrspeed <multiplier> to permanently adjust player speed multiplier",
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "Auto Speed Multiplier"
+    },
+    "AutoSpeedUpGather": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "If the current job is Miner or Botanist, all the action locks after performing gathering actions will be removed during gathering in order to accelerate the process. The module will keep the efficiency in check to prevent from being forced to disconnect by the server.",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "Auto Accelerate Gathering"
     },
     "AutoSplitStacks": {
         "Author": [
@@ -1848,6 +2053,30 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Auto Throttle Shinobi Actions"
+    },
+    "AutoTimedLogout": {
+        "Author": [
+            "Wotou"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically log out the character, exit the game and shut down the device at the given time after proper configurations.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Logout"
+    },
+    "AutoTrackStatusOff": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically track the status on other players which are given from self, and report if the status is manually removed by the player.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Track Status Disappearance"
     },
     "AutoUfoCatcher": {
         "Author": [
@@ -2004,7 +2233,7 @@
         "Description": "Optimized loading of active sets in the Blue Magic Spellbook interface, allowing active sets switching without removing Aetheric Mimicry.",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "Better BLU Spell Set Load"
+        "Title": "Better Blue Mage Active Set"
     },
     "BetterCommandInput": {
         "Author": [
@@ -2030,17 +2259,29 @@
         "NeedAuth": false,
         "Title": "Better FATE Progress UI"
     },
-    "BetterFollow": {
+    "BetterFPSLimitation": {
         "Author": [
-            "HSS"
+            "AtmoOmen"
         ],
-        "Category": 4,
+        "Category": 2,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "Unlocks the game's native follow target limitation, and is able to automatically lock on to the target and re-follow it.",
+        "Description": "Allow users to set the frame rate cap to any number rather than the fixed options provided by the game, add a frames per second indicator in Server Info bar and provide an interface to quickly adjust the frame rate cap.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Better Frame Rate Cap"
+    },
+    "BetterMarketBoard": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "New command /pdr market to pop up the better market board provided by the module, for better price inquiries, purchasing and price monitoring.",
         "GlobalPremium": false,
         "NeedAuth": true,
-        "Title": "Better Auto Follow"
+        "Title": "Better Market Board"
     },
     "BetterPartyFinderSort": {
         "Author": [
@@ -2089,18 +2330,6 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Better Wait Command"
-    },
-    "BiggerHDWindowText": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 5,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "Allows custom IME window scaling and make texts in some windows clearer",
-        "GlobalPremium": false,
-        "NeedAuth": false,
-        "Title": "Larger HD IME Interface"
     },
     "BlockInputWhenFishing": {
         "Author": [
@@ -2161,6 +2390,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "Duty Finder Command"
+    },
+    "CopyItemNameContextMenu": {
+        "Author": [
+            "Nukoooo"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add the option \"Copy Item Name\" in the right-click menu for all the items in the game.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Copy Item Name On All The Items"
     },
     "CrossDCPartyFinder": {
         "Author": [
@@ -2301,10 +2542,10 @@
         "Category": 5,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "Add additional search entries to the player context menu",
+        "Description": "Add extra search options to the right-click menu of players.",
         "GlobalPremium": false,
         "NeedAuth": true,
-        "Title": "Expand Player Menu Search"
+        "Title": "Expanded Player Right-click Menu Search"
     },
     "ExpandTargetRadius": {
         "Author": [
@@ -2317,6 +2558,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "Expand Target Radius"
+    },
+    "ExtraBlueSet": {
+        "Author": [
+            "Marsh"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allow the user to save more Blue Mage active sets by a new floating window next to Blue Magic Spellbook, and provide the command /pdr exblueset to quickly switch among active sets.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Extra Blue Mage Active Set"
     },
     "FastBLUSpellbookSearchBar": {
         "Author": [
@@ -2376,7 +2629,19 @@
         "Description": "After opening the Free Company chest, automatically request all page data, significantly reduce operation lock time, and remove quantity confirmation when storing or retrieving items",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "Fast Free Company Chest"
+        "Title": "Better Company Chest Interaction"
+    },
+    "FastFreeCompanyChestStore": {
+        "Author": [
+            "YLCHEN"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add an option \"Store in Company Chest\" in the right-click menu for items while interacting with Company Chest, or allow to directly store items in Company Chest by right clicking items while pressing the interrupt hotkey.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Better Company Chest Storage"
     },
     "FastGrandCompanyExchange": {
         "Author": [
@@ -2425,6 +2690,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Fast Reset All Striking Dummy Enmity"
+    },
+    "FastRetainerStore": {
+        "Author": [
+            "YLChen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Add a right-click menu for the item interface on retainers to facilitate storage and retrieval of items in the same category.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Better Item Storage And Retrieval On Retainers"
     },
     "FastRidePillion": {
         "Author": [
@@ -2569,7 +2846,7 @@
         "Description": "Cancel the waiting time of NPC fading in and fading out while talking with NPCs.",
         "GlobalPremium": false,
         "NeedAuth": true,
-        "Title": "Auto cancel waiting of NPC fade-in and fade-out"
+        "Title": "Auto Cancel NPC Fade-in And Fade-out"
     },
     "IgnoreTurnAndLookAtWait": {
         "Author": [
@@ -2581,7 +2858,19 @@
         "Description": "Cancel the waiting time of NPC turning and sight adjusting while interacting with NPCs if the user isn't within a certain angle in front of NPCs.",
         "GlobalPremium": false,
         "NeedAuth": true,
-        "Title": "Auto cancel waiting of NPC turn and look"
+        "Title": "Auto Cancel NPC Turn And Sight Adjustments"
+    },
+    "IgnoreWindowMinSizeLimit": {
+        "Author": [
+            "Siren"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Automatically remove the minimum size limit of the game window, so that user could resize the window even smaller.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Auto Remove Minimum Window Size Limit"
     },
     "InstanceZoneChangeCommand": {
         "Author": [
@@ -2692,6 +2981,18 @@
         "NeedAuth": true,
         "Title": "Invulnerable Mode"
     },
+    "LargerIME": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "使游戏内输入法候选词界面支持自定义缩放, 并使其界面文本显示更加清晰",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "更大的输入法界面"
+    },
     "LimitlessTargetDashAction": {
         "Author": [
             "AtmoOmen"
@@ -2740,6 +3041,30 @@
         "NeedAuth": false,
         "Title": "Display Target Markers in Party List"
     },
+    "MoreFlexibleMJIWorkdays": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Provide schedules could be applied conveniently in a floating window once the Isleworks Agenda interface pops up, and remove the restriction of two days off per week.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Better Cycles And Seasons Of Island Sanctuary Workshops"
+    },
+    "MoreMessageFilterPresets": {
+        "Author": [
+            "Ponta"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Allows the user to save an unlimited number of chat log filter presets and to apply filters to any chat tabs via proper configurations or the right-click menu of the chat log window.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "More Chat Log Filter Presets"
+    },
     "MoveableDeathState": {
         "Author": [
             "AtmoOmen"
@@ -2763,6 +3088,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "Multi-Target Tracker"
+    },
+    "NameplateIconAdjustment": {
+        "Author": [
+            "Marsh"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Adjust the scale and the position offset of all the signs (the marks above selectable objects) after proper configurations.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Sign Adjustments"
     },
     "NeverreapHelper": {
         "Author": [
@@ -2849,6 +3186,18 @@
         "NeedAuth": true,
         "Title": "No Loading Black Screes"
     },
+    "OptimizedCameraSetting": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "Optimize the setting interface of Group Pose and provide more refined and detailed options.",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "Better Group Pose Setting Interface"
+    },
     "OptimizedInteraction": {
         "Author": [
             "AtmoOmen"
@@ -2883,7 +3232,7 @@
         "Description": "Optimize the enmity list, so that it could display more information of enemy targets like HP, enmity and cast in the form of original game elements.",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "Optimize Enmity List"
+        "Title": "Better Enmity List"
     },
     "PartyFinderFilter": {
         "Author": [

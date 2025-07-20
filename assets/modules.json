@@ -227,17 +227,17 @@
         "NeedAuth": false,
         "Title": "自动中断咏唱"
     },
-    "AutoCancelGatherAnimation": {
+    "AutoCancelFSHAnimation": {
         "Author": [
             "AtmoOmen"
         ],
         "Category": 2,
         "CNOnly": false,
         "CNPremium": true,
-        "Description": "采集时自动取消相关技能的动画播放, 以提高采集速度",
+        "Description": "自动取消大部分钓鱼动画效果的播放, 以提高采集速度",
         "GlobalPremium": false,
         "NeedAuth": true,
-        "Title": "自动取消采集动画"
+        "Title": "自动取消钓鱼动画"
     },
     "AutoCancelNPCEmote": {
         "Author": [
@@ -250,6 +250,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "自动取消 NPC 情感动作播放"
+    },
+    "AutoCancelStarContributor": {
+        "Author": [
+            "Shiyuvi"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "进入宇宙探索区域场景后, 定期检查自身是否具有 贡献之星 状态效果, 若有则自动取消",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动取消贡献之星状态效果"
     },
     "AutoChakraFormShift": {
         "Author": [
@@ -396,6 +408,30 @@
         "NeedAuth": false,
         "Title": "自动转换地图坐标信息"
     },
+    "AutoCosmicExplorationLeveling": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 10,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完毕并点击开始后, 自动在宇宙探索场景内接取生产职业相关任务练级",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动宇宙探索练级"
+    },
+    "AutoCosmicFortune": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "当月球信用点足够抽取至少一次宇宙好运道时, 自动在宇宙探索面板界面下方显示悬浮窗用以快捷抽取, 并提供指令 /pdr cosfortune 执行同样的操作",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动宇宙好运道"
+    },
     "AutoCountBlacklisted": {
         "Author": [
             "ToxicStar"
@@ -504,6 +540,18 @@
         "NeedAuth": false,
         "Title": "自动显示准备确认剩余时间"
     },
+    "AutoDisplayFateItemCount": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "进入收集类危命任务时, 自动在危命任务详情旁显示当前已持有的危命任务道具数量",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动显示危命任务道具收集数量"
+    },
     "AutoDisplayMitigationInfo": {
         "Author": [
             "HaKu"
@@ -516,17 +564,17 @@
         "NeedAuth": false,
         "Title": "自动显示减伤信息"
     },
-    "AutoDisplayRetainerPlayerName": {
+    "AutoDisplayMSQProgress": {
         "Author": [
             "AtmoOmen"
         ],
         "Category": 5,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "打开市场交易版搜索结果界面时, 自动将已有数据记录的雇员名称转为高亮显示其所属玩家名称",
+        "Description": "若尚有未完成的主线任务, 则自动在主线向导界面内显示当前剩余的主线任务件数与已完成进度百分比",
         "GlobalPremium": false,
-        "NeedAuth": true,
-        "Title": "自动显示雇员归属玩家名"
+        "NeedAuth": false,
+        "Title": "自动显示主线任务完成进度"
     },
     "AutoDrawMotifs": {
         "Author": [
@@ -697,6 +745,18 @@
         "NeedAuth": false,
         "Title": "自动使用基萨尔野菜"
     },
+    "AutoHideGameObjects": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完毕后, 自动隐藏对应类型的游戏人物模型, 以期改善游戏帧率与提升其余对象模型的显示优先级",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动隐藏对象模型"
+    },
     "AutoHideNeedlessPopups": {
         "Author": [
             "AtmoOmen"
@@ -769,6 +829,18 @@
         "NeedAuth": true,
         "Title": "自动讨伐笔记"
     },
+    "AutoIgnorePortraitLimitation": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动取消肖像设计过程中可能出现的, 诸如武器不能遮挡面部等的各种限制",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动取消肖像设计限制"
+    },
     "AutoImmunizeForceMove": {
         "Author": [
             "AtmoOmen"
@@ -828,6 +900,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动确认副本内物体对话框"
+    },
+    "AutoInventoryTransfer": {
+        "Author": [
+            "Yangdoubao"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "若当前存在可以互相转移物品的不同页面, 则在按住打断热键并点击任一页面物品时, 自动转移该物品至另一页面",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动物品页面转移"
     },
     "AutoJoinExitDuty": {
         "Author": [
@@ -997,6 +1081,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "自动合成魔晶石"
+    },
+    "AutoMessageScheduler": {
+        "Author": [
+            "Wotou"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完毕后, 自动在指定的时间点以特定间隔发送特定的聊天消息或文本指令特定次数",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动定时发送消息"
     },
     "AutoMiniCactpot": {
         "Author": [
@@ -1718,6 +1814,18 @@
         "NeedAuth": true,
         "Title": "自动金币交易"
     },
+    "AutoSharpenInterfaceText": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动处理部分界面内模糊不清的文本, 高清化其渲染效果, 使文本更加清晰且易于阅读",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动高清化界面文本"
+    },
     "AutoShopPurchase": {
         "Author": [
             "AtmoOmen"
@@ -1826,6 +1934,18 @@
         "NeedAuth": true,
         "Title": "自动移速倍增器"
     },
+    "AutoSpeedUpGather": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "若当前为采集职业, 则在进入采集状态时自动取消采集动作后摇以加速, 自动避免因操作过快被服务器强制登出",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动加速采集"
+    },
     "AutoSplitStacks": {
         "Author": [
             "AtmoOmen"
@@ -1908,7 +2028,7 @@
         "Description": "若当前为防护职业, 则在进入副本后, 自动开启盾姿",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "自动开启盾姿"
+        "Title": "自动盾姿"
     },
     "AutoTenChiJin": {
         "Author": [
@@ -2139,17 +2259,17 @@
         "NeedAuth": false,
         "Title": "更好的危命任务完成度界面"
     },
-    "BetterFollow": {
+    "BetterFPSLimitation": {
         "Author": [
-            "HSS"
+            "AtmoOmen"
         ],
-        "Category": 4,
+        "Category": 2,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "解除游戏原生自动跟随的目标限制, 且能够自动锁定目标并重新跟随",
+        "Description": "使游戏原生的帧数限制功能支持限制为任意帧率, 并在服务器信息栏处提供实时帧数显示, 且提供原生界面以快捷调整帧率限制",
         "GlobalPremium": false,
-        "NeedAuth": true,
-        "Title": "更好的自动跟随"
+        "NeedAuth": false,
+        "Title": "更好的游戏帧数限制"
     },
     "BetterMarketBoard": {
         "Author": [
@@ -2210,18 +2330,6 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "更好的等待指令"
-    },
-    "BiggerHDWindowText": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 5,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "允许自定义输入法窗口缩放倍数, 并使部分窗口的文本变得更加清晰",
-        "GlobalPremium": false,
-        "NeedAuth": false,
-        "Title": "更大的高清输入法界面"
     },
     "BlockInputWhenFishing": {
         "Author": [
@@ -2752,6 +2860,18 @@
         "NeedAuth": true,
         "Title": "自动取消 NPC 转身及视线调整等待"
     },
+    "IgnoreWindowMinSizeLimit": {
+        "Author": [
+            "Siren"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动取消游戏窗口的最小尺寸限制, 使其能被手动缩放得更小",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动取消游戏窗口最小尺寸限制"
+    },
     "InstanceZoneChangeCommand": {
         "Author": [
             "AtmoOmen",
@@ -2861,6 +2981,18 @@
         "NeedAuth": true,
         "Title": "无敌模式"
     },
+    "LargerIME": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "使游戏内输入法候选词界面支持自定义缩放, 并使其界面文本显示更加清晰",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "更大的输入法界面"
+    },
     "LimitlessTargetDashAction": {
         "Author": [
             "AtmoOmen"
@@ -2920,6 +3052,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "更加灵活的无人岛工房休息日设置"
+    },
+    "MoreMessageFilterPresets": {
+        "Author": [
+            "Ponta"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "允许保存无限多的消息栏消息过滤设置，并可将保存的消息过滤设置通过配置界面或消息栏右键菜单等应用到任意消息栏中",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "更多的消息过滤预设"
     },
     "MoveableDeathState": {
         "Author": [
@@ -3041,6 +3185,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "无加载黑屏界面"
+    },
+    "OptimizedCameraSetting": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "对集体动作设置界面进行优化, 使部分选项可以进行更加方便地进行精细化调节",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "集体动作设置界面优化"
     },
     "OptimizedInteraction": {
         "Author": [
