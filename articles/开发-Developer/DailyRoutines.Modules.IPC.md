@@ -81,6 +81,13 @@ tags: [开发, IPC]
   - `float`: 移速倍率, 有效值为 0 至 10 之间
 - 返回值 `object` (`void`)
 
+## GetMultiplier
+
+获取移速倍率
+
+- 名称: `DailyRoutines.Modules.AutoSpeedMultiplier.GetMultiplier`
+- 返回值 `float`: 移速倍率
+
 # 自动面向摄像机方向 / AutoFaceCameraDirection
 
 ## SetWorkMode
