@@ -1,11 +1,3 @@
-// 导入 CSS
-import '../css/style.css';
-
-// 导入其他 JS 模块
-import './config.js';
-import './translations.js';
-import './search.js';
-
 // 配置参数
 const CONFIG = {
     articlesPath: 'articles',
@@ -1055,4 +1047,4 @@ class FAQApp {
 }
 
 // 初始化应用
-new FAQApp();
+new FAQApp(); 
