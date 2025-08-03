@@ -9,13 +9,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
 
     <!-- 预加载关键资源 -->
-    <link rel="preload" href="./js/app.js" as="script">
-    <link rel="preload" href="./js/search.js" as="script">
-    <link rel="preload" href="./css/style.css" as="style">
+    <link rel="preload" href="./dist/bundle.js" as="script">
+    <link rel="preload" href="./dist/style.min.css" as="style">
 
     <!-- 使用更快的 CDN -->
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@highlightjs/cdn-assets@11.5.0/styles/default.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./dist/style.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
 
     <!-- 添加图标库 -->
@@ -123,20 +122,17 @@
 </button>
 
 <!-- 按正确的顺序加载脚本 -->
-<script src="./js/config.js"></script>
-<script src="./js/translations.js"></script>
 <script src="https://fastly.jsdelivr.net/npm/marked@5.1.2/lib/marked.umd.min.js"></script>
 <script src="https://fastly.jsdelivr.net/npm/marked-gfm-heading-id@3.1.0/lib/index.umd.js"></script>
 <script src="https://fastly.jsdelivr.net/npm/@highlightjs/cdn-assets@11.5.0/highlight.min.js"></script>
 <script src="https://fastly.jsdelivr.net/npm/flexsearch@0.7.31/dist/flexsearch.bundle.js"></script>
-<script src="./js/search.js"></script>
-<script src="./js/app.js"></script>
+<script src="./dist/bundle.js"></script>
 
 <!-- 注册 Service Worker -->
 <script>
     if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-            navigator.serviceWorker.register("./js/sw.js")
+            navigator.serviceWorker.register("./sw.js")
                 .then(registration => {
                     console.log("Service Worker 注册成功:", registration.scope);
 
@@ -223,4 +219,4 @@
     });
 </script>
 </body>
-</html> 
+</html>
