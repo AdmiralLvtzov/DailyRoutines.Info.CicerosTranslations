@@ -200,3 +200,43 @@ tags: [开发, IPC]
 - 返回值 `bool`
   - `true`: 是
   - `false`: 否
+
+# 好友名单界面优化 / OptimizedFriendList
+
+## GetRemarkByContentID
+
+根据 ContentID 获取存储的备注信息
+
+- 名称: `DailyRoutines.Modules.OptimizedFriendlist.GetRemarkByContentID`
+- 参数
+  - `ulong`: ContentID
+- 返回值 `string`: 备注信息
+
+## GetNicknameByContentID
+
+根据 ContentID 获取存储的昵称信息
+
+- 名称: `DailyRoutines.Modules.OptimizedFriendlist.GetNicknameByContentID`
+- 参数
+  - `ulong`: ContentID
+- 返回值 `string`: 昵称信息
+
+# 自动丢弃物品 / AutoDiscard
+
+## IsBusy
+
+当前是否正在执行自动丢弃
+
+- 名称: `DailyRoutines.Modules.AutoDiscard.IsBusy`
+- 返回值 `bool`
+  - `true`: 是
+  - `false`: 否
+
+  # 自动使用任务道具 / AutoUseEventItem
+
+## UseEventItem
+
+自动尝试对周围可用任务物体使用任务物品 (内部有 100ms 的节流)
+
+- 名称: `DailyRoutines.Modules.AutoUseEventItem.UseEventItem`
+- 返回值 `object` (`void`)
