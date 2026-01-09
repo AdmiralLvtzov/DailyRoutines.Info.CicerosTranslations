@@ -107,18 +107,6 @@
         "NeedAuth": false,
         "Title": "自动解除游戏多开限制"
     },
-    "AutoAntiAfk": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 2,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "每隔固定时间, 重置游戏内部的相关计时器, 以防止进入离开状态",
-        "GlobalPremium": false,
-        "NeedAuth": false,
-        "Title": "自动防离开状态"
-    },
     "AutoAntiCensorship": {
         "Author": [
             "AtmoOmen"
@@ -152,20 +140,8 @@
         "CNPremium": false,
         "Description": "打开投影台并点击开始后, 自动取出投影台内所有可以存储为套装的物品, 并在 套装幻影化 界面出现时自动选择可用装备并存为套装",
         "GlobalPremium": false,
-        "NeedAuth": true,
-        "Title": "自动处理套装物品"
-    },
-    "AutoBasketBall": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 7,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "交互游戏机后, 自动开始重复游玩怪物投篮",
-        "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "自动游玩怪物投篮"
+        "Title": "自动处理套装物品"
     },
     "AutoBlockMisdirectionState": {
         "Author": [
@@ -215,18 +191,6 @@
         "NeedAuth": false,
         "Title": "自动屏蔽系统通知"
     },
-    "AutoBlockTitleMovie": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 2,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "自动阻止因在标题界面滞留过久而自动开始播放的各版本动画视频",
-        "GlobalPremium": false,
-        "NeedAuth": false,
-        "Title": "自动阻止标题界面动画播放"
-    },
     "AutoBroadcastActionHitInfo": {
         "Author": [
             "Xww"
@@ -263,6 +227,18 @@
         "NeedAuth": true,
         "Title": "自动取消钓鱼动画"
     },
+    "AutoCancelMountCast": {
+        "Author": [
+            "Bill"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完毕后, 在满足特定条件时自动中断当前正在进行的坐骑咏唱",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动中断坐骑咏唱"
+    },
     "AutoCancelNPCEmote": {
         "Author": [
             "AtmoOmen"
@@ -298,6 +274,30 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动斗气与演武"
+    },
+    "AutoChangeBattleEffectLevel": {
+        "Author": [
+            "Siren"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完毕后, 自动根据当前区域类型及周围玩家数量调整战斗特效显示设置",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动调整战斗特效"
+    },
+    "AutoChangeKeyboardLayout": {
+        "Author": [
+            "JiaXX"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完成后, 当游戏内文本输入框聚焦或失焦时, 自动切换至指定的键盘布局",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动切换键盘布局"
     },
     "AutoCheckFoodUsage": {
         "Author": [
@@ -400,7 +400,7 @@
             "AtmoOmen",
             "KirisameVanilla"
         ],
-        "Category": 4,
+        "Category": 2,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "当长按任一热键栏按键时, 自动转为快速重复点击该按键",
@@ -448,10 +448,10 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 1,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "当月球信用点足够抽取至少一次宇宙好运道时, 自动在宇宙探索面板界面下方显示悬浮窗用以快捷抽取, 并提供指令 /pdr cosfortune 执行同样的操作",
+        "Description": "当所持信用点足够抽取至少一次宇宙好运道时, 自动在宇宙探索面板界面下方显示悬浮窗用以快捷抽取, 并提供指令 /pdr cosfortune 执行同样的操作, 支持达到设定限额后自动抽取",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动宇宙好运道"
@@ -480,6 +480,18 @@
         "NeedAuth": false,
         "Title": "自动显示周边玩家数量"
     },
+    "AutoCuffACur": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "交互游戏机或在金碟游乐场点击开始后, 自动开始重复游玩重击伽美什",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动游玩重击伽美什"
+    },
     "AutoCutsceneSkip": {
         "Author": [
             "AtmoOmen"
@@ -503,18 +515,6 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动跳舞"
-    },
-    "AutoDeleteLetters": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 6,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "打开莫古邮件界面, 切换到指定类别并点击开始后, 即会批量删除该类别下所有的邮件",
-        "GlobalPremium": false,
-        "NeedAuth": false,
-        "Title": "自动批量删除邮件"
     },
     "AutoDesynthesizeItems": {
         "Author": [
@@ -568,7 +568,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 4,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "任务出发准备确认界面出现后, 自动在其内显示距离超时的剩余时间文本",
@@ -587,6 +587,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动显示危命任务道具收集数量"
+    },
+    "AutoDisplayIDInfomation": {
+        "Author": [
+            "Middo"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动外显诸如物品、天气、状态效果、技能等的 ID 信息",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动显示 ID 信息"
     },
     "AutoDisplayMitigationInfo": {
         "Author": [
@@ -611,6 +623,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动显示主线任务完成进度"
+    },
+    "AutoDisplayPlayerHitbox": {
+        "Author": [
+            "Due"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动在当前玩家实际判定点处绘制图标, 以强调、辅助调整人物当前位置",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动显示本地玩家判定点"
     },
     "AutoDrawMotifs": {
         "Author": [
@@ -793,6 +817,30 @@
         "NeedAuth": false,
         "Title": "自动处理无法传送状态"
     },
+    "AutoHideBanners": {
+        "Author": [
+            "XSZYYS"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完毕后, 自动阻止对应的游戏横幅与音效弹出",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动隐藏横幅"
+    },
+    "AutoHideExpBar": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "若当前职业等级已满, 则自动隐藏经验值栏",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动隐藏经验值栏"
+    },
     "AutoHideGameObjects": {
         "Author": [
             "AtmoOmen"
@@ -816,6 +864,18 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动隐藏不必要弹出窗口"
+    },
+    "AutoHighlightCursor": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动在当前鼠标位置绘制背景高亮图标, 以强调、辅助寻找鼠标位置",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动高亮鼠标"
     },
     "AutoHighlightFlagMarker": {
         "Author": [
@@ -1069,6 +1129,18 @@
         "NeedAuth": false,
         "Title": "自动管控打断技能"
     },
+    "AutoManagePeloton": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 3,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "若当前正在战斗状态, 则自动阻止使用速行技能",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动管控速行"
+    },
     "AutoMarkAetherCurrents": {
         "Author": [
             "AtmoOmen"
@@ -1142,6 +1214,18 @@
         "NeedAuth": true,
         "Title": "自动合成魔晶石"
     },
+    "AutoMaximiseWindow": {
+        "Author": [
+            "Bill"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "若当前游戏为窗口化, 则在每次模块加载时自动最大化窗口一次, 并提供 /pdr maxwin 指令以进行同样的操作",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动最大化窗口"
+    },
     "AutoMessageScheduler": {
         "Author": [
             "Wotou"
@@ -1190,6 +1274,18 @@
         "NeedAuth": false,
         "Title": "自动无人岛工房生产计划"
     },
+    "AutoMonsterToss": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "交互游戏机后或在金碟游乐场内点击开始后, 自动开始重复游玩怪物投篮",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动游玩怪物投篮"
+    },
     "AutoMount": {
         "Author": [
             "AtmoOmen"
@@ -1206,7 +1302,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 4,
+        "Category": 5,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "使用后, 自动从兵装库内取出所有未在任一有效套装内的装备",
@@ -1274,7 +1370,7 @@
         "NeedAuth": false,
         "Title": "自动通知倒计时开始"
     },
-    "AutoNotifyCutSceneEnd": {
+    "AutoNotifyCutsceneEnd": {
         "Author": [
             "AtmoOmen"
         ],
@@ -1442,6 +1538,18 @@
         "NeedAuth": true,
         "Title": "自动开启宝箱"
     },
+    "AutoOutOnALimb": {
+        "Author": [
+            "逆光"
+        ],
+        "Category": 7,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "在陆行鸟广场点击开始时, 自动开始重复游玩孤树无援",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动游玩孤树无援"
+    },
     "AutoPeloton": {
         "Author": [
             "yamiYori"
@@ -1458,7 +1566,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 3,
+        "Category": 4,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "脱战后, 若当前场上存在自身召唤物, 则自动对其下达跟随命令",
@@ -1501,18 +1609,6 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动防技能重复"
-    },
-    "AutoPunchingMachine": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 7,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "交互游戏机后, 自动开始重复游玩重击伽美什",
-        "GlobalPremium": false,
-        "NeedAuth": false,
-        "Title": "自动游玩重击伽美什"
     },
     "AutoQTE": {
         "Author": [
@@ -1614,7 +1710,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 6,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "打开队员招募后, 每经过固定间隔时间时, 自动刷新一次招募板",
@@ -1655,20 +1751,32 @@
         "CNPremium": false,
         "Description": "打开投影台界面, 并点击开始后, 自动取出投影台中所有可放入收藏柜的装备",
         "GlobalPremium": false,
-        "NeedAuth": true,
+        "NeedAuth": false,
         "Title": "自动取出投影台中可放入收藏柜装备"
     },
     "AutoRemoveDuplicateGlamours": {
         "Author": [
             "ECSS11"
         ],
-        "Category": 1,
+        "Category": 6,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "打开投影台界面, 并点击开始后, 自动取出投影台中重复装备",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动取出投影台中重复装备"
+    },
+    "AutoRemoveDuplicateModelGlamours": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 6,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "打开投影台界面, 并点击开始后, 自动取出投影台中重复模型装备",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动取出投影台中重复模型装备"
     },
     "AutoRemoveStatusSpeedPenalty": {
         "Author": [
@@ -1698,7 +1806,7 @@
         "Author": [
             "逆光"
         ],
-        "Category": 6,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "配置完成后, 当招募剩余时间不足时, 自动编辑招募一次以续期",
@@ -1778,6 +1886,18 @@
         "NeedAuth": false,
         "Title": "自动插言替换下踢"
     },
+    "AutoReplyChatBot": {
+        "Author": [
+            "Wotou"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完毕后, 自动使用指定的大语言模型与提示词回复指定频道的聊天消息",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "自动回复聊天信息"
+    },
     "AutoRequestItemSubmit": {
         "Author": [
             "AtmoOmen"
@@ -1838,14 +1958,14 @@
         "NeedAuth": false,
         "Title": "自动重复使用表情"
     },
-    "AutoSellCardsConfirm": {
+    "AutoSellCards": {
         "Author": [
             "AtmoOmen"
         ],
         "Category": 7,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "幻卡回收界面出现后, 自动点击确认按钮\n点击开始后, 自动回收当前所有已收录幻卡",
+        "Description": "幻卡回收界面出现, 并点击开始后, 自动回收全部的幻卡; 幻卡回收确认界面出现时, 自动点击确认按钮",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动幻卡回收"
@@ -1893,7 +2013,7 @@
         "Category": 4,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "进入副本后, 自动以悬浮窗形式显示来自 新大陆见闻录 的副本攻略",
+        "Description": "进入副本后, 自动以悬浮窗形式显示来自\"新大陆见闻录\"网站的副本攻略",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动显示副本攻略"
@@ -1902,7 +2022,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 4,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "进入纷争前线击倒玩家时, 自动在屏幕左侧强调显示击倒人数, 以加强游玩正反馈",
@@ -1957,18 +2077,6 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动播魂种"
-    },
-    "AutoSpearfish": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 6,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "配置完成后, 在刺鱼界面出现后, 自动显示当前渔场信息并自动按照配置刺鱼",
-        "GlobalPremium": false,
-        "NeedAuth": true,
-        "Title": "自动刺鱼"
     },
     "AutoSpeedMultiplier": {
         "Author": [
@@ -2154,7 +2262,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 2,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "将全部副本都标记为已解锁, 以便在队员招募或任务搜索器中直接查看有关副本的招募/信息",
@@ -2185,6 +2293,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "自动解锁稀有品筹备"
+    },
+    "AutoUnlockMapDiscoverZone": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动在本地解锁全部地图中所有待探索区域的迷雾, 而无须曾到达过一次",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动解锁地图待探索区域"
     },
     "AutoUseCrafterGathererManual": {
         "Author": [
@@ -2227,13 +2347,26 @@
         "Author": [
             "Cindy-Master"
         ],
-        "Category": 5,
+        "Category": 1,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "若目标堆叠物品可被使用, 则为其右键菜单中新增项, 以批量使用该物品",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动使用堆叠物品"
+    },
+    "AutoUseMountAction": {
+        "Author": [
+            "逆光",
+            "Bill"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "配置完毕后, 骑乘特定坐骑时, 自动重复使用指定的坐骑技能",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动使用坐骑技能"
     },
     "AutoVeryEasyQuestBattle": {
         "Author": [
@@ -2263,7 +2396,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 2,
+        "Category": 9,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "添加 /pdr bait <物品 ID / 物品名 / 物品名拼音>指令, 以便使用指令切换钓饵",
@@ -2287,10 +2420,10 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 2,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "提供全新的黑名单系统以增强原版功能体验, 支持保存分类无限多的黑名单玩家、自由分享导入黑名单列表与加入任意多人共享编辑的黑名单列表中",
+        "Description": "提供新的黑名单系统以增强原版功能体验, 支持保存分类无限多的黑名单玩家、自由分享导入黑名单列表与加入任意多人共享编辑的黑名单列表中, 且完全兼容游戏内已有的黑名单系统数据",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "更好的黑名单"
@@ -2331,6 +2464,19 @@
         "NeedAuth": false,
         "Title": "更好的危命任务完成度界面"
     },
+    "BetterFollow": {
+        "Author": [
+            "HSS",
+            "Xww"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "解除游戏原生自动跟随的目标限制, 且能够自动锁定目标并重新跟随",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "更好的自动跟随"
+    },
     "BetterFPSLimitation": {
         "Author": [
             "AtmoOmen"
@@ -2355,11 +2501,23 @@
         "NeedAuth": true,
         "Title": "更好的市场布告板"
     },
+    "BetterMountRoulette": {
+        "Author": [
+            "XSZYYS"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "提供新的随机坐骑系统, 允许为不同类型区域指定不同的随机坐骑待选列表, 且列表可保存无限个坐骑",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "更好的随机坐骑"
+    },
     "BetterPartyFinderSort": {
         "Author": [
             "decorwdyun"
         ],
-        "Category": 5,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "让队员招募界面内的 升序/降序排列 功能精准按照各招募剩余时间多少排序显示结果",
@@ -2451,16 +2609,28 @@
         "NeedAuth": false,
         "Title": "强制粘贴多行转单行"
     },
+    "CompanyCreditExchangeMore": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "使部队战绩交易物品数量上限突破至最多 255",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "更高的部队战绩交易上限"
+    },
     "ContentFinderCommand": {
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 4,
+        "Category": 9,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "添加 /pdrduty 指令, 用于快速参加指定的副本任务或随机任务",
         "GlobalPremium": false,
-        "NeedAuth": true,
+        "NeedAuth": false,
         "Title": "任务搜索器指令"
     },
     "CopyItemNameContextMenu": {
@@ -2479,10 +2649,10 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 11,
         "CNOnly": true,
         "CNPremium": false,
-        "Description": "允许在游戏原生的 队员招募 界面内选择并查看由众包网站提供的其他大区的招募信息",
+        "Description": "为队员招募界面新增大区切换按钮, 以选择并查看由众包网站提供的其他大区的招募信息",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "跨大区队员招募"
@@ -2535,6 +2705,18 @@
         "NeedAuth": false,
         "Title": "自定义视距"
     },
+    "DevModule": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "本地测试用模块专用临时标题与描述文本",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "本地测试用模块"
+    },
     "DisableGroundActionAutoFace": {
         "Author": [
             "AtmoOmen"
@@ -2547,18 +2729,6 @@
         "NeedAuth": false,
         "Title": "禁止地面类技能改变面向"
     },
-    "DisplayTargetHP": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 4,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "在目标栏和焦点目标栏, 根据选定的格式显示对应目标的具体生命值",
-        "GlobalPremium": false,
-        "NeedAuth": false,
-        "Title": "显示目标生命值"
-    },
     "DisregardFollowQuest": {
         "Author": [
             "Errer"
@@ -2570,6 +2740,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "无视跟踪任务判定"
+    },
+    "DungeonLoggerUploader": {
+        "Author": [
+            "Middo"
+        ],
+        "Category": 9,
+        "CNOnly": true,
+        "CNPremium": false,
+        "Description": "配置完成后, 当进入“随机任务：指导者”任务副本并完成时, 自动记录并上传相关记录数据至 DungeonLogger 网站",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "随机任务：指导者任务记录上传助手"
     },
     "ExpandActionRange": {
         "Author": [
@@ -2616,7 +2798,7 @@
         "CNPremium": false,
         "Description": "为玩家右键菜单中新增额外搜索项",
         "GlobalPremium": false,
-        "NeedAuth": true,
+        "NeedAuth": false,
         "Title": "玩家右键菜单搜索扩展"
     },
     "ExpandTargetRadius": {
@@ -2659,7 +2841,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "为任务搜索器内的各任务新增快捷按钮, 用于一键以默认、解除限制、自由探索等设置参加对应的任务",
@@ -2695,7 +2877,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 6,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "在 军票交换所 界面新增快捷交换悬浮窗, 便于直接使用物品名快捷交换对应的物品",
@@ -2703,17 +2885,42 @@
         "NeedAuth": false,
         "Title": "快捷军票交换所交换物品"
     },
+    "FastInstanceZoneChange": {
+        "Author": [
+            "AtmoOmen",
+            "KirisameVanilla"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "快速切换副本区并显示副本区信息, 支持自动重试、自动上下坐骑与自动传送等, 通过 /pdr insc 指令快捷切换或点击服务器信息栏条目打开界面交互切换",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "快捷副本区切换"
+    },
     "FastJoinAnotherPartyRecruitment": {
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "为招募详情界面新增一个按钮, 点击以一键退出当前队伍并加入目标招募",
+        "Description": "为招募详情界面新增按钮, 点击以一键退出当前队伍并加入目标招募",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "快捷退队加入招募"
+    },
+    "FastMinimizeWindow": {
+        "Author": [
+            "Rorinnn"
+        ],
+        "Category": 1,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "添加 /pdr mini/tray 命令与按钮, 以将游戏快速最小化至任务栏或托盘栏",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "快捷最小化游戏窗口"
     },
     "FastObjectInteract": {
         "Author": [
@@ -2741,7 +2948,7 @@
     },
     "FastRetainerStore": {
         "Author": [
-            "YLChen"
+            "YLCHEN"
         ],
         "Category": 6,
         "CNOnly": false,
@@ -2763,17 +2970,41 @@
         "NeedAuth": false,
         "Title": "快速共同骑乘"
     },
+    "FastSetWeatherTime": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "提供游戏原生风格的快捷天气时间设置界面, 并允许保存为区域设置自动应用, 通过交互导向地图界面天气或使用 /pdr wt 打开",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "快捷天气时间设置"
+    },
     "FastTeleportPanel": {
         "Author": [
             "AtmoOmen"
         ],
         "Category": 5,
         "CNOnly": false,
-        "CNPremium": true,
+        "CNPremium": false,
         "Description": "添加一个快捷传送面板悬浮窗, 用于快速传送至区域内任一地点处",
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "快捷传送面板"
+    },
+    "FastWorldTravel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "快速跨界传送并显示服务器信息, 支持三主城内任意位置发起跨界、副本外任意区域开始自动跨服等, 通过 /pdr worldtravel 指令快捷跨界传送或点击服务器信息栏条目打开游戏原生风格界面交互跨界\n支持快捷超域旅行并实时显示各服务器超域旅行拥挤度 [国服特供]",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "快捷跨界传送"
     },
     "FCMemberManagePanel": {
         "Author": [
@@ -2791,13 +3022,25 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 2,
+        "Category": 9,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "添加 /pdrfe <参数 / 副本名> (不区分大小写 / 部分匹配) 指令, 用于快速进入指定的特殊场景探索",
         "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "特殊场景探索进入指令"
+    },
+    "FrontlineMapRadar": {
+        "Author": [
+            "Rorinnn"
+        ],
+        "Category": 4,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "进入纷争前线后, 自动在游戏地图上标注当前可接收到的周围所有玩家的位置信息, 同时标注相关对象的倒计时、体力与据点分数等信息",
+        "GlobalPremium": false,
         "NeedAuth": true,
-        "Title": "快捷特殊场景探索进入指令"
+        "Title": "纷争前线地图雷达"
     },
     "FrontlinePlayerRadar": {
         "Author": [
@@ -2815,7 +3058,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 2,
+        "Category": 9,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "添加 /pdr gpapply <编号> (从 1 开始) 指令, 允许使用指令快捷切换游戏原生保存的各投影模板",
@@ -2894,19 +3137,6 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自动取消游戏窗口最小尺寸限制"
-    },
-    "InstanceZoneChangeCommand": {
-        "Author": [
-            "AtmoOmen",
-            "KirisameVanilla"
-        ],
-        "Category": 2,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "添加 /pdr insc 指令, 用于在可选中任一副本区内以太之光的情况下, 快速切换副本区",
-        "GlobalPremium": false,
-        "NeedAuth": true,
-        "Title": "快捷副本区切换指令"
     },
     "InstantDismount": {
         "Author": [
@@ -3016,6 +3246,30 @@
         "NeedAuth": true,
         "Title": "无敌模式"
     },
+    "JobSwitchCommand": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "添加 /pdr job <职业 ID / 职业名称 / 职业名称拼音> (部分包含, 大小写不敏感) 指令, 以快捷切换至指定职业",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "职业切换指令"
+    },
+    "LargerColorantColoringPreviewComponent": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "放大染色界面预览组件的尺寸, 获得更佳的预览效果",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "更大的染色界面预览组件"
+    },
     "LargerIME": {
         "Author": [
             "AtmoOmen"
@@ -3051,6 +3305,18 @@
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "直播匿名模式"
+    },
+    "LocalFlightMode": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": true,
+        "Description": "取消当前区域的所有飞行限制, 使游戏人物能够强行进入本地飞行模式",
+        "GlobalPremium": false,
+        "NeedAuth": true,
+        "Title": "本地飞行模式"
     },
     "MacroIntoActionQueue": {
         "Author": [
@@ -3153,7 +3419,7 @@
             "Nyy",
             "YLCHEN"
         ],
-        "Category": 5,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "当招募成员发生变更时, 自动阻止游戏关闭队员招募界面, 并重新打开正在阅读的招募详情界面",
@@ -3165,7 +3431,7 @@
         "Author": [
             "Errer"
         ],
-        "Category": 1,
+        "Category": 2,
         "CNOnly": false,
         "CNPremium": true,
         "Description": "取消游戏内所有的碰撞判定, 使游戏人物移动时不再会受到地形或障碍物的阻挡",
@@ -3221,23 +3487,73 @@
         "NeedAuth": true,
         "Title": "无加载黑屏界面"
     },
-    "OptimizedCameraSetting": {
+    "OccultCrescentHelper": {
+        "Author": [
+            "Fragile"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "为 蜃景幻界新月岛 相关副本提供游玩辅助, 包括快速传送、紧急遭遇战 (CE) / 临危受命 (FATE) 提醒、自动标记/开启宝箱、自动续 BUFF、快捷职业切换、显示岛 ID 等功能",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "蜃景幻界新月岛助手"
+    },
+    "OptimizedBorderlessWindow": {
         "Author": [
             "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "对窗口全屏模式进行优化, 当游戏位于后台, 使用 Windows 右键菜单时游戏窗口不再会被强制唤出至前台",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "窗口全屏模式优化"
+    },
+    "OptimizedCastBar": {
+        "Author": [
+            "Middo"
         ],
         "Category": 5,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "对集体动作设置界面进行优化, 使部分选项可以进行更加方便地进行精细化调节",
+        "Description": "对咏唱栏界面进行优化, 支持详细调整各主要部分的外观效果, 并能额外显示滑步标记",
         "GlobalPremium": false,
         "NeedAuth": false,
-        "Title": "集体动作设置界面优化"
+        "Title": "咏唱栏界面优化"
+    },
+    "OptimizedCharacterClass": {
+        "Author": [
+            "Middo"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "对 职业&特职 (PVE) 与 角色 (PVP) 界面进行优化, 使其可以通过点击职业名称/图标直接切换至对应职业",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "职业&特职 / 角色 界面优化"
+    },
+    "OptimizedChatBubble": {
+        "Author": [
+            "Middo",
+            "Xww"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "对聊天气泡界面进行优化, 支持在战斗中显示、自定义最大行数/显示时间等",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "聊天气泡界面优化"
     },
     "OptimizedDutyFinderSetting": {
         "Author": [
-            "Mizami"
+            "Mizami",
+            "Cyf5119"
         ],
-        "Category": 5,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "使任务搜索器各设置直接以可交互按钮形式显示在界面上方, 无需打开二级界面即可交互设置",
@@ -3288,7 +3604,7 @@
         "Category": 5,
         "CNOnly": false,
         "CNPremium": false,
-        "Description": "对好友列表界面进行优化, 支持显示当前状态为 \"无法获取角色情报\" 的好友名称与服务器信息, 并支持右键为好友添加备注与查询好友曾用名",
+        "Description": "对好友列表界面进行优化, 支持快捷搜索好友、显示当前状态为 \"无法获取角色情报\" 的好友名称与服务器信息、右键为好友添加备注与查询好友曾用名等",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "好友名单界面优化"
@@ -3305,6 +3621,18 @@
         "NeedAuth": true,
         "Title": "游戏原生交互优化"
     },
+    "OptimizedLetter": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "对莫古邮件界面进行优化, 使其可以一键领取/删除邮件, 支持发送邮件时搜索好友, 并移除\"请求特典与商城道具\"按钮的操作锁",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "莫古邮件界面优化"
+    },
     "OptimizedLongCastTimeAction": {
         "Author": [
             "AtmoOmen"
@@ -3317,11 +3645,47 @@
         "NeedAuth": true,
         "Title": "长咏唱技能优化"
     },
+    "OptimizedQuickPanel": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "对快捷面板界面进行优化, 添加锁定按钮, 使其不会被 Esc 键 / 区域切换 / 进入交互状态等情况意外关闭, 与热键栏界面逻辑保持一致; 并使原本的 /quickpanel 与 /快捷面板 指令支持传入页码参数, 以打开面板指定页",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "快捷面板界面优化"
+    },
+    "OptimizedRecipeNote": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "对制作笔记界面进行优化, 可快速切换至配方所属职业, 为配方详情页面新增 \"求解配方\" 按钮, 点击即可求解配方制作步骤, 并提供一键复制为宏、可视化预览、一键执行等功能",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "制作笔记界面优化"
+    },
+    "OptimizedTargetInfo": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "对目标情报与焦点目标情报界面进行优化, 显示目标体力值与目标技能咏唱剩余时间, 放大自身状态效果, 并支持快捷取消焦点目标",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "目标情报界面优化"
+    },
     "PartyFinderFilter": {
         "Author": [
             "status102"
         ],
-        "Category": 5,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "根据多种规则智能化筛选并显示满足要求的招募信息",
@@ -3333,7 +3697,7 @@
         "Author": [
             "status102"
         ],
-        "Category": 5,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "持久化保存 编辑招募内容 界面内填写的信息, 并在下次打开界面时自动填充",
@@ -3369,13 +3733,25 @@
         "Author": [
             "逆光"
         ],
-        "Category": 5,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "允许自定义队员招募中单页可显示的招募数量, 上限为单页 100 个招募",
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "自定义招募板单页显示数量"
+    },
+    "PlaceFurnitureAnywhere": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 2,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "自动取消家具/庭具位置调整过程中的本地位置摆放限制",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "自动取消家具/庭具摆放限制"
     },
     "PlayerTargetInfoExpand": {
         "Author": [
@@ -3429,7 +3805,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 2,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "解除战斗中无法打开传送界面的限制, 并存储战斗中发出的传送请求, 在战斗结束瞬间自动进行传送",
@@ -3453,13 +3829,25 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 2,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "使简易制作上限突破至最多 255 次",
         "GlobalPremium": false,
         "NeedAuth": true,
         "Title": "更高的简易制作上限"
+    },
+    "RealPositionInNaviMap": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 5,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "使导向地图界面的坐标显示为当前人物的真实世界坐标, 并可点击直接复制并标记当前坐标",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "导向地图界面显示真实坐标"
     },
     "RealQueuePosition": {
         "Author": [
@@ -3526,7 +3914,7 @@
         "Author": [
             "AtmoOmen"
         ],
-        "Category": 5,
+        "Category": 11,
         "CNOnly": false,
         "CNPremium": false,
         "Description": "使招募详情的留言文本可以被自由选中复制, 并提供链接快捷跳转等解析",
@@ -3582,6 +3970,18 @@
         "NeedAuth": true,
         "Title": "目标冲锋技能不位移"
     },
+    "TheCuffOfTheFatherHelper": {
+        "Author": [
+            "AtmoOmen"
+        ],
+        "Category": 9,
+        "CNOnly": false,
+        "CNPremium": false,
+        "Description": "进入副本 亚历山大机神城 启动之章2 后, 若当前未骑乘 7号哥布林战车, 则禁止选中 炸弹, 避免误攻击, 并对其高亮显示",
+        "GlobalPremium": false,
+        "NeedAuth": false,
+        "Title": "亚历山大机神城启动之章2助手"
+    },
     "ThePraetoriumHelper": {
         "Author": [
             "逆光"
@@ -3605,17 +4005,5 @@
         "GlobalPremium": false,
         "NeedAuth": false,
         "Title": "天书奇谈快捷打开副本"
-    },
-    "WorldTravelCommand": {
-        "Author": [
-            "AtmoOmen"
-        ],
-        "Category": 2,
-        "CNOnly": false,
-        "CNPremium": false,
-        "Description": "添加 /pdr worldtravel <服务器> (不区分大小写/部分匹配) 指令,\n用于在三主城内的任意位置进行快捷跨界传送",
-        "GlobalPremium": false,
-        "NeedAuth": true,
-        "Title": "快捷跨界传送指令"
     }
 }
