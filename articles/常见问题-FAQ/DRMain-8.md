@@ -1,5 +1,5 @@
 ---
-title: "因兼容性问题而被自动禁用" / 根本找不到`Daily Routines` 插件
+title: “因兼容性问题而被自动禁用” / 根本找不到 `Daily Routines` 插件
 tags: [兼容性问题, 禁用, Unban, DR, Daily Routines]
 ---
 

@@ -2,69 +2,53 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 const frontmatter = require('front-matter');
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const { LANGUAGE_CONFIG, CATEGORY_WEIGHTS } = require('./js/config.js');
 
 const articlesDir = path.join(__dirname, 'articles');
 const outputFile = path.join(__dirname, 'articles.json');
+const gitArticleDateCache = new Map();
 
-// 存储现有文章的日期和最后修改时间
-let existingArticlesData = {};
-try {
-    if (fs.existsSync(outputFile)) {
-        const existingData = JSON.parse(fs.readFileSync(outputFile, 'utf8'));
-        existingData.categories.forEach(category => {
-            category.articles.forEach(article => {
-                existingArticlesData[`${category.name}/${article.slug}`] = {
-                    date: article.date,
-                    lastModified: article.lastModified
-                };
-                
-                // 处理翻译
-                Object.keys(article.translations).forEach(lang => {
-                    const translation = article.translations[lang];
-                    existingArticlesData[`${category.name}/${translation.slug}/${lang}`] = {
-                        date: translation.date,
-                        lastModified: translation.lastModified
-                    };
-                });
-            });
-        });
+function getGitArticleDates(filePath) {
+    const relativePath = path.relative(process.cwd(), filePath).replace(/\\/g, '/');
+
+    if (gitArticleDateCache.has(relativePath)) {
+        return gitArticleDateCache.get(relativePath);
     }
-} catch (error) {
-    console.warn('无法读取现有文章数据，将为所有文章生成新的日期:', error);
-}
 
-// 获取文件的 Git 最后修改时间
-function getGitLastModifiedDate(filePath) {
+    let articleDates;
+
     try {
-        // 获取文件最后修改的 Git 提交日期
-        const relativePath = path.relative(process.cwd(), filePath).replace(/\\/g, '/');
-        const lastModified = execSync(`git log -1 --format="%aI" -- "${relativePath}"`, { encoding: 'utf8' }).trim();
-        
-        if (lastModified) {
-            return lastModified;
+        const gitLogOutput = execFileSync(
+            'git',
+            ['log', '--follow', '--format=%aI', '--', relativePath],
+            { encoding: 'utf8' }
+        ).trim();
+
+        if (!gitLogOutput) {
+            throw new Error('文件尚未提交到 Git');
         }
-    } catch (error) {
-        console.warn(`获取文件 ${filePath} 的 Git 修改时间失败:`, error.message);
-    }
-    
-    // 如果 Git 命令失败或文件没有 Git 历史，返回文件系统的修改时间
-    const stats = fs.statSync(filePath);
-    return stats.mtime.toISOString();
-}
 
-// 检查文件是否在 Git 中是新文件
-function isNewGitFile(filePath) {
-    try {
-        const relativePath = path.relative(process.cwd(), filePath).replace(/\\/g, '/');
-        // 检查文件是否有 Git 提交历史
-        const gitHistory = execSync(`git log --format="%H" -- "${relativePath}"`, { encoding: 'utf8' }).trim();
-        return !gitHistory;
+        const commitDates = gitLogOutput
+            .split(/\r?\n/)
+            .map(item => item.trim())
+            .filter(Boolean);
+
+        articleDates = {
+            date: commitDates.at(-1).split('T')[0],
+            lastModified: commitDates[0]
+        };
     } catch (error) {
-        // 如果出错，假设文件是新的
-        return true;
+        const fallbackDate = new Date().toISOString();
+        console.warn(`文件 ${relativePath} 暂无可用的 Git 历史，临时使用当前时间: ${error.message}`);
+        articleDates = {
+            date: fallbackDate.split('T')[0],
+            lastModified: fallbackDate
+        };
     }
+
+    gitArticleDateCache.set(relativePath, articleDates);
+    return articleDates;
 }
 
 function getArticleLanguage(filename) {
@@ -76,34 +60,35 @@ function getBaseSlug(filename) {
     return filename.replace(/\.[a-z]{2}\.md$/, '.md').replace(/\.md$/, '');
 }
 
+function comparePaths(a, b) {
+    return a.replace(/\\/g, '/').localeCompare(b.replace(/\\/g, '/'), 'zh-Hans-CN');
+}
+
 function generateIndex() {
     console.log('===== 开始生成索引 =====');
-    
-    // 输出现有文章数据的数量
-    console.log(`已加载 ${Object.keys(existingArticlesData).length} 篇现有文章的数据`);
-    
+
     // 确保文章目录存在
     if (!fs.existsSync(articlesDir)) {
         fs.mkdirSync(articlesDir, { recursive: true });
     }
 
     const categories = [];
-    const articlesBySlug = new Map(); // 用于存储所有语言版本的文章
     
     // 获取所有子文件夹作为分类
-    const categoryDirs = glob.sync('articles/*/', { onlyDirectories: true });
+    const categoryDirs = glob.sync('articles/*/', { onlyDirectories: true }).sort(comparePaths);
     
     categoryDirs.forEach(categoryDir => {
         const categoryName = path.basename(categoryDir);
         const articles = new Map(); // 用于存储该分类下的文章
+        const normalizedCategoryDir = categoryDir.replace(/\\/g, '/').replace(/\/$/, '');
         
         // 获取分类目录下的所有文章
-        const articleFiles = glob.sync(`${categoryDir}/**/*.md`);
+        const articleFiles = glob.sync(`${normalizedCategoryDir}/**/*.md`).sort(comparePaths);
         
         articleFiles.forEach(file => {
             try {
                 const content = fs.readFileSync(file, 'utf8');
-                const { attributes, body } = frontmatter(content);
+                const { attributes } = frontmatter(content);
                 
                 // 验证必需的 frontmatter 字段
                 if (!attributes.title) {
@@ -113,38 +98,7 @@ function generateIndex() {
 
                 const language = getArticleLanguage(path.basename(file));
                 const baseSlug = getBaseSlug(path.basename(file));
-                
-                // 使用 Git 获取文件的最后修改时间
-                const currentLastModified = getGitLastModifiedDate(file);
-                const isNewFile = isNewGitFile(file);
-                
-                // 尝试从现有数据中获取日期和最后修改时间
-                const articleKey = `${categoryName}/${baseSlug}${language !== LANGUAGE_CONFIG.default ? `/${language}` : ''}`;
-                const existingData = existingArticlesData[articleKey];
-                
-                let date, lastModified;
-                
-                if (existingData && !isNewFile) {
-                    // 比较 Git 最后修改时间与现有记录的最后修改时间
-                    if (new Date(existingData.lastModified).getTime() !== new Date(currentLastModified).getTime()) {
-                        // 文件已修改，更新日期和最后修改时间
-                        // 保留原始创建日期，仅更新最后修改时间
-                        date = existingData.date;
-                        lastModified = currentLastModified;
-                        console.log(`文件已修改: ${file}, 保留创建日期: ${date}, 更新修改时间: ${lastModified}`);
-                    } else {
-                        // 文件未修改，保留原有日期和最后修改时间
-                        date = existingData.date;
-                        lastModified = existingData.lastModified;
-                        console.log(`文件未修改: ${file}, 保留日期: ${date}`);
-                    }
-                } else {
-                    // 新文件，使用当前日期和最后修改时间
-                    // 对于新文件，创建日期和修改日期相同
-                    date = currentLastModified.split('T')[0];
-                    lastModified = currentLastModified;
-                    console.log(`新文件: ${file}, 日期: ${date}`);
-                }
+                const { date, lastModified } = getGitArticleDates(file);
 
                 const article = {
                     title: attributes.title,
@@ -180,14 +134,18 @@ function generateIndex() {
         articles.forEach((articleData, slug) => {
             if (articleData.base) {
                 const finalArticle = { ...articleData.base };
-                finalArticle.translations = articleData.translations;
+                finalArticle.translations = Object.fromEntries(
+                    Object.entries(articleData.translations).sort(([languageA], [languageB]) =>
+                        languageA.localeCompare(languageB, 'en')
+                    )
+                );
                 finalArticles.push(finalArticle);
             }
         });
 
-        // 按日期降序排序文章
+        // 按日期降序排序文章，日期相同时按 slug 排序以确保稳定输出
         const sortedArticles = finalArticles.sort((a, b) => 
-            new Date(b.date) - new Date(a.date)
+            new Date(b.date) - new Date(a.date) || a.slug.localeCompare(b.slug, 'en')
         );
 
         categories.push({
