@@ -35,6 +35,30 @@ function setAnimationOrder() {
     });
 }
 
+const MARKDOWN_ALERT_TITLES = {
+    zh: {
+        note: '注意',
+        tip: '提示',
+        important: '重要',
+        warning: '警告',
+        caution: '谨慎'
+    },
+    en: {
+        note: 'Note',
+        tip: 'Tip',
+        important: 'Important',
+        warning: 'Warning',
+        caution: 'Caution'
+    },
+    ja: {
+        note: '注意',
+        tip: 'ヒント',
+        important: '重要',
+        warning: '警告',
+        caution: '注意'
+    }
+};
+
 class FAQApp {
     constructor() {
         // 确保语言配置存在
@@ -124,6 +148,87 @@ class FAQApp {
             </div>
         `;
         document.body.appendChild(notification);
+    }
+
+    getMarkdownAlertTitle(type) {
+        const language = MARKDOWN_ALERT_TITLES[this.currentLanguage]
+            ? this.currentLanguage
+            : window.LANGUAGE_CONFIG.default;
+        const localizedTitle = MARKDOWN_ALERT_TITLES[language]?.[type];
+        if (localizedTitle) return localizedTitle;
+
+        return type.charAt(0).toUpperCase() + type.slice(1);
+    }
+
+    transformMarkdownAlerts(markdown) {
+        const lines = markdown.split(/\r?\n/);
+        const transformedLines = [];
+        let currentFence = null;
+
+        for (let index = 0; index < lines.length;) {
+            const line = lines[index];
+            const fenceMatch = line.match(/^\s*(```+|~~~+)/);
+
+            if (fenceMatch) {
+                const fence = fenceMatch[1];
+                if (!currentFence) {
+                    currentFence = fence;
+                } else if (fence.startsWith(currentFence[0]) && fence.length >= currentFence.length) {
+                    currentFence = null;
+                }
+
+                transformedLines.push(line);
+                index++;
+                continue;
+            }
+
+            if (!currentFence) {
+                const alertMatch = line.match(/^\s{0,3}>\s*\[!([a-z]+)\]\s*$/i);
+                if (alertMatch) {
+                    const alertType = alertMatch[1].toLowerCase();
+                    const contentLines = [];
+                    index++;
+
+                    while (index < lines.length) {
+                        const contentLine = lines[index];
+                        if (!/^\s{0,3}>/.test(contentLine)) break;
+
+                        contentLines.push(contentLine.replace(/^\s{0,3}>\s?/, ''));
+                        index++;
+                    }
+
+                    const alertContent = contentLines.join('\n').trim();
+                    const alertHtml = alertContent
+                        ? marked.parse(this.transformMarkdownAlerts(alertContent)).trim()
+                        : '';
+
+                    transformedLines.push('');
+                    transformedLines.push(
+                        `<div class="markdown-alert markdown-alert-${alertType}" data-alert-type="${alertType}">`
+                    );
+                    transformedLines.push(
+                        `<p class="markdown-alert-title">${this.getMarkdownAlertTitle(alertType)}</p>`
+                    );
+
+                    if (alertHtml) {
+                        transformedLines.push(alertHtml);
+                    }
+
+                    transformedLines.push('</div>');
+                    transformedLines.push('');
+                    continue;
+                }
+            }
+
+            transformedLines.push(line);
+            index++;
+        }
+
+        return transformedLines.join('\n');
+    }
+
+    parseMarkdown(markdown) {
+        return marked.parse(this.transformMarkdownAlerts(markdown));
     }
 
     async checkForUpdates() {
@@ -435,6 +540,7 @@ class FAQApp {
             if (!response.ok) throw new Error(`文章加载失败 (${response.status})`);
 
             const markdown = await response.text();
+            const normalizedMarkdown = markdown.replace(/\r\n?/g, '\n');
 
             // 配置 marked.js 选项
             const markedOptions = {
@@ -463,7 +569,7 @@ class FAQApp {
             }
 
             // 解析 frontmatter
-            const frontmatterMatch = markdown.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+            const frontmatterMatch = normalizedMarkdown.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
             if (frontmatterMatch) {
                 const [_, frontmatterContent, markdownContent] = frontmatterMatch;
                 const frontmatter = {};
@@ -502,10 +608,10 @@ class FAQApp {
                 `;
 
                 // 使用新版本的 marked API 渲染 Markdown 内容
-                this.renderArticle(articleHeader + marked.parse(markdownContent));
+                this.renderArticle(articleHeader + this.parseMarkdown(markdownContent));
             } else {
                 // 如果没有 frontmatter，直接渲染全部内容
-                this.renderArticle(marked.parse(markdown));
+                this.renderArticle(this.parseMarkdown(normalizedMarkdown));
             }
 
             // 更新当前文章信息

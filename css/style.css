@@ -449,6 +449,69 @@ body {
     background: var(--background-color);
 }
 
+#article-content .markdown-alert {
+    --alert-accent: var(--primary-color);
+    --alert-background: color-mix(in srgb, var(--alert-accent) 10%, var(--surface-color));
+    --alert-border: color-mix(in srgb, var(--alert-accent) 22%, transparent);
+
+    margin: 1.25rem 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--alert-border);
+    border-left: 0.35rem solid var(--alert-accent);
+    border-radius: var(--radius-md);
+    background: var(--alert-background);
+    box-shadow: var(--shadow-sm);
+}
+
+#article-content .markdown-alert > :first-child {
+    margin-top: 0;
+}
+
+#article-content .markdown-alert > :last-child {
+    margin-bottom: 0;
+}
+
+#article-content .markdown-alert-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--alert-accent);
+}
+
+#article-content .markdown-alert-title::before {
+    content: '';
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 999px;
+    background: var(--alert-accent);
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--alert-accent) 18%, transparent);
+    flex-shrink: 0;
+}
+
+#article-content .markdown-alert-note {
+    --alert-accent: #0969da;
+}
+
+#article-content .markdown-alert-tip {
+    --alert-accent: #1a7f37;
+}
+
+#article-content .markdown-alert-important {
+    --alert-accent: #8250df;
+}
+
+#article-content .markdown-alert-warning {
+    --alert-accent: #9a6700;
+}
+
+#article-content .markdown-alert-caution {
+    --alert-accent: #cf222e;
+}
+
 #article-content code {
     padding: 0.2em 0.4em;
     font-family: 'Fira Code', monospace;
@@ -513,6 +576,13 @@ body {
 [data-theme="dark"] #article-content blockquote {
     background: rgba(255, 255, 255, 0.05);
     border-left-color: var(--dark-primary);
+}
+
+[data-theme="dark"] #article-content .markdown-alert {
+    --alert-background: color-mix(in srgb, var(--alert-accent) 16%, var(--dark-surface));
+    --alert-border: color-mix(in srgb, var(--alert-accent) 36%, transparent);
+
+    box-shadow: none;
 }
 
 .hidden {
