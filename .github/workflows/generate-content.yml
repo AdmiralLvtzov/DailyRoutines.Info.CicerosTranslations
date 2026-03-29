@@ -28,30 +28,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: npm install --no-save glob front-matter
+        run: npm ci
 
-      - name: Generate articles.json
-        run: node generate.js
-
-      - name: Prepare site artifact
-        run: |
-          mkdir -p _site
-          rsync -av --delete \
-            --exclude '.git' \
-            --exclude '.github' \
-            --exclude 'node_modules' \
-            --exclude '_site' \
-            ./ ./_site/
+      - name: Build Astro site
+        run: npm run build
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./_site
+          path: ./dist
 
   deploy:
     runs-on: ubuntu-latest
