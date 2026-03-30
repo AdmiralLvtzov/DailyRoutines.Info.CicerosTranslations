@@ -1,5 +1,6 @@
 ---
 import type { SiteLocale } from '../lib/ui';
+import { toRelativePath } from '../lib/relative-url';
 import { SITE_COPY } from '../lib/ui';
 import {
   buildDocsArticleLink,
@@ -19,11 +20,12 @@ const siteData = buildSiteData();
 const changelog = siteData.categories.find((category) => category.slug === 'changelog');
 const latestArticles = getVisibleArticles(changelog?.articles ?? [], locale).slice(0, 8).map((article) => {
   const translation = article.translations[locale] ?? article.translations.root;
+  const targetPathname = buildDocsArticleLink(locale, 'changelog', article.slug);
   return {
     title: translation.title,
     description: translation.description,
     date: article.date,
-    href: buildDocsArticleLink(locale, 'changelog', article.slug)
+    href: toRelativePath(Astro.url.pathname, targetPathname)
   };
 });
 ---
@@ -36,9 +38,10 @@ const latestArticles = getVisibleArticles(changelog?.articles ?? [], locale).sli
     <div class="home-card-grid">
       {siteData.categories.map((category) => {
         const visibleArticles = getVisibleArticles(category.articles, locale);
+        const targetPathname = buildDocsCategoryLink(locale, category.slug);
         return (
           <article class="home-card">
-            <a class="home-card__link" href={buildDocsCategoryLink(locale, category.slug)}>
+            <a class="home-card__link" href={toRelativePath(Astro.url.pathname, targetPathname)}>
               <span class="home-card__eyebrow">
                 {visibleArticles.length} {copy.labels.articleCount}
               </span>

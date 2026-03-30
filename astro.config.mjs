@@ -4,6 +4,9 @@ import { buildSidebarConfig } from './scripts/site-data.mjs';
 
 export default defineConfig({
   site: 'https://info.atmoomen.top',
+  vite: {
+    base: './'
+  },
   integrations: [
     starlight({
       title: {
@@ -46,6 +49,10 @@ export default defineConfig({
         }
       ],
       sidebar: buildSidebarConfig(),
+      components: {
+        SiteTitle: './src/components/starlight/SiteTitle.astro',
+        LanguageSelect: './src/components/starlight/LanguageSelect.astro'
+      },
       customCss: ['./src/styles/starlight.css'],
       head: [
         {
