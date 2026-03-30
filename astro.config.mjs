@@ -55,6 +55,21 @@ export default defineConfig({
             sizes: '180x180',
             href: '/assets/apple-touch-icon.png'
           }
+        },
+        {
+          tag: 'script',
+          attrs: {
+            type: 'module'
+          },
+          content: `
+            const root = document.documentElement;
+            const syncScrollState = () => {
+              root.dataset.scrollState = window.scrollY > 12 ? 'scrolled' : 'top';
+            };
+
+            syncScrollState();
+            window.addEventListener('scroll', syncScrollState, { passive: true });
+          `
         }
       ]
     })
