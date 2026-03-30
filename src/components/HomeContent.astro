@@ -17,84 +17,55 @@ const { locale } = Astro.props;
 const copy = SITE_COPY[locale];
 const siteData = buildSiteData();
 const changelog = siteData.categories.find((category) => category.slug === 'changelog');
-const categories = siteData.categories.map((category, index) => {
-  const visibleArticles = getVisibleArticles(category.articles, locale);
-  return {
-    order: String(index + 1).padStart(2, '0'),
-    count: `${visibleArticles.length} ${copy.labels.articleCount}`,
-    title: getLocalizedValue(category.titles, locale),
-    description: getLocalizedValue(category.descriptions, locale) || copy.labels.noDescription,
-    href: buildDocsCategoryLink(locale, category.slug)
-  };
-});
-const latestArticles = getVisibleArticles(changelog?.articles ?? [], locale).slice(0, 7).map((article) => {
+const latestArticles = getVisibleArticles(changelog?.articles ?? [], locale).slice(0, 8).map((article) => {
   const translation = article.translations[locale] ?? article.translations.root;
   return {
     title: translation.title,
-    description: translation.description || copy.labels.noDescription,
+    description: translation.description,
     date: article.date,
     href: buildDocsArticleLink(locale, 'changelog', article.slug)
   };
 });
-const [featuredArticle, ...recentArticles] = latestArticles;
 ---
 
 <div class="home-content">
-  <section class="home-section home-section--directory" aria-labelledby={`home-${locale}-categories`}>
+  <section class="home-section" aria-labelledby={`home-${locale}-categories`}>
     <div class="home-section__header">
       <h2 id={`home-${locale}-categories`}>{copy.sections.categories}</h2>
     </div>
-    <ol class="home-directory">
-      {categories.map((category) => (
-        <li class="home-directory__item">
-          <a class="home-directory__link" href={category.href}>
-            <span class="home-directory__index" aria-hidden="true">{category.order}</span>
-            <div class="home-directory__body">
-              <h3>{category.title}</h3>
-              <p>{category.description}</p>
-            </div>
-            <div class="home-directory__meta">
-              <span class="home-directory__count">{category.count}</span>
-              <span class="home-directory__action">{copy.labels.openCategory}</span>
-            </div>
-          </a>
-        </li>
-      ))}
-    </ol>
+    <div class="home-card-grid">
+      {siteData.categories.map((category) => {
+        const visibleArticles = getVisibleArticles(category.articles, locale);
+        return (
+          <article class="home-card">
+            <a class="home-card__link" href={buildDocsCategoryLink(locale, category.slug)}>
+              <span class="home-card__eyebrow">
+                {visibleArticles.length} {copy.labels.articleCount}
+              </span>
+              <h3>{getLocalizedValue(category.titles, locale)}</h3>
+              <p>{getLocalizedValue(category.descriptions, locale) || copy.labels.noDescription}</p>
+              <span class="home-card__footer">{copy.labels.openCategory}</span>
+            </a>
+          </article>
+        );
+      })}
+    </div>
   </section>
 
-  {featuredArticle && (
-    <section class="home-section home-section--updates" aria-labelledby={`home-${locale}-latest`}>
-      <div class="home-section__header">
-        <h2 id={`home-${locale}-latest`}>{copy.sections.latest}</h2>
-      </div>
-      <div class="home-updates">
-        <article class="home-update-lead">
-          <a class="home-update-lead__link" href={featuredArticle.href}>
-            <span class="home-update-lead__date">{featuredArticle.date}</span>
-            <div class="home-update-lead__body">
-              <h3>{featuredArticle.title}</h3>
-              <p>{featuredArticle.description}</p>
-            </div>
+  <section class="home-section" aria-labelledby={`home-${locale}-latest`}>
+    <div class="home-section__header">
+      <h2 id={`home-${locale}-latest`}>{copy.sections.latest}</h2>
+    </div>
+    <div class="home-update-list">
+      {latestArticles.map((article) => (
+        <article class="home-update-card">
+          <a class="home-update-card__link" href={article.href}>
+            <span class="home-update-card__date">{article.date}</span>
+            <h3>{article.title}</h3>
+            <p>{article.description || copy.labels.noDescription}</p>
           </a>
         </article>
-
-        {recentArticles.length > 0 && (
-          <div class="home-update-feed">
-            {recentArticles.map((article) => (
-              <article class="home-update-row">
-                <a class="home-update-row__link" href={article.href}>
-                  <span class="home-update-row__date">{article.date}</span>
-                  <div class="home-update-row__body">
-                    <h3>{article.title}</h3>
-                    <p>{article.description}</p>
-                  </div>
-                </a>
-              </article>
-            ))}
-          </div>
-        )}
-      </div>
-    </section>
-  )}
+      ))}
+    </div>
+  </section>
 </div>
