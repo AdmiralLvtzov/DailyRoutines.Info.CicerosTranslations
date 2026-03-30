@@ -21,24 +21,9 @@ export const DEFAULT_LOCALE = 'root';
 
 export const CATEGORY_CONFIGS = [
   {
-    sourceDir: '常见问题-FAQ',
-    slug: 'faq',
-    order: 100,
-    titles: {
-      root: '常见问题',
-      en: 'FAQ',
-      ja: 'よくある質問'
-    },
-    descriptions: {
-      root: '常见问题、排查方案与日常使用说明。',
-      en: 'Frequently asked questions, troubleshooting, and usage guides.',
-      ja: 'よくある質問、トラブルシューティング、日常的な利用ガイドです。'
-    }
-  },
-  {
-    sourceDir: '更新日志-UpdateNote',
+    sourceDir: 'Changelog',
     slug: 'changelog',
-    order: 90,
+    order: 100,
     titles: {
       root: '更新日志',
       en: 'Changelog',
@@ -51,7 +36,22 @@ export const CATEGORY_CONFIGS = [
     }
   },
   {
-    sourceDir: '开发-Developer',
+    sourceDir: 'FAQ',
+    slug: 'faq',
+    order: 90,
+    titles: {
+      root: '常见问题',
+      en: 'FAQ',
+      ja: 'よくある質問'
+    },
+    descriptions: {
+      root: '常见问题、排查方案与日常使用说明。',
+      en: 'Frequently asked questions, troubleshooting, and usage guides.',
+      ja: 'よくある質問、トラブルシューティング、日常的な利用ガイドです。'
+    }
+  },
+  {
+    sourceDir: 'Development',
     slug: 'developer',
     order: 80,
     titles: {
@@ -66,7 +66,7 @@ export const CATEGORY_CONFIGS = [
     }
   },
   {
-    sourceDir: '其他-Others',
+    sourceDir: 'Others',
     slug: 'others',
     order: 10,
     titles: {
