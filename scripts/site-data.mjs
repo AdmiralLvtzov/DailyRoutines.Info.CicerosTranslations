@@ -52,7 +52,7 @@ export const CATEGORY_CONFIGS = [
   },
   {
     sourceDir: 'Development',
-    slug: 'developer',
+    slug: 'development',
     order: 80,
     titles: {
       root: '开发文档',
