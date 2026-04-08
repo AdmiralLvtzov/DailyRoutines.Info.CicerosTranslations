@@ -13,7 +13,8 @@ let siteDataCache;
 export const LOCALES = [
   { key: 'root', code: 'zh', lang: 'zh-CN', dir: '', routePrefix: '' },
   { key: 'en', code: 'en', lang: 'en', dir: 'en', routePrefix: '/en' },
-  { key: 'ja', code: 'ja', lang: 'ja-JP', dir: 'ja', routePrefix: '/ja' }
+  { key: 'ja', code: 'ja', lang: 'ja-JP', dir: 'ja', routePrefix: '/ja' },
+  { key: 'ko', code: 'ko', lang: 'ko-KR', dir: 'ko', routePrefix: '/ko' }
 ];
 
 export const LOCALE_KEYS = LOCALES.map((locale) => locale.key);
@@ -27,12 +28,14 @@ export const CATEGORY_CONFIGS = [
     titles: {
       root: '更新日志',
       en: 'Changelog',
-      ja: '更新履歴'
+      ja: '更新履歴',
+      ko: '업데이트 내역'
     },
     descriptions: {
       root: '版本更新记录、新增模块与重要行为变更。',
       en: 'Release notes, new modules, and important behavior changes.',
-      ja: 'リリースノート、新規モジュール、重要な変更点です。'
+      ja: 'リリースノート、新規モジュール、重要な変更点です。',
+      ko: '버전 업데이트 기록, 신규 모듈, 중요한 동작 변경 사항을 정리했습니다.'
     }
   },
   {
@@ -42,12 +45,14 @@ export const CATEGORY_CONFIGS = [
     titles: {
       root: '常见问题',
       en: 'FAQ',
-      ja: 'よくある質問'
+      ja: 'よくある質問',
+      ko: '자주 묻는 질문'
     },
     descriptions: {
       root: '常见问题、排查方案与日常使用说明。',
       en: 'Frequently asked questions, troubleshooting, and usage guides.',
-      ja: 'よくある質問、トラブルシューティング、日常的な利用ガイドです。'
+      ja: 'よくある質問、トラブルシューティング、日常的な利用ガイドです。',
+      ko: '자주 묻는 질문, 문제 해결 방법, 일상적인 사용 가이드를 모았습니다.'
     }
   },
   {
@@ -57,12 +62,14 @@ export const CATEGORY_CONFIGS = [
     titles: {
       root: '开发文档',
       en: 'Developer',
-      ja: '開発ドキュメント'
+      ja: '開発ドキュメント',
+      ko: '개발 문서'
     },
     descriptions: {
       root: 'IPC 与开发集成相关说明。',
       en: 'IPC and development integration references.',
-      ja: 'IPC と開発連携に関する資料です。'
+      ja: 'IPC と開発連携に関する資料です。',
+      ko: 'IPC 및 개발 연동과 관련된 참고 자료입니다.'
     }
   },
   {
@@ -72,12 +79,14 @@ export const CATEGORY_CONFIGS = [
     titles: {
       root: '其他内容',
       en: 'Others',
-      ja: 'その他'
+      ja: 'その他',
+      ko: '기타'
     },
     descriptions: {
       root: '补充资料与其他整理内容。',
       en: 'Supplementary notes and other curated content.',
-      ja: '補足資料やその他の整理済みコンテンツです。'
+      ja: '補足資料やその他の整理済みコンテンツです。',
+      ko: '보충 자료와 기타 정리된 콘텐츠입니다.'
     }
   }
 ];
@@ -103,6 +112,13 @@ const ALERT_LABELS = {
     important: '重要',
     warning: '警告',
     caution: '注意'
+  },
+  ko: {
+    note: '참고',
+    tip: '팁',
+    important: '중요',
+    warning: '경고',
+    caution: '주의'
   }
 };
 
@@ -132,11 +148,11 @@ function detectLocale(filename) {
   }
 
   const [, code] = match;
-  return code === 'en' || code === 'ja' ? code : DEFAULT_LOCALE;
+  return code === 'en' || code === 'ja' || code === 'ko' ? code : DEFAULT_LOCALE;
 }
 
 function stripLanguageSuffix(filename) {
-  return filename.replace(/\.(en|ja)\.md$/i, '.md').replace(/\.md$/i, '');
+  return filename.replace(/\.(en|ja|ko)\.md$/i, '.md').replace(/\.md$/i, '');
 }
 
 function encodeRouteSegment(value) {
@@ -334,6 +350,11 @@ function createOverviewContent(localeKey, category, articles) {
       introTitle: '概要',
       articleTitle: '記事一覧',
       empty: 'このカテゴリにはまだ記事がありません。'
+    },
+    ko: {
+      introTitle: '개요',
+      articleTitle: '문서 목록',
+      empty: '이 분류에는 아직 문서가 없습니다.'
     }
   }[localeKey];
 
@@ -373,6 +394,11 @@ function createDocsHomeContent(localeKey, siteData) {
       intro: 'このサイトでは、Daily Routines の FAQ、更新履歴、開発資料、補足情報をまとめています。',
       categoryTitle: 'カテゴリ',
       latestTitle: '最近の更新'
+    },
+    ko: {
+      intro: '이 사이트에서는 Daily Routines 의 FAQ, 업데이트 내역, 개발 자료, 보충 정보를 한곳에서 확인할 수 있습니다.',
+      categoryTitle: '분류',
+      latestTitle: '최근 업데이트'
     }
   }[localeKey];
 
@@ -520,14 +546,16 @@ export function buildSidebarConfig() {
       label: '站点入口',
       translations: {
         en: 'Site',
-        'ja-JP': 'サイト'
+        'ja-JP': 'サイト',
+        'ko-KR': '사이트'
       },
       items: [
         {
           label: '官网首页',
           translations: {
             en: 'Home',
-            'ja-JP': 'ホーム'
+            'ja-JP': 'ホーム',
+            'ko-KR': '홈'
           },
           link: '/'
         }
@@ -537,13 +565,15 @@ export function buildSidebarConfig() {
       label: '内容分区',
       translations: {
         en: 'Sections',
-        'ja-JP': 'カテゴリ'
+        'ja-JP': 'カテゴリ',
+        'ko-KR': '분류'
       },
       items: siteData.categories.map((category) => ({
         label: getLocalizedValue(category.titles, 'root'),
         translations: {
           en: getLocalizedValue(category.titles, 'en'),
-          'ja-JP': getLocalizedValue(category.titles, 'ja')
+          'ja-JP': getLocalizedValue(category.titles, 'ja'),
+          'ko-KR': getLocalizedValue(category.titles, 'ko')
         },
         link: `/docs/${category.slug}/`
       }))
@@ -569,13 +599,22 @@ export function syncGeneratedDocs() {
     fs.mkdirSync(docsPrefix, { recursive: true });
 
     const docsIndexFrontmatter = createDocFrontmatter({
-      title: locale.key === 'root' ? '文档中心' : locale.key === 'en' ? 'Docs' : 'ドキュメント',
-      description:
-        locale.key === 'root'
-          ? 'Daily Routines 文档总览'
-          : locale.key === 'en'
-            ? 'Daily Routines documentation overview'
-            : 'Daily Routines ドキュメント一覧',
+      title: (
+        {
+          root: '文档中心',
+          en: 'Docs',
+          ja: 'ドキュメント',
+          ko: '문서'
+        }
+      )[locale.key],
+      description: (
+        {
+          root: 'Daily Routines 文档总览',
+          en: 'Daily Routines documentation overview',
+          ja: 'Daily Routines ドキュメント一覧',
+          ko: 'Daily Routines 문서 개요'
+        }
+      )[locale.key],
       lastUpdated: siteData.generatedAt
     });
 

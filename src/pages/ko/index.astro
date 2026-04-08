@@ -1,0 +1,24 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import HomeContent from '../../components/HomeContent.astro';
+import { SITE_COPY } from '../../lib/ui';
+
+const locale = 'ko';
+const copy = SITE_COPY[locale];
+---
+
+<StarlightPage
+  frontmatter={{
+    title: copy.title,
+    description: copy.description,
+    template: 'splash',
+    editUrl: false,
+    tableOfContents: false,
+    pagefind: false,
+    lastUpdated: false,
+    prev: false,
+    next: false
+  }}
+>
+  <HomeContent locale={locale} />
+</StarlightPage>

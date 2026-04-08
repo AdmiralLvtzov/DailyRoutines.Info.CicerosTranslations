@@ -1,4 +1,4 @@
-export type SiteLocale = 'root' | 'en' | 'ja';
+export type SiteLocale = 'root' | 'en' | 'ja' | 'ko';
 
 type SiteCopy = {
   lang: string;
@@ -169,6 +169,49 @@ export const SITE_COPY: Record<SiteLocale, SiteCopy> = {
       ]
     },
     footer: 'Daily Routines Team. All rights reserved.'
+  },
+  ko: {
+    lang: 'ko-KR',
+    title: 'Daily Routines 정보 센터',
+    description: 'Daily Routines 공식 문서, FAQ, 업데이트 내역, 개발 자료를 모아 둔 사이트입니다.',
+    nav: {
+      home: '홈',
+      docs: '문서',
+      github: 'GitHub',
+      discord: 'Discord',
+      theme: '라이트 테마와 다크 테마 전환'
+    },
+    hero: {
+      eyebrow: 'Daily Routines',
+      title: 'Daily Routines 공식 문서 및 정보 센터',
+      description: 'FAQ, 업데이트 내역, 개발 자료를 한곳에 모아 설치 방법, 사용 가이드, 중요한 변경 사항을 빠르게 찾을 수 있습니다.',
+      primary: '문서 보기',
+      secondary: '업데이트 내역 보기'
+    },
+    stats: {
+      categories: '분류',
+      articles: '문서 수',
+      updated: '최근 업데이트'
+    },
+    sections: {
+      categories: '분류',
+      latest: '최근 업데이트'
+    },
+    labels: {
+      articleCount: '개 문서',
+      openCategory: '분류 열기',
+      latestUpdated: '최근 업데이트',
+      noDescription: '설명이 아직 없습니다'
+    },
+    heroPanel: {
+      title: '이곳에서 확인할 수 있는 내용',
+      items: [
+        '자주 묻는 질문과 문제 해결 가이드',
+        '버전 업데이트 기록과 중요한 변경 사항',
+        'IPC 및 개발 연동 자료'
+      ]
+    },
+    footer: 'Daily Routines Team. All rights reserved.'
   }
 };
 
@@ -208,6 +251,18 @@ export const MODULE_CATEGORY_LABELS = {
     8: '通知',
     9: 'アシスタント',
     10: 'スクリプト'
+  },
+  ko: {
+    1: '일반',
+    2: '시스템',
+    3: '기술',
+    4: '전투',
+    5: 'UI 최적화',
+    6: 'UI 조작',
+    7: '골드 소서',
+    8: '알림',
+    9: '보조',
+    10: '스크립트'
   }
 } as const;
 
@@ -226,5 +281,10 @@ export const MODULE_PERMISSION_LABELS = {
     CNPremium: 'テストコード (CN)',
     GlobalPremium: 'テストコード (グローバル)',
     NeedAuth: 'オンライン認証'
+  },
+  ko: {
+    CNPremium: '테스트 코드 (CN)',
+    GlobalPremium: '테스트 코드 (글로벌)',
+    NeedAuth: '온라인 인증'
   }
 } as const;

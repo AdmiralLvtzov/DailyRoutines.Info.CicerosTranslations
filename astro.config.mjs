@@ -12,7 +12,8 @@ export default defineConfig({
       title: {
         'zh-CN': 'Daily Routines 信息中心',
         en: 'Daily Routines Info Center',
-        'ja-JP': 'Daily Routines インフォメーションセンター'
+        'ja-JP': 'Daily Routines インフォメーションセンター',
+        'ko-KR': 'Daily Routines 정보 센터'
       },
       description: 'Daily Routines 官方文档、FAQ、更新日志与模块信息中心',
       favicon: '/assets/apple-touch-icon.png',
@@ -33,6 +34,10 @@ export default defineConfig({
         ja: {
           label: '日本語',
           lang: 'ja-JP'
+        },
+        ko: {
+          label: '한국어',
+          lang: 'ko-KR'
         }
       },
       lastUpdated: true,
