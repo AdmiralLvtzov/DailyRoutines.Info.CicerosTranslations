@@ -5,7 +5,7 @@ import { SITE_COPY } from '../lib/ui';
 import {
   buildDocsArticleLink,
   buildDocsCategoryLink,
-  buildSiteData,
+  getSiteData,
   getLocalizedValue,
   getVisibleArticles
 } from '../../scripts/site-data.mjs';
@@ -16,7 +16,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const copy = SITE_COPY[locale];
-const siteData = buildSiteData();
+const siteData = getSiteData();
 const changelog = siteData.categories.find((category) => category.slug === 'changelog');
 const latestArticles = getVisibleArticles(changelog?.articles ?? [], locale).slice(0, 8).map((article) => {
   const translation = article.translations[locale] ?? article.translations.root;

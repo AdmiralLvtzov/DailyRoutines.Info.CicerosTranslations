@@ -6,8 +6,11 @@ import matter from 'gray-matter';
 const rootDir = process.cwd();
 const articlesDir = path.join(rootDir, 'articles');
 const assetsDir = path.join(rootDir, 'assets');
+const generatedDir = path.join(rootDir, '.astro', 'generated');
+const siteDataSnapshotPath = path.join(generatedDir, 'site-data.json');
 const require = createRequire(import.meta.url);
 const gitDatesCache = new Map();
+let gitDatesLoaded = false;
 let siteDataCache;
 
 export const LOCALES = [
@@ -221,44 +224,91 @@ function formatDateValue(value) {
   return Number.isNaN(date.getTime()) ? new Date().toISOString() : date.toISOString();
 }
 
-function getGitDates(relativePath) {
-  const normalizedPath = relativePath.replace(/\\/g, '/');
+function normalizeToPosixPath(value) {
+  return value.replace(/\\/g, '/');
+}
 
-  if (gitDatesCache.has(normalizedPath)) {
-    return gitDatesCache.get(normalizedPath);
-  }
-
-  let dates;
+function buildFallbackDates(filePath) {
   try {
-    const { execFileSync } = require('node:child_process');
-    const output = execFileSync(
-      'git',
-      ['log', '--follow', '--format=%aI', '--', normalizedPath],
-      {
-        cwd: rootDir,
-        encoding: 'utf8'
-      }
-    ).trim();
-
-    if (!output) {
-      throw new Error('missing git history');
-    }
-
-    const commitDates = output.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
-    dates = {
-      date: commitDates.at(-1)?.slice(0, 10) ?? new Date().toISOString().slice(0, 10),
-      lastUpdated: commitDates[0] ?? new Date().toISOString()
+    const stat = fs.statSync(filePath);
+    const iso = new Date(stat.mtimeMs).toISOString();
+    return {
+      date: iso.slice(0, 10),
+      lastUpdated: iso
     };
   } catch {
     const fallback = new Date().toISOString();
-    dates = {
+    return {
       date: fallback.slice(0, 10),
       lastUpdated: fallback
     };
   }
+}
 
-  gitDatesCache.set(normalizedPath, dates);
-  return dates;
+function loadGitDatesCache() {
+  if (gitDatesLoaded) {
+    return;
+  }
+
+  gitDatesLoaded = true;
+
+  try {
+    const { execFileSync } = require('node:child_process');
+    const output = execFileSync(
+      'git',
+      ['log', '--name-only', '--pretty=format:__DR_COMMIT__%aI', '--', 'articles'],
+      {
+        cwd: rootDir,
+        encoding: 'utf8',
+        maxBuffer: 1024 * 1024 * 64
+      }
+    );
+
+    let currentCommitDate = '';
+    for (const rawLine of output.split(/\r?\n/)) {
+      const line = rawLine.trim();
+      if (!line) {
+        continue;
+      }
+
+      if (line.startsWith('__DR_COMMIT__')) {
+        currentCommitDate = line.slice('__DR_COMMIT__'.length).trim();
+        continue;
+      }
+
+      if (!currentCommitDate || !line.endsWith('.md')) {
+        continue;
+      }
+
+      const normalizedPath = normalizeToPosixPath(line);
+      const currentEntry = gitDatesCache.get(normalizedPath);
+      if (!currentEntry) {
+        gitDatesCache.set(normalizedPath, {
+          date: currentCommitDate.slice(0, 10),
+          lastUpdated: currentCommitDate
+        });
+        continue;
+      }
+
+      currentEntry.date = currentCommitDate.slice(0, 10);
+    }
+  } catch {
+    // git 不可用或历史不存在时，后续会退回到文件时间
+  }
+}
+
+function getGitDates(relativePath, filePath) {
+  loadGitDatesCache();
+  const normalizedPath = normalizeToPosixPath(relativePath);
+  const fromGit = gitDatesCache.get(normalizedPath);
+
+  if (fromGit) {
+    return fromGit;
+  }
+
+  const fallbackDates = buildFallbackDates(filePath);
+  gitDatesCache.set(normalizedPath, fallbackDates);
+  return fallbackDates;
 }
 
 function transformGithubAlerts(markdown, localeKey) {
@@ -458,6 +508,43 @@ export function getVisibleArticles(articles, localeKey) {
   return articles.filter((article) => article.translations[localeKey]);
 }
 
+function readSiteDataSnapshot() {
+  if (!fs.existsSync(siteDataSnapshotPath)) {
+    return null;
+  }
+
+  try {
+    const raw = fs.readFileSync(siteDataSnapshotPath, 'utf8');
+    const parsed = JSON.parse(raw);
+    if (!parsed || !Array.isArray(parsed.categories)) {
+      return null;
+    }
+
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+function writeSiteDataSnapshot(siteData) {
+  fs.mkdirSync(generatedDir, { recursive: true });
+  fs.writeFileSync(siteDataSnapshotPath, JSON.stringify(siteData), 'utf8');
+}
+
+export function getSiteData() {
+  if (siteDataCache) {
+    return siteDataCache;
+  }
+
+  const snapshot = readSiteDataSnapshot();
+  if (snapshot) {
+    siteDataCache = snapshot;
+    return siteDataCache;
+  }
+
+  return buildSiteData();
+}
+
 export function buildSiteData() {
   if (siteDataCache) {
     return siteDataCache;
@@ -474,7 +561,7 @@ export function buildSiteData() {
       const raw = readUtf8(filePath);
       const { data, content } = matter(raw);
       const relativePath = path.relative(rootDir, filePath);
-      const { date, lastUpdated } = getGitDates(relativePath);
+      const { date, lastUpdated } = getGitDates(relativePath, filePath);
       const slug = baseName;
 
       if (!groupedArticles.has(baseName)) {
@@ -540,7 +627,7 @@ export function buildSiteData() {
 }
 
 export function buildSidebarConfig() {
-  const siteData = buildSiteData();
+  const siteData = getSiteData();
   return [
     {
       label: '站点入口',
@@ -666,5 +753,6 @@ export function syncGeneratedDocs() {
     }
   }
 
+  writeSiteDataSnapshot(siteData);
   return siteData;
 }
