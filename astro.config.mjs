@@ -56,9 +56,13 @@ export default defineConfig({
       sidebar: buildSidebarConfig(),
       components: {
         SiteTitle: './src/components/starlight/SiteTitle.astro',
-        LanguageSelect: './src/components/starlight/LanguageSelect.astro'
+        LanguageSelect: './src/components/starlight/LanguageSelect.astro',
+        PageTitle: './src/components/starlight/PageTitle.astro',
+        MarkdownContent: './src/components/starlight/MarkdownContent.astro',
+        TableOfContents: './src/components/starlight/TableOfContents.astro',
+        MobileTableOfContents: './src/components/starlight/MobileTableOfContents.astro'
       },
-      customCss: ['./src/styles/starlight.css'],
+      customCss: ['./src/styles/starlight.css', './src/styles/article-docs.css'],
       head: [
         {
           tag: 'link',

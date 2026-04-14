@@ -1,0 +1,21 @@
+---
+import '@astrojs/starlight/style/markdown.css';
+import articlePageScript from '../../lib/article-page.inline.js?raw';
+import { isArticleDocsPage } from '../../lib/starlight-docs';
+
+const articlePage = isArticleDocsPage(Astro.locals.starlightRoute.id);
+---
+
+<div class:list={['sl-markdown-content', articlePage && 'dr-doc-content']}>
+  <slot />
+</div>
+
+{articlePage && (
+  <div class="dr-media-overlay" hidden tabindex="-1" role="dialog" aria-modal="true">
+    <img class="dr-media-overlay__image" alt="" />
+  </div>
+)}
+
+{articlePage && (
+  <script type="module" set:html={articlePageScript} />
+)}

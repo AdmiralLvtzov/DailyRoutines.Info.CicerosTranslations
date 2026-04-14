@@ -1,0 +1,16 @@
+---
+import DefaultMobileTableOfContents from '@astrojs/starlight/components/MobileTableOfContents.astro';
+import { isArticleDocsPage } from '../../lib/starlight-docs';
+
+const articlePage = isArticleDocsPage(Astro.locals.starlightRoute.id);
+---
+
+{
+  articlePage ? (
+    <div class="dr-toc dr-toc--article dr-toc--mobile">
+      <DefaultMobileTableOfContents />
+    </div>
+  ) : (
+    <DefaultMobileTableOfContents />
+  )
+}

@@ -1,0 +1,16 @@
+---
+import DefaultTableOfContents from '@astrojs/starlight/components/TableOfContents.astro';
+import { isArticleDocsPage } from '../../lib/starlight-docs';
+
+const articlePage = isArticleDocsPage(Astro.locals.starlightRoute.id);
+---
+
+{
+  articlePage ? (
+    <div class="dr-toc dr-toc--article dr-toc--desktop">
+      <DefaultTableOfContents />
+    </div>
+  ) : (
+    <DefaultTableOfContents />
+  )
+}

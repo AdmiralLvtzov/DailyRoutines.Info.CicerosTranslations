@@ -144,6 +144,64 @@ function readUtf8(filePath) {
   return fs.readFileSync(filePath, 'utf8');
 }
 
+const imageDimensionCache = new Map();
+
+function escapeHtml(value) {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;');
+}
+
+function getPngDimensions(buffer) {
+  if (buffer.length < 24 || buffer.toString('ascii', 1, 4) !== 'PNG') {
+    return null;
+  }
+
+  return {
+    width: buffer.readUInt32BE(16),
+    height: buffer.readUInt32BE(20)
+  };
+}
+
+function getGifDimensions(buffer) {
+  if (buffer.length < 10 || buffer.toString('ascii', 0, 3) !== 'GIF') {
+    return null;
+  }
+
+  return {
+    width: buffer.readUInt16LE(6),
+    height: buffer.readUInt16LE(8)
+  };
+}
+
+function resolveImageDimensions(assetPath) {
+  const normalizedAssetPath = normalizeToPosixPath(assetPath);
+  const cachedDimensions = imageDimensionCache.get(normalizedAssetPath);
+  if (cachedDimensions) {
+    return cachedDimensions;
+  }
+
+  const fullPath = path.join(rootDir, normalizedAssetPath.replace(/^\/+/u, ''));
+  if (!fs.existsSync(fullPath)) {
+    return null;
+  }
+
+  const buffer = fs.readFileSync(fullPath);
+  const extension = path.extname(fullPath).toLowerCase();
+  const dimensions =
+    extension === '.png' ? getPngDimensions(buffer) :
+    extension === '.gif' ? getGifDimensions(buffer) :
+    null;
+
+  if (dimensions) {
+    imageDimensionCache.set(normalizedAssetPath, dimensions);
+  }
+
+  return dimensions;
+}
+
 function detectLocale(filename) {
   const match = filename.match(/\.([a-z]{2})\.md$/i);
   if (!match) {
@@ -309,6 +367,70 @@ function getGitDates(relativePath, filePath) {
   const fallbackDates = buildFallbackDates(filePath);
   gitDatesCache.set(normalizedPath, fallbackDates);
   return fallbackDates;
+}
+
+function normalizeMediaStyle(styleValue) {
+  const filtered = styleValue
+    .split(';')
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .filter((part) => !/^(width|max-width|display|margin|margin-inline|margin-left|margin-right)\s*:/i.test(part));
+
+  return filtered.join('; ');
+}
+
+function transformMarkdownImages(markdown) {
+  return markdown.replace(/!\[([^\]]*)\]\((\/assets\/[^)\s]+)(?:\s+"([^"]*)")?\)/g, (_match, alt, src, title) => {
+    const dimensions = resolveImageDimensions(src);
+    const attrs = [
+      `src="${escapeHtml(src)}"`,
+      `alt="${escapeHtml(alt || '')}"`,
+      'loading="lazy"',
+      'decoding="async"',
+      'data-dr-zoomable="true"'
+    ];
+
+    if (dimensions) {
+      attrs.push(`width="${dimensions.width}"`, `height="${dimensions.height}"`);
+    }
+
+    if (title) {
+      attrs.push(`title="${escapeHtml(title)}"`);
+    }
+
+    return `<img ${attrs.join(' ')}>`;
+  });
+}
+
+function transformVideos(markdown) {
+  return markdown.replace(/<video\b([^>]*)>([\s\S]*?)<\/video>/gi, (_match, rawAttrs, inner) => {
+    let attrs = rawAttrs ?? '';
+
+    if (/style\s*=\s*"([^"]*)"/i.test(attrs)) {
+      attrs = attrs.replace(/style\s*=\s*"([^"]*)"/i, (_styleMatch, styleValue) => {
+        const normalizedStyle = normalizeMediaStyle(styleValue);
+        return normalizedStyle ? `style="${normalizedStyle}"` : '';
+      });
+    }
+
+    if (!/\bpreload\s*=/i.test(attrs)) {
+      attrs += ' preload="metadata"';
+    }
+
+    if (!/\bplaysinline\b/i.test(attrs)) {
+      attrs += ' playsinline';
+    }
+
+    if (!/\bdata-dr-video\s*=/i.test(attrs)) {
+      attrs += ' data-dr-video="true"';
+    }
+
+    return `<video${attrs}>${inner}</video>`;
+  });
+}
+
+function transformRichMedia(markdown) {
+  return transformVideos(transformMarkdownImages(markdown));
 }
 
 function transformGithubAlerts(markdown, localeKey) {
@@ -585,7 +707,7 @@ export function buildSiteData() {
         localeKey,
         title: data.title?.toString().trim() || baseName,
         description: data.description?.toString().trim() || buildExcerpt(content),
-        content: transformGithubAlerts(content.trim(), localeKey),
+        content: transformRichMedia(transformGithubAlerts(content.trim(), localeKey)),
         filePath,
         relativePath,
         tags: Array.isArray(data.tags) ? data.tags.map(String) : [],

@@ -1,0 +1,35 @@
+---
+import { isArticleDocsPage } from '../../lib/starlight-docs';
+
+const route = Astro.locals.starlightRoute;
+const articlePage = isArticleDocsPage(route.id);
+const PAGE_TITLE_ID = '_top';
+---
+
+{articlePage && (
+  <div class="dr-reading-progress" aria-hidden="true">
+    <span class="dr-reading-progress__bar" />
+  </div>
+)}
+
+<div class:list={['dr-page-title', articlePage && 'dr-page-title--article']}>
+  <h1 id={PAGE_TITLE_ID}>{route.entry.data.title}</h1>
+</div>
+
+<style>
+  @layer starlight.core {
+    .dr-page-title h1 {
+      margin: 0;
+      font-size: var(--sl-text-h1);
+      line-height: 1.02;
+      font-weight: 700;
+      color: var(--sl-color-white);
+      text-wrap: balance;
+    }
+
+    .dr-page-title--article {
+      position: relative;
+      overflow: clip;
+    }
+  }
+</style>
