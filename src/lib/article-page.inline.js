@@ -177,6 +177,49 @@ function bindArticleVideos() {
   reduceMotion.addEventListener('change', applyReducedMotionState);
 }
 
+function bindImageComparisons() {
+  const containers = document.querySelectorAll('.dr-img-comp:not([data-dr-init])');
+
+  for (const container of containers) {
+    container.dataset.drInit = '1';
+    const before = container.querySelector('.dr-img-comp__before');
+    const slider = container.querySelector('.dr-img-comp__slider');
+    let dragging = false;
+
+    const slide = (e) => {
+      if (!dragging) {
+        return;
+      }
+
+      const rect = container.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const x = clientX - rect.left;
+      const pct = Math.max(0, Math.min(100, (x / rect.width) * 100));
+      before.style.width = `${pct}%`;
+      slider.style.left = `${pct}%`;
+    };
+
+    container.addEventListener('mousedown', (e) => {
+      dragging = true;
+      e.preventDefault();
+    });
+
+    container.addEventListener('touchstart', () => {
+      dragging = true;
+    });
+
+    const stop = () => {
+      dragging = false;
+    };
+
+    window.addEventListener('mousemove', slide);
+    window.addEventListener('touchmove', slide, { passive: true });
+    window.addEventListener('mouseup', stop);
+    window.addEventListener('touchend', stop);
+  }
+}
+
 bindReadingProgress();
+bindImageComparisons();
 bindZoomableImages();
 bindArticleVideos();

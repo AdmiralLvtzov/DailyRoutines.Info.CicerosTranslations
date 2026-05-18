@@ -429,8 +429,62 @@ function transformVideos(markdown) {
   });
 }
 
+function buildImageComparison(beforeImgHtml, afterImgHtml) {
+  return [
+    '<div class="dr-img-comp">',
+    '  <div class="dr-img-comp__after">',
+    `    ${afterImgHtml}`,
+    '  </div>',
+    '  <div class="dr-img-comp__before">',
+    `    ${beforeImgHtml}`,
+    '  </div>',
+    '  <div class="dr-img-comp__slider">',
+    '    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/><path d="m15 18-6-6 6-6"/></svg>',
+    '  </div>',
+    '</div>',
+    ''
+  ].join('\n');
+}
+
+function transformImageComparisonContainers(markdown) {
+  const lines = markdown.split(/\r?\n/);
+  const result = [];
+  let i = 0;
+
+  while (i < lines.length) {
+    if (lines[i].trim() === ':::img-comp') {
+      i++;
+      const inner = [];
+      while (i < lines.length && lines[i].trim() !== ':::') {
+        inner.push(lines[i]);
+        i++;
+      }
+      i++;
+
+      const innerMd = inner.join('\n');
+      const processed = transformMarkdownImages(innerMd);
+      const imgs = [...processed.matchAll(/<img\b[^>]*>/gi)];
+
+      if (imgs.length === 2) {
+        const beforeImg = imgs[0][0].replace(/\bdata-dr-zoomable="true"\s*/gi, '').trim();
+        const afterImg = imgs[1][0].replace(/\bdata-dr-zoomable="true"\s*/gi, '').trim();
+        result.push(buildImageComparison(beforeImg, afterImg));
+        continue;
+      }
+
+      result.push(':::img-comp', ...inner, ':::');
+      continue;
+    }
+
+    result.push(lines[i]);
+    i++;
+  }
+
+  return result.join('\n');
+}
+
 function transformRichMedia(markdown) {
-  return transformVideos(transformMarkdownImages(markdown));
+  return transformVideos(transformMarkdownImages(transformImageComparisonContainers(markdown)));
 }
 
 function transformGithubAlerts(markdown, localeKey) {
