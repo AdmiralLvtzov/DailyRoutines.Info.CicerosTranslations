@@ -209,10 +209,20 @@
   line-height: 0;
 }
 
+.dr-img-comp__after,
+.dr-img-comp__before {
+  margin: 0;
+}
+
 .dr-img-comp__after img {
   display: block;
   width: 100%;
   height: auto;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
 }
 
 .dr-img-comp__before {
@@ -229,9 +239,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: auto;
+  width: 100%;
   height: 100%;
   max-width: none;
+  object-fit: cover;
+  object-position: left top;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
 }
 
 .dr-img-comp__slider {
