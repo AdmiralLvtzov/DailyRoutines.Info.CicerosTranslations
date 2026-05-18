@@ -466,8 +466,13 @@ function transformImageComparisonContainers(markdown) {
       const imgs = [...processed.matchAll(/<img\b[^>]*>/gi)];
 
       if (imgs.length === 2) {
-        const beforeImg = imgs[0][0].replace(/\bdata-dr-zoomable="true"\s*/gi, '').trim();
-        const afterImg = imgs[1][0].replace(/\bdata-dr-zoomable="true"\s*/gi, '').trim();
+        const stripAttrs = (html) => html
+          .replace(/\bdata-dr-zoomable="true"\s*/gi, '')
+          .replace(/\bwidth="[^"]*"\s*/gi, '')
+          .replace(/\bheight="[^"]*"\s*/gi, '')
+          .trim();
+        const beforeImg = stripAttrs(imgs[0][0]);
+        const afterImg = stripAttrs(imgs[1][0]);
         result.push(buildImageComparison(beforeImg, afterImg));
         continue;
       }

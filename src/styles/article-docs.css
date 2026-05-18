@@ -206,9 +206,10 @@
   -webkit-user-select: none;
   background: var(--dr-article-panel);
   box-shadow: var(--site-shadow);
+  line-height: 0;
 }
 
-.dr-img-comp img {
+.dr-img-comp__after img {
   display: block;
   width: 100%;
   height: auto;
@@ -224,11 +225,12 @@
 }
 
 .dr-img-comp__before img {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: auto;
+  height: 100%;
   max-width: none;
 }
 
