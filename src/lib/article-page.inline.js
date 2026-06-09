@@ -220,6 +220,7 @@ function bindImageComparisons() {
 }
 
 function bindImageGalleries() {
+  console.log('[DR Image Gallery] 初始化 bindImageGalleries...');
   const galleries = document.querySelectorAll('.dr-img-gallery:not([data-dr-init])');
 
   for (const gallery of galleries) {
@@ -235,6 +236,11 @@ function bindImageGalleries() {
     if (!track || slides.length === 0) {
       continue;
     }
+
+    // 动态给所有画廊图片加上 draggable="false"，防止浏览器默认图片拖动干扰我们的滑动
+    gallery.querySelectorAll('img').forEach((img) => {
+      img.setAttribute('draggable', 'false');
+    });
 
     // 单图降级处理
     if (slides.length <= 1) {
@@ -290,15 +296,19 @@ function bindImageGalleries() {
       goTo(index - 1);
     };
 
-    prevBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      goPrev();
-    });
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goPrev();
+      });
+    }
 
-    nextBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      goNext();
-    });
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goNext();
+      });
+    }
 
     dots.forEach((dot, i) => {
       dot.addEventListener('click', (e) => {
@@ -413,7 +423,6 @@ function bindImageGalleries() {
       if (e.target.closest('.dr-img-gallery__prev, .dr-img-gallery__next, .dr-img-gallery__dot')) {
         return;
       }
-      e.preventDefault();
       isTouch = false;
       handleDragStart(e.clientX, e.clientY);
     });
@@ -428,7 +437,6 @@ function bindImageGalleries() {
 
     goTo(0);
   }
-}
 }
 
 bindReadingProgress();
