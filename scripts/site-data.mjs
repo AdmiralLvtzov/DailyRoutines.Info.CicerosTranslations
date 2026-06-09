@@ -447,12 +447,9 @@ function buildImageComparison(beforeImgHtml, afterImgHtml) {
 }
 
 function buildImageGallery(imgHtmls) {
-  const slides = imgHtmls.map((img) => {
-    const altMatch = img.match(/alt="([^"]*)"/i);
-    const caption = altMatch ? altMatch[1] : '';
-    const captionAttr = caption ? ` data-caption="${escapeHtml(caption)}"` : '';
-    return `    <div class="dr-img-gallery__slide"${captionAttr}>${img}</div>`;
-  }).join('\n');
+  const slides = imgHtmls.map((img) =>
+    `    <div class="dr-img-gallery__slide">${img}</div>`
+  ).join('\n');
 
   const dots = imgHtmls.map((_, i) =>
     `    <button class="dr-img-gallery__dot" aria-label="第${i + 1}张" data-dr-index="${i}"></button>`
@@ -475,7 +472,6 @@ function buildImageGallery(imgHtmls) {
     '  <div class="dr-img-gallery__dots">',
     dots,
     '  </div>',
-    '  <div class="dr-img-gallery__caption"></div>',
     '</div>',
     ''
   ].join('\n');
