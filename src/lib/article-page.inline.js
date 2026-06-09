@@ -219,7 +219,156 @@ function bindImageComparisons() {
   }
 }
 
+function bindImageGalleries() {
+  const galleries = document.querySelectorAll('.dr-img-gallery:not([data-dr-init])');
+
+  for (const gallery of galleries) {
+    gallery.dataset.drInit = '1';
+    const track = gallery.querySelector('.dr-img-gallery__track');
+    const slides = gallery.querySelectorAll('.dr-img-gallery__slide');
+    const prevBtn = gallery.querySelector('.dr-img-gallery__prev');
+    const nextBtn = gallery.querySelector('.dr-img-gallery__next');
+    const dots = gallery.querySelectorAll('.dr-img-gallery__dot');
+
+    if (!track || slides.length === 0) {
+      continue;
+    }
+
+    let index = 0;
+    let dragging = false;
+    let dragStartX = 0;
+    let dragOffset = 0;
+
+    const total = slides.length;
+
+    const goTo = (targetIndex) => {
+      index = ((targetIndex % total) + total) % total;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+      });
+
+      if (index === 0) {
+        prevBtn.setAttribute('aria-disabled', 'true');
+      } else {
+        prevBtn.removeAttribute('aria-disabled');
+      }
+
+      if (index === total - 1) {
+        nextBtn.setAttribute('aria-disabled', 'true');
+      } else {
+        nextBtn.removeAttribute('aria-disabled');
+      }
+    };
+
+    const goNext = () => {
+      if (index < total - 1) {
+        goTo(index + 1);
+      }
+    };
+
+    const goPrev = () => {
+      if (index > 0) {
+        goTo(index - 1);
+      }
+    };
+
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      goPrev();
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      goNext();
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goTo(i);
+      });
+    });
+
+    gallery.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goPrev();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        goNext();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        goTo(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        goTo(total - 1);
+      }
+    });
+
+    const handleDragStart = (clientX) => {
+      dragging = true;
+      dragStartX = clientX;
+      track.style.transition = 'none';
+    };
+
+    const handleDragMove = (clientX) => {
+      if (!dragging) {
+        return;
+      }
+
+      dragOffset = clientX - dragStartX;
+      const pct = -index * 100 + (dragOffset / gallery.offsetWidth) * 100;
+      track.style.transform = `translateX(${pct}%)`;
+    };
+
+    const handleDragEnd = () => {
+      if (!dragging) {
+        return;
+      }
+
+      dragging = false;
+      track.style.transition = '';
+
+      const threshold = gallery.offsetWidth * 0.15;
+
+      if (dragOffset < -threshold) {
+        goNext();
+      } else if (dragOffset > threshold) {
+        goPrev();
+      } else {
+        goTo(index);
+      }
+
+      dragOffset = 0;
+    };
+
+    gallery.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      handleDragStart(e.clientX);
+    });
+
+    gallery.addEventListener('touchstart', (e) => {
+      handleDragStart(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('mousemove', (e) => {
+      handleDragMove(e.clientX);
+    });
+
+    window.addEventListener('touchmove', (e) => {
+      handleDragMove(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('mouseup', handleDragEnd);
+    window.addEventListener('touchend', handleDragEnd);
+
+    goTo(0);
+  }
+}
+
 bindReadingProgress();
 bindImageComparisons();
+bindImageGalleries();
 bindZoomableImages();
 bindArticleVideos();

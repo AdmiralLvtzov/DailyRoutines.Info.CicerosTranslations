@@ -446,6 +446,77 @@ function buildImageComparison(beforeImgHtml, afterImgHtml) {
   ].join('\n');
 }
 
+function buildImageGallery(imgHtmls) {
+  const slides = imgHtmls.map((img) =>
+    `    <div class="dr-img-gallery__slide">${img}</div>`
+  ).join('\n');
+
+  const dots = imgHtmls.map((_, i) =>
+    `    <button class="dr-img-gallery__dot" aria-label="第${i + 1}张" data-dr-index="${i}"></button>`
+  ).join('\n');
+
+  return [
+    '<div class="dr-img-gallery" role="region" aria-label="图片轮播" tabindex="0">',
+    '  <div class="dr-img-gallery__viewport">',
+    '    <div class="dr-img-gallery__track">',
+    slides,
+    '    </div>',
+    '  </div>',
+    '  <button class="dr-img-gallery__prev" aria-label="上一张">',
+    '    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>',
+    '  </button>',
+    '  <button class="dr-img-gallery__next" aria-label="下一张">',
+    '    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>',
+    '  </button>',
+    '  <div class="dr-img-gallery__dots">',
+    dots,
+    '  </div>',
+    '</div>',
+    ''
+  ].join('\n');
+}
+
+function transformImageGalleryContainers(markdown) {
+  const lines = markdown.split(/\r?\n/);
+  const result = [];
+  let i = 0;
+
+  while (i < lines.length) {
+    if (lines[i].trim() === ':::img-gallery') {
+      i++;
+      const inner = [];
+      while (i < lines.length && lines[i].trim() !== ':::') {
+        inner.push(lines[i]);
+        i++;
+      }
+      i++;
+
+      const innerMd = inner.join('\n');
+      const processed = transformMarkdownImages(innerMd);
+      const imgs = [...processed.matchAll(/<img\b[^>]*>/gi)];
+
+      if (imgs.length >= 1) {
+        const stripAttrs = (html) => html
+          .replace(/\bdata-dr-zoomable="true"\s*/gi, '')
+          .replace(/\bwidth="[^"]*"\s*/gi, '')
+          .replace(/\bheight="[^"]*"\s*/gi, '')
+          .trim();
+        const imgHtmls = imgs.map((m) => stripAttrs(m[0]));
+        result.push(buildImageGallery(imgHtmls));
+        continue;
+      }
+
+      result.push(':::img-gallery', ...inner, ':::');
+      continue;
+    }
+
+    result.push(lines[i]);
+    i++;
+  }
+
+  return result.join('\n');
+}
+
 function transformImageComparisonContainers(markdown) {
   const lines = markdown.split(/\r?\n/);
   const result = [];
@@ -489,7 +560,7 @@ function transformImageComparisonContainers(markdown) {
 }
 
 function transformRichMedia(markdown) {
-  return transformVideos(transformMarkdownImages(transformImageComparisonContainers(markdown)));
+  return transformVideos(transformMarkdownImages(transformImageComparisonContainers(transformImageGalleryContainers(markdown))));
 }
 
 function transformGithubAlerts(markdown, localeKey) {
