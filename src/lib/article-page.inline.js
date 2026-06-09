@@ -229,8 +229,21 @@ function bindImageGalleries() {
     const prevBtn = gallery.querySelector('.dr-img-gallery__prev');
     const nextBtn = gallery.querySelector('.dr-img-gallery__next');
     const dots = gallery.querySelectorAll('.dr-img-gallery__dot');
+    const counter = gallery.querySelector('.dr-img-gallery__counter');
+    const captionContainer = gallery.querySelector('.dr-img-gallery__caption');
 
     if (!track || slides.length === 0) {
+      continue;
+    }
+
+    // 单图降级处理
+    if (slides.length <= 1) {
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+      const dotsContainer = gallery.querySelector('.dr-img-gallery__dots');
+      if (dotsContainer) dotsContainer.style.display = 'none';
+      if (counter) counter.style.display = 'none';
+      if (captionContainer) captionContainer.style.display = 'none';
       continue;
     }
 
@@ -238,39 +251,43 @@ function bindImageGalleries() {
     let dragging = false;
     let dragStartX = 0;
     let dragOffset = 0;
+    let startX = 0;
+    let startY = 0;
+    let isTouch = false;
+    let dragStarted = false;
 
     const total = slides.length;
 
     const goTo = (targetIndex) => {
       index = ((targetIndex % total) + total) % total;
       track.style.transform = `translateX(-${index * 100}%)`;
+      
       dots.forEach((dot, i) => {
         dot.setAttribute('aria-current', i === index ? 'true' : 'false');
       });
 
-      if (index === 0) {
-        prevBtn.setAttribute('aria-disabled', 'true');
-      } else {
-        prevBtn.removeAttribute('aria-disabled');
+      if (counter) {
+        counter.textContent = `${index + 1} / ${total}`;
       }
 
-      if (index === total - 1) {
-        nextBtn.setAttribute('aria-disabled', 'true');
-      } else {
-        nextBtn.removeAttribute('aria-disabled');
+      if (captionContainer) {
+        const activeSlide = slides[index];
+        const captionText = activeSlide ? (activeSlide.dataset.caption || '') : '';
+        if (captionText) {
+          captionContainer.textContent = captionText;
+          captionContainer.style.opacity = '1';
+        } else {
+          captionContainer.style.opacity = '0';
+        }
       }
     };
 
     const goNext = () => {
-      if (index < total - 1) {
-        goTo(index + 1);
-      }
+      goTo(index + 1);
     };
 
     const goPrev = () => {
-      if (index > 0) {
-        goTo(index - 1);
-      }
+      goTo(index - 1);
     };
 
     prevBtn.addEventListener('click', (e) => {
@@ -306,28 +323,47 @@ function bindImageGalleries() {
       }
     });
 
-    const handleDragStart = (clientX) => {
-      dragging = true;
-      dragStartX = clientX;
-      track.style.transition = 'none';
-    };
-
     const handleDragMove = (clientX) => {
-      if (!dragging) {
-        return;
-      }
-
       dragOffset = clientX - dragStartX;
+      if (Math.abs(dragOffset) > 5) {
+        dragStarted = true;
+      }
       const pct = -index * 100 + (dragOffset / gallery.offsetWidth) * 100;
       track.style.transform = `translateX(${pct}%)`;
     };
 
-    const handleDragEnd = () => {
-      if (!dragging) {
-        return;
+    const handleMouseMove = (e) => {
+      if (!dragging) return;
+      handleDragMove(e.clientX);
+    };
+
+    const handleTouchMove = (e) => {
+      if (!dragging) return;
+      const clientX = e.touches[0].clientX;
+      const clientY = e.touches[0].clientY;
+
+      const deltaX = Math.abs(clientX - startX);
+      const deltaY = Math.abs(clientY - startY);
+
+      // 如果横向位移大于纵向位移，则判定为切换图片，阻止页面滚动
+      if (deltaX > deltaY && deltaX > 5) {
+        if (e.cancelable) {
+          e.preventDefault();
+        }
       }
 
+      handleDragMove(clientX);
+    };
+
+    const handleDragEnd = () => {
+      if (!dragging) return;
       dragging = false;
+
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleDragEnd);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleDragEnd);
+
       track.style.transition = '';
 
       const threshold = gallery.offsetWidth * 0.15;
@@ -340,31 +376,59 @@ function bindImageGalleries() {
         goTo(index);
       }
 
+      // 如果确实发生了滑动，我们需要在捕获阶段拦截接下来的 click 事件，防止误触发 Zoomable 放大
+      if (dragStarted) {
+        const preventClick = (evt) => {
+          evt.stopPropagation();
+          evt.preventDefault();
+          window.removeEventListener('click', preventClick, true);
+        };
+        window.addEventListener('click', preventClick, true);
+      }
+
       dragOffset = 0;
+      dragStarted = false;
+    };
+
+    const handleDragStart = (clientX, clientY) => {
+      dragging = true;
+      dragStarted = false;
+      startX = clientX;
+      startY = clientY;
+      dragStartX = clientX;
+      dragOffset = 0;
+      track.style.transition = 'none';
+
+      if (isTouch) {
+        window.addEventListener('touchmove', handleTouchMove, { passive: false });
+        window.addEventListener('touchend', handleDragEnd);
+      } else {
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mouseup', handleDragEnd);
+      }
     };
 
     gallery.addEventListener('mousedown', (e) => {
+      if (e.button !== 0) return;
+      if (e.target.closest('.dr-img-gallery__prev, .dr-img-gallery__next, .dr-img-gallery__dot')) {
+        return;
+      }
       e.preventDefault();
-      handleDragStart(e.clientX);
+      isTouch = false;
+      handleDragStart(e.clientX, e.clientY);
     });
 
     gallery.addEventListener('touchstart', (e) => {
-      handleDragStart(e.touches[0].clientX);
+      if (e.target.closest('.dr-img-gallery__prev, .dr-img-gallery__next, .dr-img-gallery__dot')) {
+        return;
+      }
+      isTouch = true;
+      handleDragStart(e.touches[0].clientX, e.touches[0].clientY);
     }, { passive: true });
-
-    window.addEventListener('mousemove', (e) => {
-      handleDragMove(e.clientX);
-    });
-
-    window.addEventListener('touchmove', (e) => {
-      handleDragMove(e.touches[0].clientX);
-    }, { passive: true });
-
-    window.addEventListener('mouseup', handleDragEnd);
-    window.addEventListener('touchend', handleDragEnd);
 
     goTo(0);
   }
+}
 }
 
 bindReadingProgress();

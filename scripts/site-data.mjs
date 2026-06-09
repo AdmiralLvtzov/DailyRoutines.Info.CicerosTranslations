@@ -447,9 +447,12 @@ function buildImageComparison(beforeImgHtml, afterImgHtml) {
 }
 
 function buildImageGallery(imgHtmls) {
-  const slides = imgHtmls.map((img) =>
-    `    <div class="dr-img-gallery__slide">${img}</div>`
-  ).join('\n');
+  const slides = imgHtmls.map((img) => {
+    const altMatch = img.match(/alt="([^"]*)"/i);
+    const caption = altMatch ? altMatch[1] : '';
+    const captionAttr = caption ? ` data-caption="${escapeHtml(caption)}"` : '';
+    return `    <div class="dr-img-gallery__slide"${captionAttr}>${img}</div>`;
+  }).join('\n');
 
   const dots = imgHtmls.map((_, i) =>
     `    <button class="dr-img-gallery__dot" aria-label="第${i + 1}张" data-dr-index="${i}"></button>`
@@ -468,9 +471,11 @@ function buildImageGallery(imgHtmls) {
     '  <button class="dr-img-gallery__next" aria-label="下一张">',
     '    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>',
     '  </button>',
+    '  <div class="dr-img-gallery__counter"></div>',
     '  <div class="dr-img-gallery__dots">',
     dots,
     '  </div>',
+    '  <div class="dr-img-gallery__caption"></div>',
     '</div>',
     ''
   ].join('\n');
@@ -495,9 +500,13 @@ function transformImageGalleryContainers(markdown) {
       const processed = transformMarkdownImages(innerMd);
       const imgs = [...processed.matchAll(/<img\b[^>]*>/gi)];
 
-      if (imgs.length >= 1) {
+      if (imgs.length === 1) {
+        result.push(processed);
+        continue;
+      }
+
+      if (imgs.length > 1) {
         const stripAttrs = (html) => html
-          .replace(/\bdata-dr-zoomable="true"\s*/gi, '')
           .replace(/\bwidth="[^"]*"\s*/gi, '')
           .replace(/\bheight="[^"]*"\s*/gi, '')
           .trim();
